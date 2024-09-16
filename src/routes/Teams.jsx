@@ -6,7 +6,7 @@ const Teams =()=>{
     <TeamsStyle>
 
     </TeamsStyle>
-    
+
     )
 }
 

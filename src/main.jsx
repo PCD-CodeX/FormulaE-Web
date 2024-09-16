@@ -7,6 +7,7 @@ import Races from './routes/Races.jsx'
 import Teams from './routes/Teams.jsx'
 import Circuits from './routes/Circuits.jsx'
 import Error from './routes/Error.jsx'
+import Pilots from './routes/Pilots.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       {path:'/Teams',element:<Teams/>},
       {path:'/Circuits',element:<Circuits/>},
       {path:'/Races',element:<Races/>},
+      {path:'/Pilots',element:<Pilots/>},
     ]
 
 }
