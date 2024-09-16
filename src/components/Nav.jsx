@@ -1,6 +1,6 @@
 import { NavStyle } from "../css/NavStyle";
 
-const Nav = () => {
+const Nav =()=>{
     
     <NavStyle>
         <nav className="nav-container">
@@ -20,7 +20,6 @@ const Nav = () => {
                 <h2>Corridas</h2>
             </div>
         </nav>
-
     </NavStyle>
 
 }
