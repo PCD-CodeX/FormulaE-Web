@@ -19,10 +19,12 @@ width: 100%;
     margin-bottom: clamp(80px, 10vh, 200px);
     margin-left: clamp(30px, 6vw, 200px);
     margin-left: clamp(30px, 6vw, 200px);
-    background: linear-gradient(90deg, #023E8A, #48CAE4) ;
+    background: linear-gradient(90deg, #023E8A, #48CAE4); ;
     border-radius: 1vw;
     transition: all 0.6s ease;
     color: white;
+    box-shadow: -0.5vw 0.5vw 0.5vw rgba(88, 88, 88, 0.3);
+    opacity: 0.9;
 }
 
 .sidebar_container.expanded {
@@ -53,7 +55,7 @@ width: 100%;
     transition: 0.3s ease;
     margin-right: 4vh;
     padding: 1vw;
-    font-size: clamp(10px, 1vw, 20px);
+    font-size: clamp(10px, 1.2vw, 20px);
 
 }
 .menu.expand{

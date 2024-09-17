@@ -28,6 +28,6 @@ a{
 }
 h5{
     font-weight: 300;
-    font-size: clamp(8px,1.2vw,30px);
+    font-size: clamp(8px,1vw,30px);
 }
 `
