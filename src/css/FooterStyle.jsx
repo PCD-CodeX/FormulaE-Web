@@ -17,7 +17,7 @@ export const FooterStyle = styled.section `
 }
 
 i{
-    padding-left: calc(4vw + 20px);
+    margin-left: calc(4vw + 20px);
     font-size: clamp(16px,1.2vw,30px);
     color: white;
 }

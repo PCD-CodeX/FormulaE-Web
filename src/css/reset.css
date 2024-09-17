@@ -1,8 +1,18 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: local('MyCustomFont')
+        url('../assets/fonts/FESans.var.woff2') format('woff2'),
+        url('../assets/fonts/FESans.var.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Righteous", sans-serif;
+    font-family: 'MyCustomFont';
+
 }
 
 :root {
