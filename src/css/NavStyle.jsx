@@ -5,7 +5,7 @@ export const NavStyle = styled.section`
 width: 100%;
 .nav{
     width: 100%;
-    height: 30vh;
+    height: 20vh;
 }
 .sidebar_container {
     z-index: 3;
@@ -13,20 +13,21 @@ width: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
-    height: 4vw;
-    width: clamp(24px, 8vh, 800px);
+    height: clamp(40px,4vw,100px);;
+    width: clamp(24px, 8vh, 80px);
     margin-top: clamp(80px, 10vh, 200px);
     margin-bottom: clamp(80px, 10vh, 200px);
     margin-left: clamp(30px, 6vw, 200px);
-    background-color: #023E8A;
+    margin-left: clamp(30px, 6vw, 200px);
+    background: linear-gradient(90deg, #023E8A, #48CAE4) ;
     border-radius: 1vw;
     transition: all 0.6s ease;
     color: white;
 }
 
 .sidebar_container.expanded {
-    height: 4vw;
-    width: 60vw;
+    height: clamp(50px,4vw,100px);
+    width: clamp(320px,60vw,1200px);
     border-radius: 1.2vw;
 }
 
@@ -35,7 +36,7 @@ width: 100%;
     display: flex;
     justify-content: end;
     flex-direction: column;
-    margin-left: 10vw;
+    margin-left: clamp(30px,10vw,200px);
     transition: all 0.1s ease;
     color: transparent;
     pointer-events: none;
@@ -66,7 +67,7 @@ width: 100%;
     z-index: 4;
     display: flex;
     position: fixed;
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: clamp(12px, 0.6vw, 20px);
     transition: all 0.6s ease;
     width: clamp(20px,2.4vw,60px);
 }
@@ -78,7 +79,7 @@ width: 100%;
 }
 
 #hamb.expanded {
-    margin-right: 52vw;
+    margin-right: clamp(280px,52vw,1400px);
     rotate: 360deg;
 }
 
@@ -93,4 +94,5 @@ a{
     text-decoration: none;
     
 }
+
 `
