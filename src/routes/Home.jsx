@@ -4,7 +4,6 @@ const Home =()=>{
     return(
 
     <HomeStyle>
-        <h1>meu pau</h1>
 
     </HomeStyle>
     

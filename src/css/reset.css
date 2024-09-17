@@ -5,20 +5,19 @@
         url('../assets/fonts/FESans.var.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
-  }
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'MyCustomFont';
-
+    letter-spacing: clamp(1px,0.2vh,3px);
 }
 
 :root {
-    --color1: rgb(8,5,109);
-    --color2:#08056d;
-    --color3:rgb(0,155,255);
-    --color4:rgb(0,255,255);
-    --color5:#00ffff;
+    --color1:#08056d;
+    --color2:rgb(0,155,255);
+    --color3:#00c2ff;
+    --color4:#00ffff;
 }

@@ -20,7 +20,7 @@ const Nav =()=>{
                         src={logo}
                         className={`hamb ${Expandir ? 'expanded' : ''}`}
                         onClick={toggleMenu} // Chama a função ao clicar
-                    ></img>
+                        ></img>
                     <div className={`sidebar ${Expandir ? 'expand' : ''}`} id="sidebar">
                         <li>
                             <ul className={`menu ${Expandir ? 'expand' : ''}`}>
@@ -38,8 +38,15 @@ const Nav =()=>{
                             <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                                 <Link to='/Teams'>Equipes</Link>
                             </ul>
+                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                                <Link to='/Login'>Login</Link>
+                            </ul>
                         </li>
                     </div>
+                </div> 
+                <div className='links'>
+                        <Link to='/Login'><h1>Login</h1></Link>
+                        <Link to='/Cadastro'><h1>Cadastre-se</h1></Link>
                 </div>
             </nav>
         </NavStyle>

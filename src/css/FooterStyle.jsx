@@ -27,7 +27,7 @@ a{
     color: white;
 }
 h5{
-    font-weight: 300;
-    font-size: clamp(8px,1vw,30px);
+    font-weight: 600;
+    font-size: clamp(8px,0.8vw,30px);
 }
 `

@@ -8,6 +8,7 @@ import Teams from './routes/Teams.jsx'
 import Circuits from './routes/Circuits.jsx'
 import Error from './routes/Error.jsx'
 import Pilots from './routes/Pilots.jsx'
+import Login from './routes/Login.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       {path:'/Circuits',element:<Circuits/>},
       {path:'/Races',element:<Races/>},
       {path:'/Pilots',element:<Pilots/>},
+      {path:'/Login',element:<Login/>},
     ]
 
 }
