@@ -4,3 +4,11 @@
     box-sizing: border-box;
     font-family: "Righteous", sans-serif;
 }
+
+:root {
+    --color1: rgb(8,5,109);
+    --color2:#08056d;
+    --color3:rgb(0,155,255);
+    --color4:rgb(0,255,255);
+    --color5:#00ffff;
+}

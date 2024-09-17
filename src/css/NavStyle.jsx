@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const NavStyle = styled.section`
-
+:root {
+    --color1: rgb(8,5,109);
+    --color2:#08056d;
+    --color3:rgb(0,155,255);
+    --color4:rgb(0,255,255);
+    --color5:#00ffff;
+}
 width: 100%;
 .nav{
     width: 100%;
@@ -19,7 +25,7 @@ width: 100%;
     margin-bottom: clamp(80px, 10vh, 200px);
     margin-left: clamp(30px, 6vw, 200px);
     margin-left: clamp(30px, 6vw, 200px);
-    background: linear-gradient(90deg, #023E8A, #48CAE4); ;
+    background: linear-gradient(70deg, var(--color2),var(--color3)); ;
     border-radius: 1vw;
     transition: all 0.6s ease;
     color: white;
@@ -52,7 +58,7 @@ width: 100%;
 
 .menu {
     z-index: 2;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in;
     margin-right: 4vh;
     padding: 1vw;
     font-size: clamp(10px, 1.2vw, 20px);
