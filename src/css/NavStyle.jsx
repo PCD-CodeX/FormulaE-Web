@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const NavStyle = styled.section`
+width: 100%;
 
 :root {
     --color1:#08056d; //base de cores, mudar aqui nao adianta, tem que mudar no RESET.CSS!!!
@@ -10,30 +11,28 @@ export const NavStyle = styled.section`
     --opacity:rgba(0, 71, 255, 0.1) //base de cores, mudar aqui nao adianta, tem que mudar no RESET.CSS!!!
 }
 
-width: 100%;
 
 .links {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start; /* Mantém os itens distribuídos horizontalmente */
+    justify-content: center; /* Mantém os itens distribuídos horizontalmente */
     font-size: clamp(10px, 0.4vw, 20px);
-    flex-wrap: wrap; /* Permite que os itens se ajustem na horizontal se o espaço for limitado */
-    padding: 0 40px;
-
 }
 
 .logo {
-    width: clamp(50px, 15vw, 240px); /* Mantém a logo flexível */
-    margin-right: clamp(8px, 16vw, 300px);
+    width: clamp(50px, 14vw, 240px); /* Mantém a logo flexível */
+    margin-right: clamp(8px, 10vw, 200px);
 }
 .link{
     display: flex;
-    padding: clamp(10px,1vw,30px);
-    margin-right: clamp(8px, 4vw, 300px);
+    justify-content: center;
+    padding: clamp(6px,1vw,30px);
+    margin-right: clamp(8px, 6vw, 300px);
     border-radius: 1vw;
     background-color: var(--opacity);
     border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
+    font-size: clamp(8px, 0.5vw, 20px);
     transition: 0.2s ease;
 }
 .link:hover{ 
@@ -46,10 +45,17 @@ width: 100%;
     font-size: clamp(8px, 0.6vw, 20px);
     font-weight:700;
 }
+
+@media (max-width: 1080px) {
+    .links{
+        flex-wrap: wrap;
+    }
+
+    
+}
 .nav{
     width: 100%;
-    width: 100%;
-    height: 2vh;
+    height: 1vh;
     background: linear-gradient(90deg, var(--color1), var(--color3));
 
 }

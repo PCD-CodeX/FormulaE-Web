@@ -13,7 +13,7 @@ export const LoginStyle = styled.section`
         position: absolute;
         top: 30vh;
         left: 30vw;
-    }
+    }   
 
 
 `

@@ -24,6 +24,7 @@ const Login = () => {
 
     return (
     <LoginStyle>
+        
         <form className="form"></form>
             <div className="login-texto">
                 <h1>You must sign in to join</h1>

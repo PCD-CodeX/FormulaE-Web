@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const FooterStyle = styled.section `
     width: 100%;
 .Footer{
+    width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
