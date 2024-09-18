@@ -7,8 +7,13 @@ export const LoginStyle = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 
+    .login-texto{
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+    }
 
 
 `

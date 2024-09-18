@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { NavStyle } from "../css/NavStyle";
 import { Link } from 'react-router-dom';
-import logo from "../assets/logos/Fomrula-E-Logo.png";
+import logo from "../public/Fomrula-E-Logo.png";
+import logoCompleta from "../public/fe-Logo-completa.png";
+
 const Nav =()=>{
     
     const [Expandir, setExpandir] = useState(false);
@@ -13,6 +15,19 @@ const Nav =()=>{
 
     return(
         <NavStyle>
+            {/*links*/}
+
+            <div className='links'>
+                        <img src={logoCompleta} className='logo'/>
+                        <Link to='/Quiz' className='h1'><h1>Quiz</h1></Link>
+                        <Link to='/News' className='h1'><h1>News</h1></Link>
+                        <Link to='/Live'className='h1'><h1>Live</h1></Link>
+                        <Link to='/Login' className='link'><h1>Login</h1></Link>
+                        <Link to='/Cadastro'className='link'><h1>Cadastre-se</h1></Link>
+            </div>
+
+            {/*Menu Hamburguer*/}
+
             <nav className='nav'>
                 <div className={`sidebar_container ${Expandir ? 'expanded' : ''}`}> {/*? baseado no valor de Expandir (true : false) atribue uma nome a sidebar_conatiner */} 
                     <img
@@ -44,10 +59,6 @@ const Nav =()=>{
                         </li>
                     </div>
                 </div> 
-                <div className='links'>
-                        <Link to='/Login' className='h1'><h1>Login</h1></Link>
-                        <Link to='/Cadastro'className='h1'><h1>Cadastre-se</h1></Link>
-                </div>
             </nav>
         </NavStyle>
     )
