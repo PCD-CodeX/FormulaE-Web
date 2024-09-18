@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+//imports dos routes
 import App from './App.jsx'
 import Home from './routes/Home.jsx'
 import Races from './routes/Races.jsx'
@@ -9,12 +11,12 @@ import Circuits from './routes/Circuits.jsx'
 import Error from './routes/Error.jsx'
 import Pilots from './routes/Pilots.jsx'
 import Login from './routes/Login.jsx'
+import Cadastro from './routes/Cadastro.jsx'
 
 const router = createBrowserRouter([
   {
-
-  path:'/',element:<App/>,
-  errorElement:<Error/>,
+    path:'/',element:<App/>,
+    errorElement:<Error/>,
 
     children:[
       {path:'/',element:<Home/>},
@@ -23,8 +25,8 @@ const router = createBrowserRouter([
       {path:'/Races',element:<Races/>},
       {path:'/Pilots',element:<Pilots/>},
       {path:'/Login',element:<Login/>},
+      {path:'/Cadastro',element:<Cadastro/>}, 
     ]
-
 }
 ])
 

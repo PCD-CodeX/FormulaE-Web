@@ -45,8 +45,8 @@ const Nav =()=>{
                     </div>
                 </div> 
                 <div className='links'>
-                        <Link to='/Login'><h1>Login</h1></Link>
-                        <Link to='/Cadastro'><h1>Cadastre-se</h1></Link>
+                        <Link to='/Login' className='h1'><h1>Login</h1></Link>
+                        <Link to='/Cadastro'className='h1'><h1>Cadastre-se</h1></Link>
                 </div>
             </nav>
         </NavStyle>

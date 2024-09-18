@@ -6,18 +6,16 @@ export const FooterStyle = styled.section `
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: calc(2.8vh + 10px );
     padding-bottom: calc(2.8vh + 10px );
-    padding-right: calc(2vw + 10px);
-    padding-left: calc(2vw + 10px);
+    padding-right: calc(6vw + 10px);
+    padding-left: calc(6vw + 10px);
     background-color:#03045E;
-    color: white; 
-    font-size: clamp(8px,1vw,30px);   
+    color: white;  
 }
 
 i{
-    margin-left: calc(4vw + 20px);
     font-size: clamp(16px,1.2vw,30px);
     color: white;
 }
@@ -28,6 +26,6 @@ a{
 }
 h5{
     font-weight: 600;
-    font-size: clamp(8px,0.8vw,30px);
+    font-size: clamp(8px,0.6vw,30px);
 }
 `
