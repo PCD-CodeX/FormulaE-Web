@@ -38,7 +38,7 @@ export const LoginStyle = styled.section`
         justify-content: center;
         align-items: center;
         margin-top: -6vw;
-        background: linear-gradient(330deg, var(--color1), var(--color3));
+        background: linear-gradient(330deg, var(--color1) 40%, white 100%);
         box-shadow: 0.4vw 0.4vw 0.4vw rgba(88, 88, 88, 0.3);
         border-top-right-radius: 2vh;
         border-bottom-right-radius: 2vh;
@@ -49,6 +49,7 @@ export const LoginStyle = styled.section`
 
     .logo {
         width: clamp(100px, 16vw, 260px); /* Mantém a logo flexível */
+        filter: drop-shadow(0 0 0.5rem rgba(201, 200, 200, 0.425));
     }
     .login {
         padding: 2rem 6rem; //usei rem pra manter identado mais facilmente
@@ -62,18 +63,16 @@ export const LoginStyle = styled.section`
 
     h1 {
         font-size: clamp(1rem, 1.6vw, 2rem);
-        margin-bottom: 6vh;
         font-weight: 900;
         letter-spacing: 4px;
         font-weight: bolder;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
-        font-style: normal;
     }
 
     .input-container {
         display: flex;
         flex-direction: column;
-        margin-top: 1vw;
+        margin-top: 2vw;
     }
 
     label {
@@ -89,7 +88,7 @@ export const LoginStyle = styled.section`
         padding-left: 2vw;
         border-radius: 1vw;
         border: none;
-        border: 3px solid var(--opacity);
+        //border: 3px solid var(--opacity);
         font-size: clamp(8px, 0.6vw, 16px);
         margin-top: 1vw;
         font-weight: 900;
@@ -108,7 +107,7 @@ export const LoginStyle = styled.section`
         background-color: var(--opacity);
         color: #ffffff;
         padding: clamp(6px,0.8vw,30px);
-        border: clamp(2px,0.2vw,4px) solid var(--color1) ;
+        border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
         border-radius: 1vw;
         font-size: clamp(8px, 0.8vw, 20px);
         transition: 0.2s ease;
@@ -133,13 +132,13 @@ export const LoginStyle = styled.section`
         width: clamp(200px, 30vw, 540px);
         height: clamp(100px, 16.6vw, 310px);
         z-index: 1;
-        margin: 4vw 0vw;
+        margin: 4vw 0vw; //ajusta a altura do lado esquerdo inteiro
         filter: drop-shadow(0 0 0.5rem rgba(146, 146, 146, 0.4));
         background-image: mix-blend-mode;
     }
     .gif-container h1{
         position: absolute;
-        margin-bottom: 26vw;
+        margin-bottom: 26vw; //ajusta a altura do 'welcome back'
         padding: 0.4vw;
         color: #000000;
         border-bottom: 4px solid var(--color1);
@@ -151,6 +150,7 @@ export const LoginStyle = styled.section`
         height: auto;
         border-radius: 0.5rem;
         transition: opacity 0.5s ease;
+        margin-bottom: 6vw; //ajusta a altura da imagem e do gif
     }
 
     .gif {
@@ -165,7 +165,8 @@ export const LoginStyle = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -2vh;
+        position: absolute;
+        margin-top: 16vw; //ajusta a altura dos botoes
         gap: 4vh;
     }
 
@@ -193,6 +194,7 @@ export const LoginStyle = styled.section`
 
     .google-button:hover {
         background-color: #b3ddcc;
+        color: #ffffff;
     }
 
     .other-button {
@@ -201,7 +203,7 @@ export const LoginStyle = styled.section`
     }
 
     .other-button:hover {
-        background-color: #737cd1;
+        background-color: #a2a6cc;
         color: #ffffff
     }
 

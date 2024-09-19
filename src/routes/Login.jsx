@@ -2,7 +2,7 @@ import { LoginStyle } from "../css/LoginStyle";
 import { useEffect, useState } from "react";
 import myGif from "../public/formulae.gif";
 import lastFrameImage from "../public/last-fomrulae.png";
-import logoCompleta from "../public/fe-Logo-completa.png";
+import logoCompleta from "../public/formulae-completo-branco.png";
 import googleIcon from "../public/google-icon.png";  // Ícone do Google
 import facebookIcon from "../public/facebook-icon.png";  // Ícone de outra plataforma
 
