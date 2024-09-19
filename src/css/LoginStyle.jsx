@@ -209,23 +209,52 @@ export const LoginStyle = styled.section`
 
     .google-button img,
     .other-button img {
-        width: 20px;
-        height: 20px;
+        width: clamp(1vh,20px,3hv);
+        height: clamp(1vh,20px,3vh);
     }
-    @media (max-width: 1080px) {
+
+    //media query para ajustar o layout para telas menores
+
+
+    @media (max-width: 900px) {
         .content {
             flex-direction: column;
-            padding-top: 0vw;
+            padding: 0vw 2vw;
+            box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);
+            background: linear-gradient(0deg,#ffffff,#ffffff); ;
         }
         .form {
-            margin-top: 0;
+            margin-top: -4vw;
+        }
+        .input-container {
+            margin-top: 1vw;
         }
         //sera feito com position absolute pois o gif esta muito grande, dai fica mal identado
         .gif-container {
-            display: none;
+            //display: none;
+            margin-top: clamp(10px,1vw,50px);
+            margin-left: 4vw;
+        }
+        .gif-container h1{
+            margin-bottom: clamp(200px,22vw,300px);
+        }
+        .gif-container .social-login {
+            margin-top: clamp(770px,92vw,1200px);
+        }  
+        .gif .imagem-final {
+            margin-bottom: 2vw;
         }
         .login{
-            padding: 3rem clamp(20px, 3rem, 50px);
+            padding: 2.8rem clamp(20px, 3rem, 50px);
+        }
+        .my-form__button{
+            margin-top: clamp(150px,16vh,200px);
+        }
+        .google-button,
+        .other-button {
+            padding: 1vw;
+            width: clamp(90px,16vh,200px);
+            margin-right: clamp(20px,8vw,0px);
         }
     }
 `
