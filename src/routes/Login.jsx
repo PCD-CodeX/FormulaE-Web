@@ -1,51 +1,91 @@
 import { LoginStyle } from "../css/LoginStyle";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import myGif from "../public/formulae.gif";
 import lastFrameImage from "../public/last-fomrulae.png";
+import logoCompleta from "../public/fe-Logo-completa.png";
+import googleIcon from "../public/google-icon.png";  // Ícone do Google
+import facebookIcon from "../public/facebook-icon.png";  // Ícone de outra plataforma
 
 const Login = () => {
-
-    const [showGif, setShowGif] = useState(true); // Controla o GIF
-    const [showLastFrame, setShowLastFrame] = useState(false); // Controla a exibição do último frame
+    const [showGif, setShowGif] = useState(true);
+    const [showLastFrame, setShowLastFrame] = useState(false);
 
     useEffect(() => {
-    // Definir um tempo para ocultar o GIF após sua exibição (ajuste de acordo com a duração do GIF)
-    const gifDuration = 1170; // 3 segundos, ajuste conforme a duração do seu GIF
-    const timer = setTimeout(() => {
-      setShowGif(false); // Oculta o GIF
-      setShowLastFrame(true); // Exibe o último frame
-    }, gifDuration);
+        // Ajuste a duração conforme o tempo do GIF
+        const gifDuration = 1180;
+        const timer = setTimeout(() => {
+            setShowGif(false); // Oculta o GIF
+            setShowLastFrame(true); // Exibe o último frame
+        }, gifDuration);
 
-    // Limpeza do timer ao desmontar o componente
-    return () => clearTimeout(timer);
+
+        return () => {
+            clearTimeout(timer);
+        };
+
     }, []);
 
-
     return (
-    <LoginStyle>
-        
-        <form className="form"></form>
-            <div className="login-texto">
-                <h1>You must sign in to join</h1>
+        <LoginStyle>
+            <div className="content">
+                <div className="gif-container">
+                    <h1>Welcome Back</h1>
+                    {showGif && (
+                        <img
+                            src={myGif}
+                            className="gif"
+                            style={{ display: showGif ? "block" : "none" }}
+                        />
+                    )}
+                    {showLastFrame && (
+                        <img 
+                            src={lastFrameImage} 
+                            className="imagem-final"
+                            style={{ display: showLastFrame ? "block" : "none" }}
+                        />
+                    )}
+                    <div className="social-login">
+                        <button className="google-button">
+                            <img src={googleIcon} alt="Google logo" />
+                            Login with Google
+                        </button>
+                        <button className="other-button">
+                            <img src={facebookIcon} alt="Other platform logo" />
+                            Login with Facebook
+                        </button>
+                    </div>
+                </div>
+                <form className="form">
+                    <div className="login">
+                        <img src={logoCompleta} className="logo"/>
+                        <div className="input-container">
+                            <label>Email:</label>
+                            <input
+                                type="email" id="email" name="email" 
+                                placeholder="Youremail@gmail.com"
+                                autoComplete="off"
+                                required
+                            />
+                            <div className="error-message">Email in incorrect format</div>
+                        </div>
+                        <div className="input-container">
+                            <label>Password:</label>
+                            <input
+                                id="password" type="password" 
+                                name="password" placeholder="Your password"
+                                title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$" required
+                                autoComplete="off"
+                            />
+                            <div className="error-message">Minimum 6 characters, at least 1 Alphabet, 1 Number, and 1 Symbol</div>
+                        </div>
+                        <button className="my-form__button" type="submit">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div className="cadastro-texto">
-                <p>Não possui login?</p><Link to='/Cadastro'>Cadastre-se</Link>
-            </div>
-
-
-            <div>
-                {/* Renderiza o GIF se showGif for true */}
-                <img
-                    src={myGif}
-                    alt="My GIF"
-                    style={{ visibility: showGif ? "visible" : "hidden", position: "relative", display: showGif ? "block" : "none" }} className="gif"/>
-                {/* Renderiza a imagem estática do último frame quando showLastFrame for true */}
-                {showLastFrame && (
-                    <img src={lastFrameImage} alt="Last Frame" style={{ position: "relative" }} className="imagem-final" />
-                )}
-            </div>
-    </LoginStyle>
+        </LoginStyle>
     );
 };
 export default Login;

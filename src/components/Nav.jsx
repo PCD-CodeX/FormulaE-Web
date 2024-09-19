@@ -53,9 +53,6 @@ const Nav =()=>{
                             <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                                 <Link to='/Teams'>Equipes</Link>
                             </ul>
-                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
-                                <Link to='/Login'>Login</Link>
-                            </ul>
                         </li>
                     </div>
                 </div> 

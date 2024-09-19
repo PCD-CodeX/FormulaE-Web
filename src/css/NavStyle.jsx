@@ -18,17 +18,20 @@ width: 100%;
     align-items: center;
     justify-content: center; /* Mantém os itens distribuídos horizontalmente */
     font-size: clamp(10px, 0.4vw, 20px);
+    margin-top: 2vh;
+    margin-bottom: 1vh;
 }
 
 .logo {
-    width: clamp(50px, 14vw, 240px); /* Mantém a logo flexível */
+    width: clamp(100px, 14vw, 240px); /* Mantém a logo flexível */
     margin-right: clamp(8px, 10vw, 200px);
+    margin-bottom: 1vh;
 }
 .link{
     display: flex;
     justify-content: center;
-    padding: clamp(6px,1vw,30px);
     margin-right: clamp(8px, 6vw, 300px);
+    padding: clamp(6px,1vw,30px);
     border-radius: 1vw;
     background-color: var(--opacity);
     border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
@@ -67,7 +70,7 @@ width: 100%;
     position: fixed;
     height: clamp(30px,4vw,100px);;
     width: clamp(30px, 8vh, 80px);
-    margin-top: clamp(20px, 8vh, 200px); //da a altura do menu em relação ao topo
+    margin-top: clamp(20px, 6vh, 200px); //da a altura do menu em relação ao topo
     margin-bottom: clamp(20px, 8vh, 200px);
     margin-left: clamp(30px, 4vw, 200px);
     background: linear-gradient(180deg, var(--color1), var(--color2));
@@ -79,7 +82,7 @@ width: 100%;
 }
 
 .sidebar_container.expanded {
-    height: clamp(300px,36vw,800px);
+    height: clamp(300px,32vw,800px); //se mexer aqui, tem que mexer no margin-top do hamb.expanded!! se nao o simbolo da FE nao aparece
     width: clamp(80px,10vw,400px);
     background: linear-gradient(180deg, var(--color1), var(--color2)); ;
     border-radius: 1.2vw;
@@ -103,7 +106,6 @@ width: 100%;
 
 .menu {
     z-index: 2;
-    padding-top: 1vw; //altura dos componentes 
     font-size: clamp(6px, 0.6vw, 20px);
     transition: 0.1s ease-out;
 
@@ -134,7 +136,7 @@ width: 100%;
 }
 
 #hamb.expanded {
-    margin-bottom: clamp(240px,31vw,1000px);
+    margin-bottom: clamp(240px,26vw,1000px);
     rotate: 360deg;
 }
 
