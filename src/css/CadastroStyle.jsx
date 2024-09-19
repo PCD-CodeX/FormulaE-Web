@@ -47,7 +47,7 @@ export const CadastroStyle = styled.div`
         height: clamp(100px, 16.6vw, 310px);
         z-index: 1;
         margin: 16vw 0vw; //ajusta a altura do lado esquerdo inteiro
-        filter: drop-shadow(0 0 0.5rem rgba(51, 51, 51, 0.4));
+        filter: drop-shadow(0 0 0.5rem rgba(198, 197, 197, 0.1));
         background-image: mix-blend-mode;
     }
     .gif-container h1{
@@ -56,7 +56,7 @@ export const CadastroStyle = styled.div`
         padding: 0.4vw;
         color: #000000;
         border-bottom: 4px solid var(--color1);
-        filter: drop-shadow(0 0 0.5rem rgba(100, 100, 100, 0.329));
+        filter: drop-shadow(0 0 0.5rem rgba(198, 197, 197, 0.329));
     }
 
     .gif, .imagem-final {
@@ -108,6 +108,7 @@ export const CadastroStyle = styled.div`
         font-size: clampclamp(8px, 0.9vw, 16px);;
         font-weight: 900;
         letter-spacing: 3px;
+        color: #ffffff;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
     }
 
@@ -132,7 +133,7 @@ export const CadastroStyle = styled.div`
     }
 
     .my-form__button {
-        background-color: var(--opacity);
+        background-color: rgba(202, 203, 206, 0.15);
         color: #ffffff;
         padding: clamp(6px,0.8vw,30px);
         border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
