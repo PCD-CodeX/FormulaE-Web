@@ -8,8 +8,7 @@ export const LoginStyle = styled.section`
     --color3:#00c2ff;
     --color4:#00ffff;
     --opacity:rgba(0, 71, 255, 0.05);
-    --clr-neon: hsl(317 100% 54%);
-    --clr-neon: hsl(323 21% 16%);
+
 }
     width: 100%;
     margin-top: 22vh;
@@ -38,7 +37,7 @@ export const LoginStyle = styled.section`
         justify-content: center;
         align-items: center;
         margin-top: -6vw;
-        background: linear-gradient(330deg, var(--color1) 40%, white 100%);
+        background: linear-gradient(330deg, var(--color1) 40%, var(--color2) 100%);
         box-shadow: 0.4vw 0.4vw 0.4vw rgba(88, 88, 88, 0.3);
         border-top-right-radius: 2vh;
         border-bottom-right-radius: 2vh;
@@ -141,7 +140,7 @@ export const LoginStyle = styled.section`
         margin-bottom: 26vw; //ajusta a altura do 'welcome back'
         padding: 0.4vw;
         color: #000000;
-        border-bottom: 4px solid var(--color1);
+        border-bottom: 4px solid var(--color2);
         filter: drop-shadow(0 0 0.5rem rgba(100, 100, 100, 0.329));
     }
 
@@ -151,6 +150,7 @@ export const LoginStyle = styled.section`
         border-radius: 0.5rem;
         transition: opacity 0.5s ease;
         margin-bottom: 6vw; //ajusta a altura da imagem e do gif
+        filter: contrast(80%) saturate(90%);
     }
 
     .gif {
@@ -225,6 +225,8 @@ export const LoginStyle = styled.section`
         }
         .form {
             margin-top: -4vw;
+            border-top-left-radius: 2vh;
+            border-bottom-left-radius: 2vh;
         }
         .input-container {
             margin-top: 1vw;

@@ -94,7 +94,7 @@ width: 100%;
     flex-direction: column;
     color: transparent;
     pointer-events: none;
-    transition: all 0.2s ease-in; //em ease-in a nao mostra o menu vindo do topo do site, pois vai mais rapido ao ponto 0 antes de aparecer na tela
+    transition: all 0.1s ease-in; //em ease-in a nao mostra o menu vindo do topo do site, pois vai mais rapido ao ponto 0 antes de aparecer na tela
     //text-transform: uppercase;
 }
 

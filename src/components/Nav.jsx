@@ -1,8 +1,8 @@
-import { useState } from 'react';
+    import { useState } from 'react';
 import { NavStyle } from "../css/NavStyle";
 import { Link } from 'react-router-dom';
 import logo from "../public/Fomrula-E-Logo.png";
-import logoCompleta from "../public/fe-Logo-completa.png";
+import logoCompleta from "../assets/logos/fe-Logo-completa.png";
 
 const Nav =()=>{
     
