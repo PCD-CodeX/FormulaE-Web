@@ -1,6 +1,7 @@
 import styled from "styled-components";
-
+import bgImg from "../assets/logos/bg-login.gif";
 export const CadastroStyle = styled.div`
+
 
 :root {
     --color1:#08056d;
@@ -25,55 +26,17 @@ export const CadastroStyle = styled.div`
         justify-content: center;
         align-items: flex-start;
         position: relative;
-        background: linear-gradient(330deg, rgba(0, 50, 176, 0.75) 20%,#ffffff) ;
-        margin-top: -8vw;
+        margin-top:-8vw;
+        margin-left: clamp(30px, 4vw, 8vw);
+        margin-right: clamp(30px, 4vw, 8vw);
         padding-top: 6vw;
         border-radius: 1em;
         font-weight: 700;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        width: 40vw; //largura da tela
     }
 
     .form {
         margin-top: -6vw;
-    }
-    .gif-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        flex-direction: column;
-        width: clamp(200px, 30vw, 540px);
-        height: clamp(100px, 16.6vw, 310px);
-        z-index: 1;
-        margin: 16vw 0vw; //ajusta a altura do lado esquerdo inteiro
-        filter: drop-shadow(0 0 0.5rem rgba(198, 197, 197, 0.1));
-        background-image: mix-blend-mode;
-    }
-    .gif-container h1{
-        position: absolute;
-        margin-bottom: 48vw; //ajusta a altura do 'Sing Up'
-        padding: 0.4vw;
-        color: #000000;
-        border-bottom: 4px solid var(--color1);
-        filter: drop-shadow(0 0 0.5rem rgba(198, 197, 197, 0.329));
-    }
-
-    .gif, .imagem-final {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        transition: opacity 0.5s ease;
-        margin-top: 0vw; //ajusta a altura da imagem e do gif
-    }
-
-    .gif {
-        opacity: 1;
-    }
-
-    .imagem-final {
-        opacity: 1; /* Mantenha visível após a exibição */
-        position: relative;
     }
 
     .logo {
@@ -81,29 +44,53 @@ export const CadastroStyle = styled.div`
         filter: drop-shadow(0 0 0.5rem rgba(201, 200, 200, 0.425));
     }
     .login {
-        padding: 3rem 5rem; //usei rem pra manter identado mais facilmente
-        border-radius: 1rem;
-        text-align: center;
-        position: relative;
-        z-index: 10;
-        //box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    }
+    padding: 4rem 6rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background-color: #fff; /* Adiciona um fundo sem blur ao conteúdo */
+    overflow: hidden; /* Garante que nada exceda o container, especialmente o pseudo-elemento */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Opção para um leve sombreado */
+
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%; /* Faz com que o background cubra levemente fora da área visível */
+    height: 110%;
+    background-image: url(${bgImg});
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Mantém o fundo atrás do conteúdo */
+    filter: blur(2px);
+    transform: scale(1.1); /* Evita que o desfoque afete as bordas visíveis */
+    
+}
+
 
     h1 {
         font-size: clamp(1rem, 1.6vw, 2rem);
         font-weight: 900;
         letter-spacing: 4px;
         font-weight: bolder;
+        color: #ffffff;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
     }
 
     .input-container {
         display: flex;
         flex-direction: column;
-        margin-top: 2vw;
+        margin-top: 3vw; //altura entre os inputs
+        margin-left: 10vw;
     }
 
     label {
+        display: flex;
+        flex-direction: start;
         margin-bottom: 0.5rem;
         font-size: clampclamp(8px, 0.9vw, 16px);;
         font-weight: 900;
@@ -113,16 +100,18 @@ export const CadastroStyle = styled.div`
     }
 
     input {
-        padding: clamp(6px,0.6vw,14px);
+        padding: clamp(6px,0.8vw,14px);
         padding-left: 2vw;
         border-radius: 1vw;
         border: none;
         //border: 3px solid var(--opacity);
         font-size: clamp(8px, 0.6vw, 16px);
         margin-top: 1vw;
+        margin-right: 10vw;
         font-weight: 900;
         background: white;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
+        font-style: italic;
     }
 
     .error-message {
@@ -133,7 +122,7 @@ export const CadastroStyle = styled.div`
     }
 
     .my-form__button {
-        background-color: rgba(202, 203, 206, 0.15);
+        background-color: rgba(207, 212, 226, 0.35);
         color: #ffffff;
         padding: clamp(6px,0.8vw,30px);
         border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
@@ -144,6 +133,7 @@ export const CadastroStyle = styled.div`
         cursor: pointer;
         outline: none;
         margin-top: 2vh;
+        margin-bottom: 2vh;
     }
 
     .my-form__button:hover {
@@ -156,6 +146,11 @@ export const CadastroStyle = styled.div`
 
 
     @media (max-width: 900px) {
-    
+        .login{
+            padding: 2rem 4rem;
+        }
+        h1{
+            margin-bottom: 30px;
+        }
     }
 `

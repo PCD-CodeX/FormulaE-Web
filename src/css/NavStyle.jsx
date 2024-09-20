@@ -63,7 +63,7 @@ width: 100%;
 
 }
 .sidebar_container {
-    z-index: 3;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;

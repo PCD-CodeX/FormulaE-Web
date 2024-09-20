@@ -83,7 +83,7 @@ export const LoginStyle = styled.section`
     }
 
     input {
-        padding: clamp(6px,0.6vw,14px);
+        padding: clamp(6px,0.8vw,14px);
         padding-left: 2vw;
         border-radius: 1vw;
         border: none;
@@ -92,7 +92,8 @@ export const LoginStyle = styled.section`
         margin-top: 1vw;
         font-weight: 900;
         background: white;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
+        font-style: italic;
     }
 
     .error-message {
