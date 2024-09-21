@@ -249,6 +249,10 @@ const TeamCard = styled.div`
         display: flex;
         margin: 1vw 1vw;
         font-size: clamp(12px, 1vw, 30px);
+        font-style: italic;
+    }
+    i{
+        padding-right: 1vw;
     }
     &:hover img {
         transform: translateX(-30px); /* Move a imagem para a esquerda */
@@ -261,7 +265,7 @@ const CarImage = styled.img`
     height: auto;
     margin-top: 1vh;
     margin-bottom: 1vh;
-    filter: drop-shadow(0 0 10px rgba(88, 88, 88, 0.205));
+    filter: drop-shadow(0 0 10px rgba(41, 41, 41, 0.205));
     object-fit: cover;
     margin-left: 6vw;
     transform: translateX(0); /* Posição inicial */
@@ -284,8 +288,8 @@ const PilotItem = styled.li`
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 6vw 12vw;
-    padding: 6vw 15vw;
+    gap: 6vw 16vw;
+    padding: 6vw 12vw;
 `;
 const TeamList = () => {
     return (
@@ -293,9 +297,18 @@ const TeamList = () => {
             {teams.map((team, index) => (
                 <TeamCard key={index} color={team.colorMain}>
                     <h2 className='team'>{team.name}</h2>
-                    <p>Vitórias: {team.wins}</p>
-                    <p>Pódios: {team.podiums}</p>
-                    <p>Corridas: {team.races}</p>
+                    <p>
+                        <i className="fi fi-bs-trophy"></i>
+                        Vitórias: {team.wins}
+                    </p>
+                    <p>
+                        <i className="fi fi-bs-chart-simple"></i>
+                        Pódios: {team.podiums}
+                    </p>
+                    <p>
+                        <i className="fi fi-bs-flag-checkered"></i>
+                            Corridas: {team.races}
+                    </p>
                     {/*<h3>Pilotos:</h3>*/}
                     {/*<PilotList>
                         {team.pilots.map((pilot, i) => (
