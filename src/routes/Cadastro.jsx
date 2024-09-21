@@ -94,7 +94,7 @@ const Cadastro = () => {
                 <input
                   id="password"
                   type="password"
-                  placeholder="Senha"
+                  placeholder="Senha: FormulaE@2024"
                   title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
                   value={password}

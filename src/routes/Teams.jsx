@@ -226,24 +226,19 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    display: flex;
     background-color: ${(props) => props.color};
     border-radius: 10px;
     margin: 20px;
-    padding: 2vw;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-    .team{
-        font-size: 2rem;
-        margin: 0;
-    }
-`;  
+    min-width: 16vw;
+`;
 
 const CarImage = styled.img`
-    //280x70
-    width: 560px;
-    height: 140px;
+    width: 100px;
+    height: auto;
     margin-bottom: 10px;
 `;
 
@@ -252,18 +247,17 @@ const PilotList = styled.ul`
     padding: 0;
 `;
 
-const PilotItem = styled.li`   
-    margin: 10px 0;
+const PilotItem = styled.li`
+    margin: 5px 0;
 `;
 
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    gap: 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4vw 10vw;
     padding: 20px;
 `;
-
 const TeamList = () => {
     return (
         <GridContainer>
@@ -281,7 +275,7 @@ const TeamList = () => {
                             </PilotItem>
                         ))}
                     </PilotList>
-                    <CarImage src={`/images/${team.imageCar}`} alt={team.name} />
+                    <CarImage src={`../assets/teams-images/${team.imageCar}`} alt={team.name} />
                 </TeamCard>
             ))}
         </GridContainer>

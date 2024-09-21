@@ -119,7 +119,7 @@ export const CadastroStyle = styled.section`
         margin-right: 6vw;
         font-weight: 900;
         background: white;
-        letter-spacing: 2px;
+        letter-spacing: 2.2px;
         font-style: italic;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
     }
