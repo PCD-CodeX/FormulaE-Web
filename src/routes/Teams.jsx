@@ -226,54 +226,66 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-
     background: linear-gradient(220deg, ${(props) => props.color} 10%, #131235ae 100%);
     border-radius: 10px;
-    margin: 20px;
+    margin: 0px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: white;
-    min-width: 16vw;
-    //width: 30vw;
+    min-width: 18vw;
+    overflow: hidden;
     h2{
         display: flex;
         font-size: clamp(12px, 1.2vw, 30px);
         font-weight: bold;
+        padding: 1vw 0.8vw;
+        margin-right: 1vw;
     }
     h3{
         display: flex;
     }
     p{
         display: flex;
+        margin: 1vw 1vw;
         font-size: clamp(12px, 1vw, 30px);
+    }
+    &:hover img {
+        transform: translateX(-30px); /* Move a imagem para a esquerda */
+        transition: transform 0.3s ease-in; /* Transição suave */
     }
 `;
 
 const CarImage = styled.img`
-    width: 400px;
+    width: clamp(300px, 34vw, 660px);
     height: auto;
-    margin-bottom: 10px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     filter: drop-shadow(0 0 10px rgba(88, 88, 88, 0.205));
-    ;
+    object-fit: cover;
+    margin-left: 6vw;
+    transform: translateX(0); /* Posição inicial */
+    transition: transform 0.5s ease; /* Transição suave no retorno */
 `;
 
-const PilotList = styled.ul`
+{/*const PilotList = styled.ul`
+    display: flex;
     list-style-type: none;
     padding: 0;
+    z-index: 1;
 `;
 
 const PilotItem = styled.li`
     display: flex;  
     margin: 5px 0;
-`;
+`;*/}
 
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4vw 16vw;
-    padding: 12vw;
+    gap: 6vw 12vw;
+    padding: 6vw 15vw;
 `;
 const TeamList = () => {
     return (
@@ -284,15 +296,15 @@ const TeamList = () => {
                     <p>Vitórias: {team.wins}</p>
                     <p>Pódios: {team.podiums}</p>
                     <p>Corridas: {team.races}</p>
-                    <h3>Pilotos:</h3>
-                    <PilotList>
+                    {/*<h3>Pilotos:</h3>*/}
+                    {/*<PilotList>
                         {team.pilots.map((pilot, i) => (
                             <PilotItem key={i}>
                                 #{pilot.number} {pilot.name} {pilot.lastName}
                             </PilotItem>
                         ))}
-                    <CarImage src={`/teams-images/${team.imageCar}`} alt={team.name} />
-                    </PilotList>
+                        </PilotList>*/}
+                        <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} />
                 </TeamCard>
             ))}
         </GridContainer>
