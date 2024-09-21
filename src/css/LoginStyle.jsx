@@ -25,7 +25,7 @@ export const LoginStyle = styled.section`
         align-items: flex-start;
         position: relative;
         background: linear-gradient(350deg,#f0f0f0,#ffffff); //muda a cor do lado esquerdo da tela
-        margin-top: -8vw;
+        margin-top: -6vw;
         padding-top: 6vw;
         border-radius: 1em;
         font-weight: 700;
@@ -36,7 +36,7 @@ export const LoginStyle = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -6vw;
+        margin-top: -6vw; //mexe com a altura do lado direito
         background: linear-gradient(330deg, var(--color1) 30%, var(--color2) 100%);
         box-shadow: 0.4vw 0.4vw 0.4vw rgba(88, 88, 88, 0.3);
         border-top-right-radius: 2vh;

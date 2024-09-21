@@ -226,7 +226,7 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    background: linear-gradient(220deg, ${(props) => props.color} 10%, #131235ae 100%);
+    background: linear-gradient(220deg, ${(props) => props.color} 10%, #131235ae 100%); // pega a cor da equipe e faz um gradiante
     border-radius: 10px;
     margin: 0px;
     padding: 20px;
@@ -234,10 +234,10 @@ const TeamCard = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     color: white;
     min-width: 18vw;
-    overflow: hidden;
+    overflow: hidden; // Esconde a imagem que ultrapassa o tamanho do card
     h2{
         display: flex;
-        font-size: clamp(12px, 1.2vw, 30px);
+        font-size: clamp(12px, 1.2vw, 30px); // Tamanho da fonte
         font-weight: bold;
         padding: 1vw 0.8vw;
         margin-right: 1vw;
@@ -261,7 +261,7 @@ const TeamCard = styled.div`
 `;
 
 const CarImage = styled.img`
-    width: clamp(300px, 34vw, 660px);
+    width: clamp(300px, 34vw, 660px); // Tamanho da imagem
     height: auto;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -286,38 +286,37 @@ const PilotItem = styled.li`
 
 // Estilo para o grid layout
 const GridContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 6vw 16vw;
-    padding: 6vw 12vw;
+    display: grid; // Exibe os cards em grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
+    gap: 6vw 16vw; // Espaçamento entre os cards
+    padding: 6vw 12vw; // Espaçamento interno (topo e laterais)
 `;
 const TeamList = () => {
     return (
         <GridContainer>
             {teams.map((team, index) => (
-                <TeamCard key={index} color={team.colorMain}>
-                    <h2 className='team'>{team.name}</h2>
+                <TeamCard key={index} color={team.colorMain}> {/* a funcao 'map' percorre o array da const Teams e retorna um card para cada equipe */}
+                    <h2 className='team'>{team.name}</h2> {/* Pega o nome da equipe pelo index definido acima, index nada mais é doq a posição das equipes naquela lista Teams*/}
                     <p>
                         <i className="fi fi-bs-trophy"></i>
-                        Vitórias: {team.wins}
+                        Vitórias: {team.wins}  {/* Pega o número de vitórias da equipe pelo array definido */}
                     </p>
                     <p>
                         <i className="fi fi-bs-chart-simple"></i>
-                        Pódios: {team.podiums}
+                        Pódios: {team.podiums} {/* Pega o número de pódios da equipe pelo array definido */}
                     </p>
                     <p>
                         <i className="fi fi-bs-flag-checkered"></i>
-                            Corridas: {team.races}
+                            Corridas: {team.races} {/* Pega o número de corridas da equipe pelo array definido */}
                     </p>
-                    {/*<h3>Pilotos:</h3>*/}
-                    {/*<PilotList>
-                        {team.pilots.map((pilot, i) => (
-                            <PilotItem key={i}>
-                                #{pilot.number} {pilot.name} {pilot.lastName}
-                            </PilotItem>
-                        ))}
-                        </PilotList>*/}
-                        <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} />
+                    {/*
+                    
+                    
+                    <-----OPTEI POR NAO COLOCAR OS PILOTOS, PARA TRAZER UM DESIGN MAIS LIMPO E OBJETIVO---->
+                    
+
+                    */}
+                        <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} /> {/* Pega a imagem do carro da equipe pelo array definido */}
                 </TeamCard>
             ))}
         </GridContainer>
