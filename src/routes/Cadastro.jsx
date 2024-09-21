@@ -1,5 +1,9 @@
 import { CadastroStyle } from "../css/CadastroStyle";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
+import lastFrameImage from "../assets/logos/last-formulaefia.png";
+import googleIcon from "../assets/logos/google-icon.png"; // Ícone do Google
+import facebookIcon from "../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
+import myGif from "../assets/logos/formulae-logo-completa.gif"
 import axios from "axios";
 //import googleIcon from "../assets/logos/google-icon.png";  // Ícone do Google
 //import facebookIcon from "../assets/logos/facebook-icon.png";  // Ícone de outra plataforma
@@ -34,6 +38,22 @@ const Cadastro = () => {
 
   // --------------< GIF >-------------- //
 
+  const [showGif, setShowGif] = useState(true);
+  const [showLastFrame, setShowLastFrame] = useState(false);
+
+  useEffect(() => {
+    // Ajuste a duração conforme o tempo do GIF
+    const gifDuration = 4600;
+    const timer = setTimeout(() => {
+      setShowGif(false); // Oculta o GIF
+      setShowLastFrame(true); // Exibe o último frame
+    }, gifDuration);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <CadastroStyle>
       <div className="content">
@@ -41,13 +61,15 @@ const Cadastro = () => {
             {" "}
             {/* Submit os valores de name, email e password */}
             <div className="login">
-              <h1>Cadastre-se</h1>
+              <h1>
+                Cadastre-se
+              </h1>
               <div className="input-container">
                 <label>Nome:</label>
                 <input
                   type="text"
                   id="name"
-                  placeholder="Your name"
+                  placeholder="Seu nome"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -59,7 +81,7 @@ const Cadastro = () => {
                 <input
                   type="email"
                   id="email"
-                  placeholder="Youremail@gmail.com"
+                  placeholder="Formulae@gmail.com"
                   autoComplete="off"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -72,7 +94,7 @@ const Cadastro = () => {
                 <input
                   id="password"
                   type="password"
-                  placeholder="Your password"
+                  placeholder="Senha"
                   title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
                   value={password}
@@ -90,6 +112,35 @@ const Cadastro = () => {
               </button>
             </div>
           </form>
+          <div className="gif-container">
+              <h1>Bem-Vindo</h1>
+            <div className="animation">
+              {showGif && (
+                <img
+                  src={myGif}
+                  className="gif"
+                  style={{ display: showGif ? "block" : "none" }}
+                />
+              )}
+              {showLastFrame && (
+                <img
+                  src={lastFrameImage}
+                  className="imagem-final"
+                  style={{ display: showLastFrame ? "block" : "none" }}
+                />
+              )}
+            </div>
+            <div className="social-login">
+              <button className="google-button">
+                <img src={googleIcon} alt="Google logo" />
+                Conecte-se com o Google
+              </button>
+              <button className="other-button">
+                <img src={facebookIcon} alt="Other platform logo" />
+                Conecte-se com o Facebook 
+              </button>
+          </div>
+      </div>
       </div>
     </CadastroStyle>
   );

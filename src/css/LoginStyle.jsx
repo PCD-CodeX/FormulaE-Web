@@ -24,7 +24,7 @@ export const LoginStyle = styled.section`
         justify-content: center;
         align-items: flex-start;
         position: relative;
-        background: linear-gradient(350deg,#f0f0f0,#ffffff); ;
+        background: linear-gradient(350deg,#f0f0f0,#ffffff); //muda a cor do lado esquerdo da tela
         margin-top: -8vw;
         padding-top: 6vw;
         border-radius: 1em;
@@ -37,7 +37,7 @@ export const LoginStyle = styled.section`
         justify-content: center;
         align-items: center;
         margin-top: -6vw;
-        background: linear-gradient(330deg, var(--color1) 40%, var(--color2) 100%);
+        background: linear-gradient(330deg, var(--color1) 30%, var(--color2) 100%);
         box-shadow: 0.4vw 0.4vw 0.4vw rgba(88, 88, 88, 0.3);
         border-top-right-radius: 2vh;
         border-bottom-right-radius: 2vh;
@@ -76,7 +76,7 @@ export const LoginStyle = styled.section`
 
     label {
         margin-bottom: 0.5rem;
-        font-size: clampclamp(8px, 0.9vw, 16px);;
+        font-size: clamp(8px, 0.9vw, 16px);;
         font-weight: 900;
         letter-spacing: 3px;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
@@ -132,7 +132,7 @@ export const LoginStyle = styled.section`
         width: clamp(200px, 30vw, 540px);
         height: clamp(100px, 16.6vw, 310px);
         z-index: 1;
-        margin: 4vw 0vw; //ajusta a altura do lado esquerdo inteiro
+        margin: 3vw 0vw; //ajusta a altura do lado esquerdo inteiro
         filter: drop-shadow(0 0 0.5rem rgba(146, 146, 146, 0.4));
         background-image: mix-blend-mode;
     }
@@ -167,7 +167,7 @@ export const LoginStyle = styled.section`
         flex-direction: column;
         align-items: center;
         position: absolute;
-        margin-top: 16vw; //ajusta a altura dos botoes
+        margin-top: 30vh;//ajusta a altura dos botoes
         gap: 4vh;
     }
 
@@ -181,7 +181,7 @@ export const LoginStyle = styled.section`
         width: 18vw;
         border: none;
         border-radius: 0.8vw;
-        font-size: clamp(8px, 0.9vw, 16px);
+        font-size: clamp(6px, 0.9vw, 16px);
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -210,8 +210,8 @@ export const LoginStyle = styled.section`
 
     .google-button img,
     .other-button img {
-        width: clamp(1vh,20px,3hv);
-        height: clamp(1vh,20px,3vh);
+        width: clamp(0.2vh,20px,3hv);
+        height: clamp(0.2vh,20px,3vh);
     }
 
     //media query para ajustar o layout para telas menores
@@ -225,11 +225,12 @@ export const LoginStyle = styled.section`
             background: linear-gradient(0deg,#ffffff,#ffffff); ;
         }
         .form {
-            margin-top: -4vw;
+            margin-top: clamp(-200px,-30vh,600px);
             border-top-left-radius: 2vh;
             border-bottom-left-radius: 2vh;
         }
         .input-container {
+            z-index: 10;
             margin-top: 1vw;
         }
         //sera feito com position absolute pois o gif esta muito grande, dai fica mal identado
@@ -240,13 +241,14 @@ export const LoginStyle = styled.section`
         }
         .gif-container h1{
             margin-bottom: clamp(200px,22vw,300px);
+            display: none;
+        }
+        .gif-container .animation{
+            display: none;
         }
         .gif-container .social-login {
-            margin-top: clamp(770px,92vw,1200px);
+            margin-top: clamp(330px,52vw,1200px);
         }  
-        .gif .imagem-final {
-            margin-bottom: 2vw;
-        }
         .login{
             padding: 2.8rem clamp(20px, 3rem, 50px);
         }
@@ -257,7 +259,12 @@ export const LoginStyle = styled.section`
         .other-button {
             padding: 1vw;
             width: clamp(90px,16vh,200px);
-            margin-right: clamp(20px,8vw,0px);
+            margin-right: clamp(0px,6vw,80px);
         }
+        .google-button img,
+        .other-button img {
+        width: clamp(0.2vh,20px,3vh);
+        height: clamp(0.2vh,20px,3vh);
+    }
     }
 `

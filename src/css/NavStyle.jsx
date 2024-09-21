@@ -18,14 +18,14 @@ width: 100%;
     align-items: center;
     justify-content: center; /* Mantém os itens distribuídos horizontalmente */
     font-size: clamp(10px, 0.4vw, 20px);
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
 .logo {
     width: clamp(100px, 14vw, 240px); /* Mantém a logo flexível */
     margin-right: clamp(8px, 10vw, 200px);
-    margin-bottom: 1vh;
+    margin-bottom: 0vh;
 }
 .link{
     display: flex;

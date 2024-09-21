@@ -58,29 +58,31 @@ const Login = () => {
     <LoginStyle>
       <div className="content">
         <div className="gif-container">
-          <h1>Welcome Back</h1>
-          {showGif && (
-            <img
-              src={myGif}
-              className="gif"
-              style={{ display: showGif ? "block" : "none" }}
-            />
-          )}
-          {showLastFrame && (
-            <img
-              src={lastFrameImage}
-              className="imagem-final"
-              style={{ display: showLastFrame ? "block" : "none" }}
-            />
-          )}
+            <h1>Bem-Vindo</h1>
+          <div className="animation">
+            {showGif && (
+              <img
+                src={myGif}
+                className="gif"
+                style={{ display: showGif ? "block" : "none" }}
+              />
+            )}
+            {showLastFrame && (
+              <img
+                src={lastFrameImage}
+                className="imagem-final"
+                style={{ display: showLastFrame ? "block" : "none" }}
+              />
+            )}
+          </div>
           <div className="social-login">
             <button className="google-button">
               <img src={googleIcon} alt="Google logo" />
-              Login with Google
+              Login com Google
             </button>
             <button className="other-button">
               <img src={facebookIcon} alt="Other platform logo" />
-              Login with Facebook
+              Login com Facebook
             </button>
           </div>
         </div>
@@ -93,7 +95,7 @@ const Login = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Youremail@gmail.com"
+                placeholder="Formulae@gmail.com"
                 autoComplete="off"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -107,7 +109,7 @@ const Login = () => {
                 id="password"
                 type="password"
                 name="password"
-                placeholder="Your password"
+                placeholder="Senha"
                 title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                 pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
                 required
