@@ -226,6 +226,7 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
+    display: flex;
     background-color: ${(props) => props.color};
     border-radius: 10px;
     margin: 20px;
@@ -233,11 +234,16 @@ const TeamCard = styled.div`
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: white;
-`;
+    .team{
+        font-size: 2rem;
+        margin: 0;
+    }
+`;  
 
 const CarImage = styled.img`
-    width: 100px;
-    height: auto;
+    //280x70
+    width: 560px;
+    height: 140px;
     margin-bottom: 10px;
 `;
 
@@ -246,14 +252,14 @@ const PilotList = styled.ul`
     padding: 0;
 `;
 
-const PilotItem = styled.li`
-    margin: 5px 0;
+const PilotItem = styled.li`   
+    margin: 10px 0;
 `;
 
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 2vw;
     padding: 20px;
 `;
@@ -263,8 +269,7 @@ const TeamList = () => {
         <GridContainer>
             {teams.map((team, index) => (
                 <TeamCard key={index} color={team.colorMain}>
-                    <h2>{team.name}</h2>
-                    <CarImage src={`/images/${team.imageCar}`} alt={team.name} />
+                        <h2 className='team'>{team.name}</h2>
                     <p>Vitórias: {team.wins}</p>
                     <p>Pódios: {team.podiums}</p>
                     <p>Corridas: {team.races}</p>
@@ -276,6 +281,7 @@ const TeamList = () => {
                             </PilotItem>
                         ))}
                     </PilotList>
+                    <CarImage src={`/images/${team.imageCar}`} alt={team.name} />
                 </TeamCard>
             ))}
         </GridContainer>
