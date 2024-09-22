@@ -63,7 +63,7 @@ const teams = [
     },
     {
         name: 'Avalanche Andretti Formula E',
-        colorMain: '#e22f2f99',
+        colorMain: '#af13137b',
         imageCar: 'andretti.png',
         wins: 11,
         podiums: 37,
@@ -123,7 +123,7 @@ const teams = [
     },
     {
         name: 'ERT Formula E Team',
-        colorMain: '#34363ace',
+        colorMain: '#262627df',
         imageCar: 'ert.png',
         wins: 2,
         podiums: 6,
@@ -143,7 +143,7 @@ const teams = [
     },
     {
         name: 'Jaguar TCS Racing',
-        colorMain: '#000000ae',
+        colorMain: '#868585ac',
         imageCar: 'jaguar.png',
         wins: 16,
         podiums: 46,
@@ -203,7 +203,7 @@ const teams = [
     },
     {
         name: 'Envision Racing',
-        colorMain: '#0ecf3563',
+        colorMain: '#0f962a61',
         imageCar: 'envision.png',
         wins: 16,
         podiums: 53,
@@ -226,7 +226,7 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    background: linear-gradient(220deg, ${(props) => props.color} 10%, #131235ae 100%); // pega a cor da equipe e faz um gradiante
+    background: linear-gradient(120deg, ${(props) => props.color} 20%, #ffffffad 100%); // pega a cor da equipe e faz um gradiante
     border-radius: 10px;
     margin: 0px;
     padding: 20px;
@@ -256,7 +256,6 @@ const TeamCard = styled.div`
     }
     &:hover img {
         transform: translateX(-30px); /* Move a imagem para a esquerda */
-        transition: transform 0.3s ease-in; /* Transição suave */
     }
 `;
 
@@ -269,20 +268,8 @@ const CarImage = styled.img`
     object-fit: cover;
     margin-left: 6vw;
     transform: translateX(0); /* Posição inicial */
-    transition: transform 0.5s ease; /* Transição suave no retorno */
+    transition: transform 0.5s ease-out; /* Transição suave no retorno */
 `;
-
-{/*const PilotList = styled.ul`
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    z-index: 1;
-`;
-
-const PilotItem = styled.li`
-    display: flex;  
-    margin: 5px 0;
-`;*/}
 
 // Estilo para o grid layout
 const GridContainer = styled.div`
