@@ -2,26 +2,6 @@ import styled from 'styled-components';
 // Exemplo de dados que você forneceu
 const teams = [
     {
-        name: 'Mahindra Racing',
-        colorMain: '#df1e10',
-        imageCar: 'mahindra.png',
-        wins: 5,
-        podiums: 24,
-        races: 131,
-        pilots: [
-            {
-                number: 48,
-                name: 'Edoardo',
-                lastName: 'Mortara'
-            },
-            {
-                number: 21,
-                name: 'Nyck',
-                lastName: 'De Vries'
-            }
-        ]
-    },
-    {
         name: 'TAG Heuer Porsche Formula E Team',
         colorMain: '#880516',
         imageCar: 'porsche.png',
@@ -38,6 +18,26 @@ const teams = [
                 number: 13,
                 name: 'Antonio Felix',
                 lastName: 'Da Costa'
+            }
+        ]
+    },
+    {
+        name: 'Mahindra Racing',
+        colorMain: '#df1e10',
+        imageCar: 'mahindra.png',
+        wins: 5,
+        podiums: 24,
+        races: 131,
+        pilots: [
+            {
+                number: 48,
+                name: 'Edoardo',
+                lastName: 'Mortara'
+            },
+            {
+                number: 21,
+                name: 'Nyck',
+                lastName: 'De Vries'
             }
         ]
     },
@@ -163,7 +163,7 @@ const teams = [
     },
     {
         name: 'Neom McLaren Formula E Team',
-        colorMain: '#ff8000b9',
+        colorMain: '#ff7300b8',
         imageCar: 'mclaren.png',
         wins: 8,
         podiums: 26,
@@ -177,7 +177,7 @@ const teams = [
             {
                 number: 8,
                 name: 'Sam',
-                lastName: 'Bird'
+                lastName: 'Jamie Bird'
             },
         ]
     },
@@ -226,12 +226,12 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    background: linear-gradient(120deg, ${(props) => props.color} 20%, #ffffffad 100%); // pega a cor da equipe e faz um gradiante
+    background: linear-gradient(135deg, ${(props) => props.color} 20%, #ffffff 100%); // pega a cor da equipe e faz um gradiante
     border-radius: 10px;
     margin: 0px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.336);
     color: white;
     min-width: 18vw;
     overflow: hidden; // Esconde a imagem que ultrapassa o tamanho do card
@@ -250,6 +250,7 @@ const TeamCard = styled.div`
         margin: 1vw 1vw;
         font-size: clamp(12px, 1vw, 30px);
         font-style: italic;
+        font-weight: 500;
     }
     i{
         padding-right: 1vw;
@@ -259,12 +260,27 @@ const TeamCard = styled.div`
     }
 `;
 
+const PilotList = styled.ul`
+    display: flex;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    font-size: clamp(12px, 0.8vw, 22px);
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0;
+`;
+
+const PilotItem = styled.li`
+padding: 1vw;
+    margin: 10px 0;
+`;
+
 const CarImage = styled.img`
     width: clamp(300px, 34vw, 660px); // Tamanho da imagem
     height: auto;
-    margin-top: 1vh;
+    margin-top: 6vh;
     margin-bottom: 1vh;
-    filter: drop-shadow(0 0 10px rgba(41, 41, 41, 0.205));
+    filter: drop-shadow(0 0 6px rgba(155, 154, 154, 0.507));
     object-fit: cover;
     margin-left: 6vw;
     transform: translateX(0); /* Posição inicial */
@@ -296,17 +312,18 @@ const TeamList = () => {
                         <i className="fi fi-bs-flag-checkered"></i>
                             Corridas: {team.races} {/* Pega o número de corridas da equipe pelo array definido */}
                     </p>
-                    {/*
-                    
-                    
-                    <-----OPTEI POR NAO COLOCAR OS PILOTOS, PARA TRAZER UM DESIGN MAIS LIMPO E OBJETIVO---->
-                    
-
-                    */}
-                        <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} /> {/* Pega a imagem do carro da equipe pelo array definido */}
+                    <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} /> {/* Pega a imagem do carro da equipe pelo array definido */}
+                    <PilotList>
+                        {team.pilots.map((pilot, i) => (
+                            <PilotItem key={i}>
+                                #{pilot.number} {pilot.name} {pilot.lastName}
+                            </PilotItem>
+                        ))}
+                    </PilotList>
                 </TeamCard>
             ))}
         </GridContainer>
+
     );
 };
 

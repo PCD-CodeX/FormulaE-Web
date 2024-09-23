@@ -11,7 +11,6 @@ export const CadastroStyle = styled.section`
     --opacity:rgba(0, 71, 255, 0.05);
     --clr-neon: hsl(317 100% 54%);
     --clr-neon: hsl(323 21% 16%);
-
 }
     width: 100%;
     margin-top: 22vh; //distancia ate o nav
