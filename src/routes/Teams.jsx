@@ -43,7 +43,7 @@ const teams = [
     },
     {
         name: 'Nissan Formula E Team',
-        colorMain: '#ee6190',
+        colorMain: '#EE6174FF',
         imageCar: 'nissan.png',
         wins: 19,
         podiums: 47,
@@ -63,7 +63,7 @@ const teams = [
     },
     {
         name: 'Avalanche Andretti Formula E',
-        colorMain: '#af13137b',
+        colorMain: '#E61C1C94',
         imageCar: 'andretti.png',
         wins: 11,
         podiums: 37,
@@ -83,7 +83,7 @@ const teams = [
     },
     {
         name: 'Maserati MSG Racing',
-        colorMain: '#3290dd94',
+        colorMain: '#2088DD94',
         imageCar: 'maserati.png',
         wins: 10,
         podiums: 27,
@@ -163,7 +163,7 @@ const teams = [
     },
     {
         name: 'Neom McLaren Formula E Team',
-        colorMain: '#ff7300b8',
+        colorMain: '#FF7300D8',
         imageCar: 'mclaren.png',
         wins: 8,
         podiums: 26,
@@ -183,7 +183,7 @@ const teams = [
     },
     {
         name: 'DS Penske',
-        colorMain: '#ff990061',
+        colorMain: '#FF990096',
         imageCar: 'ds_penske.png',
         wins: 3,
         podiums: 17,
@@ -226,7 +226,7 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    background: linear-gradient(135deg, ${(props) => props.color} 20%, #ffffff 100%); // pega a cor da equipe e faz um gradiante
+    background: linear-gradient(135deg, ${(props) => props.color} 30%, #172D9173 100%); // pega a cor da equipe e faz um gradiante
     border-radius: 10px;
     margin: 0px;
     padding: 20px;
@@ -280,7 +280,7 @@ const CarImage = styled.img`
     height: auto;
     margin-top: 6vh;
     margin-bottom: 1vh;
-    filter: drop-shadow(0 0 6px rgba(155, 154, 154, 0.507));
+    //filter: drop-shadow(0 0 6px rgba(155, 154, 154, 0.507));
     object-fit: cover;
     margin-left: 6vw;
     transform: translateX(0); /* Posição inicial */
@@ -293,6 +293,7 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
     gap: 6vw 16vw; // Espaçamento entre os cards
     padding: 6vw 12vw; // Espaçamento interno (topo e laterais)
+    background: linear-gradient(120deg, white 10%, #0c0c5c9d 50%);
 `;
 const TeamList = () => {
     return (

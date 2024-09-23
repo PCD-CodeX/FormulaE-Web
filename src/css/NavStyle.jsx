@@ -78,6 +78,7 @@ width: 100%;
     border-radius: 1vw;
     transition: all 0.6s ease;
     opacity: 0.96;
+    overflow: hidden;
     
 }
 

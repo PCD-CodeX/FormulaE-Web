@@ -1,0 +1,4 @@
+
+npm install -g json-server
+json-server --watch users.json --port 8080/users
+pra rodar

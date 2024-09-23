@@ -47,9 +47,9 @@ const Nav =()=>{
                             <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                                 <Link to='/Races'>Corridas</Link>
                             </ul>
-                            <ul className={`menu ${Expandir ? 'expand' : ''}`}>
+                            {/* <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                                 <Link to='/Pilots'>Pilotos</Link>
-                            </ul>
+                            </ul> */}
                             <ul className={`menu ${Expandir ? 'expand' : ''}`}>
                                 <Link to='/Teams'>Equipes</Link>
                             </ul>
