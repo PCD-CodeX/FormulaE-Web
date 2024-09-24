@@ -7,6 +7,7 @@ const tracks = [
     track: 'brazil',
     flagCountry: 'br',
     date: "2024-12-07",
+    link:'https://feverup.com/m/195745?thm=487&thm=',
     round: 1,
   },
   {
@@ -15,6 +16,7 @@ const tracks = [
     track: 'mexico',
     flagCountry: 'mx',
     date: "2025-01-11",
+    link: 'https://www.ticketmaster.com.mx/abb-fia-formula-e-mexico-boletos/artist/2190270',
     round: 2,
   },
   {
@@ -23,6 +25,7 @@ const tracks = [
     track: 'usa',
     flagCountry: 'us',
     date: "2024-10-10",
+    link: 'https://www.fiaformulae.com/en/calendar/register/miami',
     round: 3,
   },
   {
@@ -30,7 +33,8 @@ const tracks = [
     sedePT: "Monaco",
     track: 'monaco',
     flagCountry: 'mc',
-    date: "2024-10-12",
+    date: "2025-04-12",
+    link: 'https://monaco-eprix.com/en/edition/monaco-e-prix-2025/',
     round: 4,
   },
   {
@@ -38,7 +42,8 @@ const tracks = [
     sedePT: "Tokyo",
     track: 'japan',
     flagCountry: 'jp',
-    date: "2024-10-15",
+    date: "2025-10-15",
+    link: 'https://www.fiaformulae.com/en/calendar/register/tokyo',
     round: 5,
   },
   {
@@ -46,7 +51,8 @@ const tracks = [
     sedePT: "Shangai",
     track: 'china',
     flagCountry: 'cn',
-    date: "2024-10-28",
+    date: "2025-05-31",
+    link: 'https://www.fiaformulae.com/en/calendar/register/shanghai',   
     round: 6,
   }
 ];
@@ -63,20 +69,21 @@ const TrackCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(90deg, #1e33ac 20%, var(--color1) 100%); /* Define o gradiente de cor */
+    background: linear-gradient(90deg, var(--color2) 20%, var(--color3) 100%); /* Define o gradiente de cor */
     background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
-    margin: 4vh;
+    margin: 0vh;
     padding: 4vh;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 20vw;
     transition: all 0.3s ease-in;
-    border: 8px solid var(--color2);
+    border: 8px solid #ffffff;
+
+    //numero
     h1{
         display: flex;
         align-items: center;
-        justify-content: center;
-        padding: 2vh 0vh;       
+        justify-content: center;      
         font-size: clamp(14px, 1.8vw, 30px);
         background-color: var(--color1);
         margin-right: clamp(100px,30vh,500px);
@@ -84,10 +91,11 @@ const TrackCard = styled.div`
         border-radius: 4px;
 
     }
+
+    //nome do circuito
     h2 {
         display: flex;
         align-items: center;
-        justify-content: center;
         padding: 2vh;
         border-radius: 4px;
         font-size: clamp(14px, 1.2vw, 26px);
@@ -97,20 +105,28 @@ const TrackCard = styled.div`
         letter-spacing: 3px;
         font-weight: 900;
     }
+
+    //data
     p {
         font-size: clamp(12px, 1.1vw, 20px);
         font-weight: 900;
         margin-bottom: 0.6vh;
     }
+
+    //imagem da pista
     .images{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    //hover do card inteiro
     &:hover {
-        scale: 1.01;
-        animation: gradientMoveHover 5s ease infinite; /* Acelera a animação no hover */
+        //scale: 1.01;
+        animation: gradientMoveHover 4s ease infinite; /* Acelera a animação no hover */
     }
+
+    //animacao do gradiente
     @keyframes gradientMoveHover {
     0% {
         background-position: 0% 50%;
@@ -129,8 +145,9 @@ const FlagImage = styled.img`
     width: clamp(40px,3vw,100px);
     border-radius: 4px;
     height: auto;
-    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 0px 2px rgba(0, 0, 0, 0.6));
     margin-left: 2vw;
+    border: 1px solid #ffffff55;
 `;
 
 
@@ -153,6 +170,33 @@ const GridContainer = styled.div`
     gap: 4vw 12vw;
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
+    background: linear-gradient(270deg, rgb(2, 65, 94) 10%,rgb(5, 119, 172)  100%);
+`;
+
+const Links = styled.a`
+    display: flex;
+    justify-content: center;
+    padding: clamp(6px,1vw,30px);
+    border-radius: 1vw;
+    background-color: var(--opacity);
+    border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
+    font-size: clamp(8px, 1vw, 20px);
+    transition: 0.2s ease;  
+    margin-bottom: 4vh;
+
+    a{
+            font-style: none;
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+    }
+
+    &:hover{
+    background-color: var(--opacity);
+    border: 0.2vw solid var(--color3) ;
+    scale: 1.03;
+}
+    
 `;
 
 const TrackList = () => {
@@ -169,6 +213,11 @@ const TrackList = () => {
                             </h2>
                         <div className="images">
                             <TrackImage src={`/tracks/${track.track}.png`} alt={`Imagem da pista de ${track.sedePT}`} />
+                            <Links>
+                                <a href={track.link} target="_blank" rel="noreferrer">
+                                Comprar Ingressos
+                            </a>
+                            </Links>
                         </div>
                         <p>{new Date(track.date).toLocaleDateString()}</p>
                     </div>
