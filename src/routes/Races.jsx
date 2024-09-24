@@ -63,7 +63,7 @@ const TrackCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(90deg, var(--color2) 20%, var(--color1) 80%); /* Define o gradiente de cor */
+    background: linear-gradient(90deg, var(--color2) 20%, var(--color1) 100%); /* Define o gradiente de cor */
     background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
     margin: 4vh;
     padding: 4vh;
@@ -90,7 +90,7 @@ const TrackCard = styled.div`
     }
     &:hover {
         scale: 1.01;
-        animation: gradientMoveHover 7s ease infinite; /* Acelera a animação no hover */
+        animation: gradientMoveHover 5s ease infinite; /* Acelera a animação no hover */
     }
     @keyframes gradientMoveHover {
     0% {
@@ -111,7 +111,7 @@ const FlagImage = styled.img`
     border-radius: 4px;
     height: auto;
     margin-bottom: 4vh;
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
 `;
 
 
