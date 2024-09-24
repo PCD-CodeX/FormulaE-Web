@@ -130,7 +130,7 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: auto;
     grid-template-rows: repeat(2, 1fr); 
-    gap: 4vw 10vw;
+    gap: 4vw 12vw;
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
 `;
