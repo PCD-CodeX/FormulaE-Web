@@ -11,7 +11,7 @@ const tracks = [
   },
   {
     id: 2,
-    sedePT: "Cidade do Mexico",
+    sedePT: "City of Mexico",   
     track: 'mexico',
     flagCountry: 'mx',
     date: "2025-01-11",
@@ -63,18 +63,37 @@ const TrackCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(90deg, var(--color2) 20%, var(--color1) 100%); /* Define o gradiente de cor */
+    background: linear-gradient(90deg, #1e33ac 20%, var(--color1) 100%); /* Define o gradiente de cor */
     background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
     margin: 4vh;
     padding: 4vh;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 16vw;
+    min-width: 20vw;
     transition: all 0.3s ease-in;
+    border: 8px solid var(--color2);
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh 0vh;       
+        font-size: clamp(14px, 1.8vw, 30px);
+        background-color: var(--color1);
+        margin-right: clamp(100px,30vh,500px);
+        padding: 1vh 2vh;
+        border-radius: 4px;
+
+    }
     h2 {
-        font-size: clamp(14px, 1.5vw, 26px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh;
+        border-radius: 4px;
+        font-size: clamp(14px, 1.2vw, 26px);
         font-weight: bold;
-        margin-bottom: 4vh;
+        margin-bottom: 2vh;
+        margin-top: 2vh;
         letter-spacing: 3px;
         font-weight: 900;
     }
@@ -107,18 +126,19 @@ const TrackCard = styled.div`
 
 // Estilo para as imagens das bandeiras
 const FlagImage = styled.img`
-    width: clamp(40px,4vw,100px);
+    width: clamp(40px,3vw,100px);
     border-radius: 4px;
     height: auto;
-    margin-bottom: 4vh;
     filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
+    margin-left: 2vw;
 `;
 
 
 const TrackImage = styled.img`
     width: 100%;
-    max-width: 300px;
+    width: clamp(200px,20vw,400px);
     height: auto;
+    margin-top: 2vh;
     margin-bottom: 4vh;
     border-radius: 10px;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.4));
@@ -141,13 +161,16 @@ const TrackList = () => {
             {tracks.map((track, index) => (
                 <TrackCard key={index}>
                     <div className="hover">
-                        <h2>{track.sedePT}</h2>
+                            <h1> 
+                                {track.round}
+                            </h1>
+                            <h2>{track.sedePT}
+                            <FlagImage src={`/flags/${track.flagCountry}.svg`} alt={track.sedePT} />
+                            </h2>
                         <div className="images">
                             <TrackImage src={`/tracks/${track.track}.png`} alt={`Imagem da pista de ${track.sedePT}`} />
-                            <FlagImage src={`/flags/${track.flagCountry}.svg`} alt={track.sedePT} />
                         </div>
-                        <p>Rodada: {track.round}</p>
-                        <p>Data: {new Date(track.date).toLocaleDateString()}</p>
+                        <p>{new Date(track.date).toLocaleDateString()}</p>
                     </div>
                 </TrackCard>
             ))}

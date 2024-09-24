@@ -127,7 +127,7 @@ const circuits = [
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(0deg, var(--color1), var(--color2));
+    background: #1e33ac;
     margin: 4vh;
     padding: 4vh;
     text-align: center;
@@ -135,11 +135,14 @@ const circuits = [
     min-width: 16vw;
     transition: all 0.3s ease;
     h2 {
-        font-size: clamp(14px, 1.5vw, 26px);
+        font-size: clamp(14px, 1.2vw, 26px);
         font-weight: bold;
         margin-bottom: 4vh;
         letter-spacing: 3px;
         font-weight: 900;
+        background-color: var(--color1);
+        padding: 2vh;
+        border-radius: 4px;
     }
     .images{
         display: flex;
@@ -167,7 +170,7 @@ const GridContainer = styled.div`
     grid-auto-rows: auto;
     grid-template-rows: repeat(2, 1fr); 
     gap: 4vw 10vw;
-    padding: 4vw 16vw 6vw 16vw;
+    padding: 4vw 14vw 6vw 14vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
 `;
     const CircuitsList = () => {
