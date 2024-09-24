@@ -26,7 +26,7 @@ export const CadastroStyle = styled.section`
         justify-content: center;
         align-items: flex-start;
         position: relative;
-        margin-top:-8vw; //altura do cadastro inteiro
+        margin-top:-6vw; //altura do cadastro inteiro
         margin-left: clamp(30px, 4vw, 8vw);
         margin-right: clamp(30px, 4vw, 8vw);
         padding-top: 6vw;

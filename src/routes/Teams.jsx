@@ -2,7 +2,47 @@ import styled from 'styled-components';
 // Exemplo de dados que você forneceu
 const teams = [
     {
-        name: 'TAG Heuer Porsche Formula E Team',
+        name: 'Maserati MSG Racing',
+        colorMain: '#2088DD94',
+        imageCar: 'maserati.png',
+        wins: 10,
+        podiums: 27,
+        races: 132,
+        pilots: [
+            {
+                number: 18,
+                name: 'Jehan',
+                lastName: 'Daruvala'
+            },
+            {
+                number: 7,
+                name: 'Maximilian',
+                lastName: 'Guenther'
+            }
+        ]
+    },
+    {
+        name: 'ABT CUPRA Formula E Team',
+        colorMain: '#0b3c75c1',
+        imageCar: 'cupra.png',
+        wins: 14,
+        podiums: 47,
+        races: 115,
+        pilots: [
+            {
+                number: 11,
+                name: 'Lucas Di Grassi',
+                lastName: 'Frijns'
+            },
+            {
+                number: 51,
+                name: 'Nico',
+                lastName: 'Mueller'
+            },
+        ]
+    },
+    {
+        name: 'TAG Porsche Formula E Team',
         colorMain: '#880516',
         imageCar: 'porsche.png',
         wins: 12,
@@ -79,46 +119,6 @@ const teams = [
                 name: 'Norman',
                 lastName: 'Nato'
             }
-        ]
-    },
-    {
-        name: 'Maserati MSG Racing',
-        colorMain: '#2088DD94',
-        imageCar: 'maserati.png',
-        wins: 10,
-        podiums: 27,
-        races: 132,
-        pilots: [
-            {
-                number: 18,
-                name: 'Jehan',
-                lastName: 'Daruvala'
-            },
-            {
-                number: 7,
-                name: 'Maximilian',
-                lastName: 'Guenther'
-            }
-        ]
-    },
-    {
-        name: 'ABT CUPRA Formula E Team',
-        colorMain: '#0b3c75c1',
-        imageCar: 'cupra.png',
-        wins: 14,
-        podiums: 47,
-        races: 115,
-        pilots: [
-            {
-                number: 11,
-                name: 'Lucas Di Grassi',
-                lastName: 'Frijns'
-            },
-            {
-                number: 51,
-                name: 'Nico',
-                lastName: 'Mueller'
-            },
         ]
     },
     {
@@ -291,8 +291,8 @@ const CarImage = styled.img`
 const GridContainer = styled.div`
     display: grid; // Exibe os cards em grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
-    gap: 6vw 16vw; // Espaçamento entre os cards
-    padding: 6vw 12vw; // Espaçamento interno (topo e laterais)
+    gap: 6vw 12vw; // Espaçamento entre os cards
+    padding: 6vw 16vw; // Espaçamento interno (topo e laterais)
     background: white
 `;
 const TeamList = () => {

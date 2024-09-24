@@ -54,16 +54,23 @@ const tracks = [
 // Estilo para os cards das pistas
 const TrackCard = styled.div`
     //colors 
-
-    background: var(--color1);
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--color2) 20%, var(--color1) 80%); /* Define o gradiente de cor */
+    background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
     margin: 4vh;
     padding: 4vh;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white;
     min-width: 16vw;
-    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-in;
     h2 {
         font-size: clamp(14px, 1.5vw, 26px);
         font-weight: bold;
@@ -74,6 +81,7 @@ const TrackCard = styled.div`
     p {
         font-size: clamp(12px, 1.1vw, 20px);
         font-weight: 900;
+        margin-bottom: 0.6vh;
     }
     .images{
         display: flex;
@@ -82,7 +90,19 @@ const TrackCard = styled.div`
     }
     &:hover {
         scale: 1.01;
+        animation: gradientMoveHover 7s ease infinite; /* Acelera a animação no hover */
     }
+    @keyframes gradientMoveHover {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 `;
 
 // Estilo para as imagens das bandeiras
@@ -110,8 +130,9 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: auto;
     grid-template-rows: repeat(2, 1fr); 
-    gap: 4vw 12vw;
-    padding: 4vw 16vw;
+    gap: 4vw 10vw;
+    padding: 4vw 16vw 6vw 16vw;
+    filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
 `;
 
 const TrackList = () => {
