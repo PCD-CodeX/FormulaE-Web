@@ -287,44 +287,63 @@ const CarImage = styled.img`
     transition: transform 0.5s ease-out; /* Transição suave no retorno */
 `;
 
+const TituloStyle = styled.div`
+    h2{
+        display: flex;
+        justify-content: center;
+        font-size: clamp(20px, 1.6vw, 36px);
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-weight: 900;
+        background: var(--color2);
+        padding: 2vh;
+        color: white; 
+        margin: 4vh clamp(10px,44vw,1100px);
+        border-radius: 30px;
+    }
+`;
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid; // Exibe os cards em grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
     gap: 6vw 12vw; // Espaçamento entre os cards
-    padding: 6vw 16vw; // Espaçamento interno (topo e laterais)
+    padding: 4vw 16vw; // Espaçamento interno (topo e laterais)
     background: white;
 `;
 const TeamList = () => {
     return (
-        <GridContainer>
-            {teams.map((team, index) => (
-                <TeamCard key={index} color={team.colorMain}> {/* a funcao 'map' percorre o array da const Teams e retorna um card para cada equipe */}
-                    <h2 className='team'>{team.name}</h2> {/* Pega o nome da equipe pelo index definido acima, index nada mais é doq a posição das equipes naquela lista Teams*/}
-                    <p>
-                        <i className="fi fi-bs-trophy"></i>
-                        Vitórias: {team.wins}  {/* Pega o número de vitórias da equipe pelo array definido */}
-                    </p>
-                    <p>
-                        <i className="fi fi-bs-chart-simple"></i>
-                        Pódios: {team.podiums} {/* Pega o número de pódios da equipe pelo array definido */}
-                    </p>
-                    <p>
-                        <i className="fi fi-bs-flag-checkered"></i>
-                            Corridas: {team.races} {/* Pega o número de corridas da equipe pelo array definido */}
-                    </p>
-                    <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} /> {/* Pega a imagem do carro da equipe pelo array definido */}
-                    <PilotList>
-                        {team.pilots.map((pilot, i) => (
-                            <PilotItem key={i}>
-                                #{pilot.number} {pilot.name} {pilot.lastName}
-                            </PilotItem>
-                        ))}
-                    </PilotList>
-                </TeamCard>
-            ))}
-        </GridContainer>
-
+        <>
+            <TituloStyle>
+                <h2>Equipes</h2>
+            </TituloStyle>
+            <GridContainer>
+                {teams.map((team, index) => (
+                    <TeamCard key={index} color={team.colorMain}> {/* a funcao 'map' percorre o array da const Teams e retorna um card para cada equipe */}
+                        <h2 className='team'>{team.name}</h2> {/* Pega o nome da equipe pelo index definido acima, index nada mais é doq a posição das equipes naquela lista Teams*/}
+                        <p>
+                            <i className="fi fi-bs-trophy"></i>
+                            Vitórias: {team.wins}  {/* Pega o número de vitórias da equipe pelo array definido */}
+                        </p>
+                        <p>
+                            <i className="fi fi-bs-chart-simple"></i>
+                            Pódios: {team.podiums} {/* Pega o número de pódios da equipe pelo array definido */}
+                        </p>
+                        <p>
+                            <i className="fi fi-bs-flag-checkered"></i>
+                                Corridas: {team.races} {/* Pega o número de corridas da equipe pelo array definido */}
+                        </p>
+                        <CarImage className='car' src={`/teams-images/${team.imageCar}`} alt={team.name} /> {/* Pega a imagem do carro da equipe pelo array definido */}
+                        <PilotList>
+                            {team.pilots.map((pilot, i) => (
+                                <PilotItem key={i}>
+                                    #{pilot.number} {pilot.name} {pilot.lastName}
+                                </PilotItem>
+                            ))}
+                        </PilotList>
+                    </TeamCard>
+                ))}
+            </GridContainer>
+        </>
     );
 };
 

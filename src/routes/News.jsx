@@ -155,7 +155,7 @@ const CarouselStyle = styled.div`
   }
   h2{
     text-align: center;
-    padding: 1vw 0;
+    padding: 1.4vw 0;
     font-size: clamp(0.8rem, 1.3vw, 2.5rem);
   }
   .carousel {
