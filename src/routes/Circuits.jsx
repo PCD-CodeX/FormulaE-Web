@@ -85,7 +85,7 @@ const GridContainer = styled.div`
 `;
 
 const ContinentContainer = styled.div`
-    background: linear-gradient(90deg, rgb(4, 66, 95) 5%, var(--color1) 100%);
+    //background: linear-gradient(90deg, rgb(4, 66, 95) 5%, var(--color1) 100%);
     padding-top: 10vh; 
 
     .continent{

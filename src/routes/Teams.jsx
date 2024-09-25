@@ -293,7 +293,7 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
     gap: 6vw 12vw; // Espaçamento entre os cards
     padding: 6vw 16vw; // Espaçamento interno (topo e laterais)
-    background: rgb(4, 66, 95);
+    background: white;
 `;
 const TeamList = () => {
     return (

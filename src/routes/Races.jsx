@@ -77,7 +77,7 @@ const TrackCard = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 20vw;
     transition: all 0.3s ease-in;
-    border: 7px solid #ffffff;
+    border: 7px solid #ebebebf0;
 
     //numero
     h1{
@@ -171,7 +171,7 @@ const GridContainer = styled.div`
     gap: 4vw 12vw;
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
-    background: rgb(4, 66, 95);
+    background: white;
 `;
 
 const Links = styled.a`

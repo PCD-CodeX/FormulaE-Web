@@ -6,7 +6,7 @@ const carouselNews = [
   {
     id: 1,
     title: "Nova temporada da Fórmula E está para começar",
-    image: "https://i.ytimg.com/vi/UpHyUsgqcXU/maxresdefault.jpg",
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*J-xFM5IGIsRwBvpDXbqjJQ.png",
     description:
       "A nova temporada promete muita emoção com novas equipes e pilotos entrando na disputa.",
   },
@@ -108,7 +108,7 @@ const PageContainer = styled.div`
 // Coluna principal (70% da largura da tela)
 const LeftColumn = styled.div`
   width: 70%;
-  padding-right: 20px;
+  padding-right: 2vh;
 `;
 
 // Coluna adicional de notícias (30% da largura da tela)
@@ -116,7 +116,25 @@ const RightColumn = styled.div`
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  gap: 40px;
+  padding-left: 3vw;
+  border-left: 3px solid var(--opacity);
+  h2{
+    padding: 1vw 1vh;
+    margin-right: 20vw;
+    border-radius: 8px;
+    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+  }
+  img{
+    width: 100%;
+    aspect-ratio: 5/4;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 // Estilos do carrossel
@@ -126,6 +144,7 @@ const CarouselStyle = styled.div`
     max-width: 60vw; /* Tamanho máximo para telas maiores */
     height: 24vw;
     margin: auto;
+    margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -134,7 +153,11 @@ const CarouselStyle = styled.div`
     border-radius: 8px;
     border: 4px solid var(--opacity);
   }
-
+  h2{
+    text-align: center;
+    padding: 1vw 0;
+    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+  }
   .carousel {
     width: 100%;
     height: 85%;
@@ -248,6 +271,13 @@ const NewsContainer = styled.div`
   justify-content: center;
   gap: 20px;
   padding: 20px;
+
+  h2{
+    text-align: center;
+    padding: 1vw 0;
+    width: 100%;
+    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+  }
 `;
 
 const NewsCard = styled.div`
@@ -256,6 +286,9 @@ const NewsCard = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   padding: 20px;
+  margin-bottom: 7vh;
+  margin-left: 2vw;
+  
 `;
 
 const NewsImage = styled.img`
@@ -268,30 +301,33 @@ const NewsImage = styled.img`
 
 const NewsTitle = styled.h3`
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1vw, 2rem);
 `;
 
 const NewsDescription = styled.p`
-  font-size: 1rem;
+  padding-top: 10px;
+  font-size: clamp(0.6rem, 0.8vw, 1.2rem);
   color: #555;
 `;
 
 const RightNewsCard = styled.div`
   background: #f4f4f4;
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+
 `;
 
 const RightNewsTitle = styled.h4`
-  font-size: 1.2rem;
+  font-size: clamp(0.5rem, 1vw, 2rem);
   color: #333;
   margin-bottom: 10px;
 `;
 
 const RightNewsDescription = styled.p`
-  font-size: 1rem;
-  color: #666;
+  font-size: clamp(0.4rem, 0.8vw, 1.2rem);
+  color: var(--color2);
 `;
 
 const NewsPage = () => {
@@ -319,6 +355,7 @@ const NewsPage = () => {
       <LeftColumn>
         {/* Carrossel de Notícias */}
         <CarouselStyle>
+          <h2>Destaques</h2>
           <div className="carousel-container">
             <div
               className={`carousel ${fade ? "fade-in" : "fade-out"}`}
@@ -326,7 +363,7 @@ const NewsPage = () => {
                 backgroundImage: `url(${carouselNews[currentIndex].image})`,
               }}
             >
-              <div className="overlay"></div>{" "}
+              <div className="overlay"></div>
               {/* Filtro escuro sobre a imagem */}
               <div className="carousel-content">
                 <h2>{carouselNews[currentIndex].title}</h2>
@@ -349,6 +386,7 @@ const NewsPage = () => {
 
         {/* Lista de Notícias (lado esquerdo) */}
         <NewsContainer>
+          <h2>Novas Notícias</h2>
           {newsList.map((news) => (
             <NewsCard key={news.id}>
               <NewsImage src={news.image} alt={news.title} />
@@ -361,12 +399,18 @@ const NewsPage = () => {
 
       {/* Coluna da direita (30%) */}
       <RightColumn>
+        <h2>Novidades</h2>
         {additionalNews.map((news) => (
           <RightNewsCard key={news.id}>
             <RightNewsTitle>{news.title}</RightNewsTitle>
             <RightNewsDescription>{news.description}</RightNewsDescription>
           </RightNewsCard>
         ))}
+        <div className="publi">
+          <div className="overlay"></div>
+          <h2>Publicidade</h2>
+          <img src="https://resources.formula-e.pulselive.com/photo-resources/2024/05/12/62fd5f20-67a2-4743-85a1-614aaccfd322/1020172190-LAT-20240512-EPS1010_145458DSC_6253-1-.jpg?width=544&height=308" alt="Publicidade" />
+        </div>
       </RightColumn>
     </PageContainer>
   );
