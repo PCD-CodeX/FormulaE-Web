@@ -226,7 +226,7 @@ const teams = [
 
 // Componente de estilo para o Card
 const TeamCard = styled.div`
-    background: linear-gradient(135deg, ${(props) => props.color} 30%, #172D9173 100%); // pega a cor da equipe e faz um gradiante
+    background: linear-gradient(135deg, ${(props) => props.color} 30%, #ffffff 100%); // pega a cor da equipe e faz um gradiante
     border-radius: 10px;
     margin: 0px;
     padding: 20px;
@@ -293,7 +293,7 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
     gap: 6vw 12vw; // Espaçamento entre os cards
     padding: 6vw 16vw; // Espaçamento interno (topo e laterais)
-    background: white
+    background: linear-gradient(270deg, rgb(4, 175, 255) 30%, white 100%);
 `;
 const TeamList = () => {
     return (

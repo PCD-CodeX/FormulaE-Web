@@ -39,7 +39,7 @@ const CircuitCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: var(--color1);
+    background: linear-gradient(125deg, rgb(4, 175, 255) 60%, white 100%);
     margin: 4vh;
     padding: 4vh;
     text-align: center;
@@ -52,7 +52,6 @@ const CircuitCard = styled.div`
     margin-bottom: 4vh;
     letter-spacing: 3px;
     font-weight: 900;
-    background-color: var(--color1);
     padding: 2vh;
     border-radius: 4px;
     }
@@ -86,8 +85,9 @@ const GridContainer = styled.div`
 `;
 
 const ContinentContainer = styled.div`
-    background: linear-gradient(270deg, rgb(4, 175, 255) 30%, white 100%);
-    padding-top: 10vh;  
+    background: linear-gradient(270deg, rgb(4, 93, 134) 30%, white 100%);
+    padding-top: 10vh; 
+
     .continent{
     display: flex;
     justify-content: center;
@@ -96,11 +96,11 @@ const ContinentContainer = styled.div`
     margin-bottom: 4vh;
     letter-spacing: 3px;
     font-weight: 900;
-    background-color: var(--color1);
+    background: var(--color2);
     padding: 2vh;
-    color: white;
-    margin: 0vh 40vw;
-    border-radius: 20px;
+    color: white; 
+    margin: 0vh clamp(10px,40vw,1100px);
+    border-radius: 30px;
     }
 `;
 

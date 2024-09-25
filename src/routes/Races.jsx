@@ -69,7 +69,7 @@ const TrackCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(90deg, var(--color2) 20%, var(--color3) 100%); /* Define o gradiente de cor */
+    background: linear-gradient(90deg, rgba(1, 97, 141, 0.582) 20%, var(--color3) 100%); /* Define o gradiente de cor */
     background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
     margin: 0vh;
     padding: 4vh;
@@ -84,10 +84,10 @@ const TrackCard = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;      
-        font-size: clamp(14px, 1.8vw, 30px);
+        font-size: clamp(14px, 2vw, 30px);
         background-color: var(--color1);
         margin-right: clamp(100px,30vh,500px);
-        padding: 1vh 2vh;
+        padding: 2vh;
         border-radius: 4px;
 
     }
@@ -108,7 +108,7 @@ const TrackCard = styled.div`
 
     //data
     p {
-        font-size: clamp(12px, 1.1vw, 20px);
+        font-size: clamp(12px, 1vw, 20px);
         font-weight: 900;
         margin-bottom: 0.6vh;
     }
@@ -123,7 +123,7 @@ const TrackCard = styled.div`
     //hover do card inteiro
     &:hover {
         //scale: 1.01;
-        animation: gradientMoveHover 4s ease infinite; /* Acelera a animação no hover */
+        animation: gradientMoveHover 5s ease infinite; /* Acelera a animação no hover */
     }
 
     //animacao do gradiente
@@ -170,7 +170,7 @@ const GridContainer = styled.div`
     gap: 4vw 12vw;
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
-    background: linear-gradient(270deg, rgb(2, 65, 94) 10%,rgb(5, 119, 172)  100%);
+    background: linear-gradient(270deg, rgb(4, 93, 134) 30%, white 100%);
 `;
 
 const Links = styled.a`
@@ -180,13 +180,12 @@ const Links = styled.a`
     border-radius: 1vw;
     background-color: var(--opacity);
     border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
-    font-size: clamp(8px, 1vw, 20px);
+    font-size: clamp(8px, 0.9vw, 20px);
     transition: 0.2s ease;  
     margin-bottom: 4vh;
-
+    font-style: none;
+    text-decoration: none;
     a{
-            font-style: none;
-            text-decoration: none;
             color: white;
             font-weight: 800;
     }
@@ -213,8 +212,8 @@ const TrackList = () => {
                             </h2>
                         <div className="images">
                             <TrackImage src={`/tracks/${track.track}.png`} alt={`Imagem da pista de ${track.sedePT}`} />
-                            <Links>
-                                <a href={track.link} target="_blank" rel="noreferrer">
+                            <Links href={track.link}>
+                            <a>
                                 Comprar Ingressos
                             </a>
                             </Links>
