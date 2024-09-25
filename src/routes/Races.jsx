@@ -85,10 +85,11 @@ const TrackCard = styled.div`
         align-items: center;
         justify-content: center;      
         font-size: clamp(14px, 2vw, 30px);
-        background-color: #19187e;
+        background-color: rgba(10, 35, 97, 0.2);
         margin-right: clamp(100px,30vh,500px);
         padding: 2vh;
-        border-radius: 6px;
+        border-radius: 10px;
+        border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
 
     }
 
