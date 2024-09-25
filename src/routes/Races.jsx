@@ -77,7 +77,7 @@ const TrackCard = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 20vw;
     transition: all 0.3s ease-in;
-    border: 8px solid #ffffff;
+    border: 7px solid #ffffff;
 
     //numero
     h1{
