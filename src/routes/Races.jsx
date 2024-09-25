@@ -69,7 +69,7 @@ const TrackCard = styled.div`
     color: white;
     font-size: 24px;
     text-align: center;
-    background: linear-gradient(90deg, rgba(1, 97, 141, 0.582) 20%, var(--color3) 100%); /* Define o gradiente de cor */
+    background: linear-gradient(90deg, rgba(4, 127, 184, 0.582) 20%, var(--color3) 100%); /* Define o gradiente de cor */
     background-size: 400% 400%; /* Define o tamanho do gradiente para permitir movimento */
     margin: 0vh;
     padding: 4vh;
@@ -85,10 +85,10 @@ const TrackCard = styled.div`
         align-items: center;
         justify-content: center;      
         font-size: clamp(14px, 2vw, 30px);
-        background-color: var(--color1);
+        background-color: #19187e;
         margin-right: clamp(100px,30vh,500px);
         padding: 2vh;
-        border-radius: 4px;
+        border-radius: 6px;
 
     }
 
@@ -170,7 +170,7 @@ const GridContainer = styled.div`
     gap: 4vw 12vw;
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
-    background: linear-gradient(270deg, rgb(4, 93, 134) 30%, white 100%);
+    background: rgb(4, 66, 95);
 `;
 
 const Links = styled.a`
