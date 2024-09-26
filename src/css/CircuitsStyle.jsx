@@ -63,6 +63,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  filter: brightness(0.9);
 }
 
 .back-info {

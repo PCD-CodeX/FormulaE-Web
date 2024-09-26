@@ -22,3 +22,6 @@
     --color4:#00ffff;
     --opacity:rgba(0, 71, 255, 0.05)
 }
+html {
+    scroll-behavior: smooth;
+  }
