@@ -16,6 +16,7 @@ export const LiveStyle = styled.section`
   background-color: var(--opacity);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color1);
+  padding-top: 6vh;
   padding-bottom: 10vh;
 }
 
@@ -100,6 +101,7 @@ export const LiveStyle = styled.section`
   flex-direction: column;
   gap: 20px;
   width: 30%;
+  margin-right: 20px;
 }
 
 /* Card das condições da pista */
@@ -209,7 +211,7 @@ export const LiveStyle = styled.section`
 
 .circuit-info h2 {
   font-size: clamp(0.8rem, 1.4vw, 2rem);
-  color: var(--color1);
+  color: var(--color2);
   margin-bottom: 15px;
 }
 
