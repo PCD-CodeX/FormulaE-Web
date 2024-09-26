@@ -16,11 +16,13 @@ export const LiveStyle = styled.section`
   background-color: var(--opacity);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color1);
+  padding-bottom: 10vh;
 }
 
 .lives-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
+  margin-top: 2vh;
 }
 
 .lives-header h1 {
@@ -44,7 +46,7 @@ export const LiveStyle = styled.section`
 .live-videos {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   width: 65%;
 }
 
@@ -194,7 +196,10 @@ export const LiveStyle = styled.section`
 }
 
 /* Informações do circuito */
+
 .circuit-info {
+  width: 100%;
+  min-width: 300px;
   margin-top: 30px;
   padding: 20px;
   background-color: var(--color-white);
@@ -203,16 +208,21 @@ export const LiveStyle = styled.section`
 }
 
 .circuit-info h2 {
-  font-size: 2rem;
+  font-size: clamp(0.8rem, 1.4vw, 2rem);
   color: var(--color1);
   margin-bottom: 15px;
 }
 
 .circuit-info p {
-  font-size: 1.1rem;
+  padding: 10px;
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
   color: var(--color2);
 }
-
+.circuit-info img{
+    width: 100%;
+    aspect-ratio: 6/4;
+    border-radius: 10px;
+}
 @media (max-width: 768px) {
   .live-content {
     flex-direction: column;

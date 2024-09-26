@@ -20,14 +20,13 @@ const LivesPage = () => {
     },
   ];
 
-  
   const [trackConditions, setTrackConditions] = useState({
     temperature: 28,
-    humidity: 60
+    humidity: 60,
   });
 
   // Dados fictícios de ranking dos pilotos
-    const [driverRankings] = useState([
+  const [driverRankings] = useState([
     { position: 1, driver: "Lucas di Grassi", team: "Mahindra Racing" },
     { position: 2, driver: "Jean-Éric Vergne", team: "DS Techeetah" },
     { position: 3, driver: "Stoffel Vandoorne", team: "Mercedes-Benz EQ" },
@@ -42,7 +41,7 @@ const LivesPage = () => {
 
       setTrackConditions({
         temperature: newTemperature,
-        humidity: newHumidity
+        humidity: newHumidity,
       });
     }, 10000);
 
@@ -116,22 +115,24 @@ const LivesPage = () => {
                 ))}
               </ul>
             </div>
+            
+            {/* Texto sobre o circuito de Mônaco */}
+            <div className="circuit-info">
+              <h2>Sobre o Circuito de Mônaco</h2>
+              <img src={`/public/tracks/monaco.png`} alt="" />
+              <p>
+                O Circuito de Mônaco é um dos mais tradicionais e icônicos
+                traçados do automobilismo mundial. Situado nas ruas de Monte
+                Carlo, é famoso por suas curvas desafiadoras e a proximidade das
+                barreiras. A pista é estreita, com subidas e descidas
+                acentuadas, tornando as ultrapassagens extremamente difíceis e
+                exigindo muita habilidade dos pilotos. Durante a corrida, a
+                temperatura e a umidade podem variar significativamente,
+                afetando o desempenho dos pneus e a aderência na pista. É um
+                verdadeiro teste para os pilotos, equipes e máquinas!
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Texto sobre o circuito de Mônaco */}
-        <div className="circuit-info">
-          <h2>Sobre o Circuito de Mônaco</h2>
-          <p>
-            O Circuito de Mônaco é um dos mais tradicionais e icônicos traçados
-            do automobilismo mundial. Situado nas ruas de Monte Carlo, é famoso
-            por suas curvas desafiadoras e a proximidade das barreiras. A pista
-            é estreita, com subidas e descidas acentuadas, tornando as
-            ultrapassagens extremamente difíceis e exigindo muita habilidade dos
-            pilotos. Durante a corrida, a temperatura e a umidade podem variar
-            significativamente, afetando o desempenho dos pneus e a aderência na
-            pista. É um verdadeiro teste para os pilotos, equipes e máquinas!
-          </p>
         </div>
       </div>
     </LiveStyle>
