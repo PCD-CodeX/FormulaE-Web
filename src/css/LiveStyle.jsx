@@ -148,6 +148,7 @@ export const LiveStyle = styled.section`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: var(--transition);
+  margin-top: 40px;
 }
 
 .driver-ranking-card:hover {
@@ -169,7 +170,7 @@ export const LiveStyle = styled.section`
 .driver-ranking-list li {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 10px;
   border-bottom: 1px solid var(--color4);
   transition: var(--transition);
 }
@@ -202,7 +203,7 @@ export const LiveStyle = styled.section`
 .circuit-info {
   width: 100%;
   min-width: 300px;
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 20px;
   background-color: var(--color-white);
   border-radius: 10px;

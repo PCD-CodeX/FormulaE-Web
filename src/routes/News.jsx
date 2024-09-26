@@ -1,34 +1,31 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
+import Styled from '../css/NewsStyle';  // Importa o objeto unificado
 
-// Dados fictícios para o carrossel de notícias
-const carouselNews = [
+const carouselNews = [  
   {
-    id: 1,
-    title: "Nova temporada da Fórmula E está para começar",
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*J-xFM5IGIsRwBvpDXbqjJQ.png",
-    description:
-      "A nova temporada promete muita emoção com novas equipes e pilotos entrando na disputa.",
-  },
-  {
-    id: 2,
-    title: "Equipe Porsche vence campeonato mundial",
-    image:
-      "https://i0.wp.com/watchilove.com/wp-content/uploads/2019/08/Porsche_FE_Car_Sneak_Peak_1920x1080.jpg?resize=1035%2C425&ssl=1",
-    description:
-      "A equipe Porsche dominou a temporada e levou o troféu de campeã da Fórmula E.",
-  },
-  {
-    id: 3,
-    title: "Tecnologia de carros elétricos em expansão",
-    image:
-      "https://cdn-3.motorsport.com/images/amp/YMdmy4g2/s1000/formula-e-gen-3-evo.jpg",
-    description:
-      "Os avanços na tecnologia de carros elétricos trazem benefícios tanto para a Fórmula E quanto para o mercado automobilístico.",
-  },
+  id: 1,
+  title: "Nova temporada da Fórmula E está para começar",
+  image: "https://miro.medium.com/v2/resize:fit:1400/1*J-xFM5IGIsRwBvpDXbqjJQ.png",
+  description:
+    "A nova temporada promete muita emoção com novas equipes e pilotos entrando na disputa.",
+},
+{
+  id: 2,
+  title: "Equipe Porsche vence campeonato mundial",
+  image:
+    "https://i0.wp.com/watchilove.com/wp-content/uploads/2019/08/Porsche_FE_Car_Sneak_Peak_1920x1080.jpg?resize=1035%2C425&ssl=1",
+  description:
+    "A equipe Porsche dominou a temporada e levou o troféu de campeã da Fórmula E.",
+},
+{
+  id: 3,
+  title: "Tecnologia de carros elétricos em expansão",
+  image:
+    "https://cdn-3.motorsport.com/images/amp/YMdmy4g2/s1000/formula-e-gen-3-evo.jpg",
+  description:
+    "Os avanços na tecnologia de carros elétricos trazem benefícios tanto para a Fórmula E quanto para o mercado automobilístico.",
+},
 ];
-
-// Dados fictícios para as notícias estáticas no lado esquerdo
 const newsList = [
   {
     id: 1,
@@ -68,303 +65,64 @@ const newsList = [
     content:
       "Neste artigo, analisamos como a Fórmula E evoluiu desde sua criação...",
   },
+
 ];
-
-// Novas notícias para o lado direito
-const additionalNews = [
+const additionalNews = [  
   {
-    id: 1,
-    title: "Corrida Noturna em Berlim Confirmada",
-    description:
-      "Pela primeira vez, a Fórmula E terá uma corrida noturna na cidade de Berlim, o que trará um novo desafio aos pilotos.",
-  },
-  {
-    id: 2,
-    title: "Novos Patrocinadores Anunciados para 2025",
-    description:
-      "Grandes marcas como Tesla e Google anunciaram patrocínios para a próxima temporada da Fórmula E.",
-  },
-  {
-    id: 3,
-    title: "Análise Técnica: Os Carros Mais Rápidos de 2024",
-    description:
-      "Um estudo detalhado sobre os carros mais rápidos da última temporada da Fórmula E e suas inovações tecnológicas.",
-  },
-  {
-    id: 4,
-    title: "Entrevista Exclusiva com Jean-Eric Vergne",
-    description:
-      "Em entrevista exclusiva, o piloto Jean-Eric Vergne fala sobre os desafios e as expectativas para a nova temporada.",
-  },
-];
-
-// Estilos gerais para o layout de duas colunas
-const PageContainer = styled.div`
-  display: flex;
-  width: 100%;
-  padding: 20px;
-`;
-
-// Coluna principal (70% da largura da tela)
-const LeftColumn = styled.div`
-  width: 70%;
-  padding-right: 2vh;
-`;
-
-// Coluna adicional de notícias (30% da largura da tela)
-const RightColumn = styled.div`
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1vh;
-  margin-right: 2vw;
-  gap: 40px;
-  padding-left: 3vw;
-  border-left: 3px solid var(--opacity);
-  h2{
-    padding: 1vw 1vh;
-    margin-right: 20vw;
-    border-radius: 8px;
-    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
-  }
-  img{
-    width: 100%;
-    aspect-ratio: 5/4;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-// Estilos do carrossel
-const CarouselStyle = styled.div`
-  .carousel-container {
-    width: 100%; /* Largura relativa ao contêiner pai */
-    max-width: 60vw; /* Tamanho máximo para telas maiores */
-    height: 24vw;
-    margin: auto;
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 8px;
-    border: 4px solid var(--opacity);
-  }
-  h2{
-    text-align: center;
-    padding: 1.4vw 0;
-    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
-  }
-  .carousel {
-    width: 100%;
-    height: 85%;
-    background-size: cover; /* Redimensiona a imagem para cobrir o contêiner */
-    background-position: center; /* Centraliza a imagem */
-    position: relative;
-    display: flex;
-    align-items: end;
-    justify-content: start;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Transição suave de 0.5 segundos */
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Filtro escuro */
-  }
-
-  .carousel-content {
-    position: relative;
-    color: white;
-    padding: 0.5rem;
-    z-index: 1;
-    h2 {
-      font-size: clamp(0.8rem, 1.4vw, 2rem);
-      padding: 0vw 2vw;
-      display: flex;
-    }
-    p {
-      font-size: clamp(0.2rem, 0.8vw, 1.2rem);
-      display: flex;
-      padding: 1vw 2vw;
-    }
-  }
-
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    padding: 1vw 0;
-    background-color: white;
-    border-top: 2px solid var(--opacity);
-  }
-
-  .carousel-controls button {
-    margin: 0 0.25rem;
-    padding: 0.5vw;
-    border: none;
-    background-color: var(--opacity);
-    border: 2px solid var(--opacity);
-    cursor: pointer;
-    border-radius: 4px;
-  }
-
-  .carousel-controls button.active {
-    background-color: var(--color1);
-    color: white;
-  }
-
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .carousel-container {
-      height: 250px; /* Ajusta a altura para tablets e telas menores */
-    }
-
-    .carousel-content h2 {
-      font-size: 1.25rem; /* Ajusta o tamanho do título */
-    }
-
-    .carousel-content p {
-      font-size: 0.9rem; /* Ajusta o tamanho do texto */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .carousel-container {
-      height: 200px; /* Ajusta a altura para smartphones */
-    }
-
-    .carousel-content {
-      h2 {
-        font-size: 0.8rem;
-        font-weight: 900;
-      }
-      p {
-        margin-top: 4px;
-        font-size: 0.6rem;
-      }
-    }
-
-    .carousel-controls button {
-      padding: 0.3rem; /* Diminui os botões de controle */
-    }
-    .carousel.fade-in {
-  opacity: 1; /* Aparece suavemente */
-}
-
-.carousel.fade-out {
-  opacity: 0; /* Some suavemente */
-}
-  }
-`;
-
-//outras noticias abaixo do carrossel
-const NewsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-
-  h2{
-    text-align: center;
-    padding: 1vw 0;
-    width: 100%;
-    font-size: clamp(0.8rem, 1.3vw, 2.5rem);
-  }
-`;
-
-const NewsCard = styled.div`
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  padding: 20px;
-  margin-bottom: 7vh;
-  margin-left: 2vw;
-  
-`;
-
-const NewsImage = styled.img`
-  width: 100%;
-  aspect-ratio: 5/3; // Proporção da imagem
-  object-fit: cover; // Redimensiona a imagem para cobrir o contêiner
-  overflow: hidden;
-  border-radius: 8px;
-`;
-
-const NewsTitle = styled.h3`
-  margin-top: 10px;
-  font-size: clamp(0.8rem, 1vw, 2rem);
-`;
-
-const NewsDescription = styled.p`
-  padding-top: 10px;
-  font-size: clamp(0.6rem, 0.8vw, 1.2rem);
-  color: #555;
-`;
-
-const RightNewsCard = styled.div`
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 100px;
-
-`;
-
-const RightNewsTitle = styled.h4`
-  font-size: clamp(0.5rem, 1vw, 2rem);
-  color: #333;
-  margin-bottom: 10px;
-`;
-
-const RightNewsDescription = styled.p`
-  font-size: clamp(0.4rem, 0.8vw, 1.2rem);
-  color: var(--color2);
-`;
+  id: 1,
+  title: "Corrida Noturna em Berlim Confirmada",
+  description:
+    "Pela primeira vez, a Fórmula E terá uma corrida noturna na cidade de Berlim, o que trará um novo desafio aos pilotos.",
+},
+{
+  id: 2,
+  title: "Novos Patrocinadores Anunciados para 2025",
+  description:
+    "Grandes marcas como Tesla e Google anunciaram patrocínios para a próxima temporada da Fórmula E.",
+},
+{
+  id: 3,
+  title: "Análise Técnica: Os Carros Mais Rápidos de 2024",
+  description:
+    "Um estudo detalhado sobre os carros mais rápidos da última temporada da Fórmula E e suas inovações tecnológicas.",
+},
+{
+  id: 4,
+  title: "Entrevista Exclusiva com Jean-Eric Vergne",
+  description:
+    "Em entrevista exclusiva, o piloto Jean-Eric Vergne fala sobre os desafios e as expectativas para a nova temporada.",
+},
+ ];
 
 const NewsPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [fade, setFade] = useState(true); // Controle de opacidade para a transição
+  const [fade, setFade] = useState(true);
 
-  // Efeito para mudar automaticamente a imagem a cada 3 segundos
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // Inicia a transição de saída
+      setFade(false);
       setTimeout(() => {
         setCurrentIndex((prevIndex) =>
           prevIndex === carouselNews.length - 1 ? 0 : prevIndex + 1
         );
-        setFade(true); // Inicia a transição de entrada
-      }, 500); // Tempo da transição (mesmo que o CSS)
+        setFade(true);
+      }, 500);
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <PageContainer>
-      {/* Coluna da esquerda (70%) */}
-      <LeftColumn>
-        {/* Carrossel de Notícias */}
-        <CarouselStyle>
+    <Styled.PageContainer>
+      <Styled.LeftColumn>
+        <Styled.CarouselStyle>
           <h2>Destaques</h2>
           <div className="carousel-container">
             <div
               className={`carousel ${fade ? "fade-in" : "fade-out"}`}
-              style={{
-                backgroundImage: `url(${carouselNews[currentIndex].image})`,
-              }}
+              style={{ backgroundImage: `url(${carouselNews[currentIndex].image})` }}
             >
               <div className="overlay"></div>
-              {/* Filtro escuro sobre a imagem */}
               <div className="carousel-content">
                 <h2>{carouselNews[currentIndex].title}</h2>
                 <p>{carouselNews[currentIndex].description}</p>
@@ -382,37 +140,30 @@ const NewsPage = () => {
               ))}
             </div>
           </div>
-        </CarouselStyle>
+        </Styled.CarouselStyle>
 
-        {/* Lista de Notícias (lado esquerdo) */}
-        <NewsContainer>
+        <Styled.NewsContainer>
           <h2>Novas Notícias</h2>
           {newsList.map((news) => (
-            <NewsCard key={news.id}>
-              <NewsImage src={news.image} alt={news.title} />
-              <NewsTitle>{news.title}</NewsTitle>
-              <NewsDescription>{news.description}</NewsDescription>
-            </NewsCard>
+            <Styled.NewsCard key={news.id}>
+              <Styled.NewsImage src={news.image} alt={news.title} />
+              <Styled.NewsTitle>{news.title}</Styled.NewsTitle>
+              <Styled.NewsDescription>{news.description}</Styled.NewsDescription>
+            </Styled.NewsCard>
           ))}
-        </NewsContainer>
-      </LeftColumn>
+        </Styled.NewsContainer>
+      </Styled.LeftColumn>
 
-      {/* Coluna da direita (30%) */}
-      <RightColumn>
+      <Styled.RightColumn>
         <h2>Novidades</h2>
         {additionalNews.map((news) => (
-          <RightNewsCard key={news.id}>
-            <RightNewsTitle>{news.title}</RightNewsTitle>
-            <RightNewsDescription>{news.description}</RightNewsDescription>
-          </RightNewsCard>
+          <Styled.RightNewsCard key={news.id}>
+            <Styled.RightNewsTitle>{news.title}</Styled.RightNewsTitle>
+            <Styled.RightNewsDescription>{news.description}</Styled.RightNewsDescription>
+          </Styled.RightNewsCard>
         ))}
-        <div className="publi">
-          <div className="overlay"></div>
-          <h2>Publicidade</h2>
-          <img src="https://resources.formula-e.pulselive.com/photo-resources/2024/05/12/62fd5f20-67a2-4743-85a1-614aaccfd322/1020172190-LAT-20240512-EPS1010_145458DSC_6253-1-.jpg?width=544&height=308" alt="Publicidade" />
-        </div>
-      </RightColumn>
-    </PageContainer>
+      </Styled.RightColumn>
+    </Styled.PageContainer>
   );
 };
 
