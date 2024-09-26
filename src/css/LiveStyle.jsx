@@ -13,7 +13,7 @@ export const LiveStyle = styled.section`
 
 .lives-page {
   padding: 20px;
-  background-color: var(--opacity);
+  background-color: var(--color-white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color1);
   padding-top: 6vh;
@@ -106,16 +106,16 @@ export const LiveStyle = styled.section`
 
 /* Card das condições da pista */
 .track-conditions-card {
-  background-color: var(--color-white);
+  background-color: var(--opacity);
   color: var(--color1);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .track-conditions-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  scale: 1.02;
 }
 
 .track-conditions-card h2 {
@@ -142,17 +142,17 @@ export const LiveStyle = styled.section`
 
 /* Card do ranking dos pilotos */
 .driver-ranking-card {
-  background-color: var(--color-white);
+  background-color: var(--opacity);
   color: var(--color1);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   margin-top: 40px;
 }
 
 .driver-ranking-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  scale: 1.02;
 }
 
 .driver-ranking-card h2 {
@@ -205,7 +205,7 @@ export const LiveStyle = styled.section`
   min-width: 300px;
   margin-top: 40px;
   padding: 20px;
-  background-color: var(--color-white);
+  background-color: var(--opacity);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
