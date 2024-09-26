@@ -5,7 +5,7 @@ const Error =()=>{
 
     <ErrorStyle>
 
-        <h1>erro 404</h1>
+        <h1>Erro 404!</h1>
     </ErrorStyle>
     
     )
