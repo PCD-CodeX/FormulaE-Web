@@ -8,19 +8,19 @@ const QuizPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10vh;
-    background-color: var(--color1);
+    padding: 10vh 10vh 3vh 10vh;
+    background-color: white;
     font-size: clamp(0.8rem, 4vw, 4rem);
-    color: white;
+    color: #000000;
   }
   .p{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2vh;
-    background-color: var(--color1);
+    padding: 0vh 2vh;
+    background-color: white;
     font-size: clamp(0.8rem, 2vw, 2rem);
-    color: white;
+    color: #000000;
   }
 `
 const QuizContainer = styled.div`
@@ -28,8 +28,8 @@ const QuizContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10vw 0;
-  margin-top: -10vh;
-  background-color: var(--color1);
+  margin-top: -6vh;
+  background-color: white;
   color: white;
 `;
 
@@ -39,7 +39,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
   font-size: clamp(0.8rem, 1.4vw, 2rem);
-  background-color: var(--opacity);
+  background-color: var(--color1);
   padding: 60px;
   border-radius: 10px;
   min-width: 300px;
