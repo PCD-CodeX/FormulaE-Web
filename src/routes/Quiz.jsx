@@ -72,7 +72,7 @@ justify-content: center;
 `;
 
 const ResultContainer = styled.div`
-  background-color: var(--opacity);
+  background-color: var(--color1);
   padding: 4vw;
   border-radius: 10px;
   margin-top: -10vh;
