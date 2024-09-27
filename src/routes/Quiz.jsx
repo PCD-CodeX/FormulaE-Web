@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const QuizPage = styled.div`
@@ -140,36 +140,36 @@ const questions = [
     question: "Qual dessas atividades você mais gosta de fazer?",
     options: [
       { answer: "Cozinhar e experimentar novas receitas", teams: ["DS", "Maserati"] },
-      { answer: "Jogar vídeo games e maratonar séries", teams: ["Porsche", "McLaren","Nissan"] },
-      { answer: "Explorar atividades ao ar livre", teams: ["Avalanche", "Jaguar","ABT"] },
-      { answer: "Ler livros e assistir documentários", teams: ["Mahindra", "Envision","ERT"] }
+      { answer: "Jogar vídeo games e maratonar séries", teams: ["Porsche", "McLaren", "Nissan"] },
+      { answer: "Explorar atividades ao ar livre", teams: ["Avalanche", "Jaguar", "ABT"] },
+      { answer: "Ler livros e assistir documentários", teams: ["Mahindra", "Envision", "ERT"] }
     ]
   },
   {
     question: "O que mais te instigaria na Fórmula E?",
     options: [
-      { answer: "A Inovação tecnológica envolvida no campeonato", teams: ["Nissan", "Jaguar","McLaren"] },
-      { answer: "A Sustentabilidade ambiental", teams: ["ERT","ABT","Avalanche"] },
+      { answer: "A Inovação tecnológica envolvida no campeonato", teams: ["Nissan", "Jaguar", "McLaren"] },
+      { answer: "A Sustentabilidade ambiental", teams: ["ERT", "ABT", "Avalanche"] },
       { answer: "A Competição acirrada entre as equipes", teams: ["DS", "Envision", "Jaguar"] },
-      { answer: "A História e tradição do campeonato", teams: ["Mahindra","ERT"] },
-      { answer: "Velocidade e desempenho", teams: ["Maserati","Porsche"] }
+      { answer: "A História e tradição do campeonato", teams: ["Mahindra", "ERT"] },
+      { answer: "Velocidade e desempenho", teams: ["Maserati", "Porsche"] }
     ]
   },
   {
     question: "Qual é o seu estilo de vida?",
     options: [
       { answer: "Urbano e Moderno", teams: ["Porsche", "McLaren"] },
-      { answer: "Aventureiro", teams: ["Jaguar", "Avalanche","Nissan"] },
-      { answer: "Sofisticado e Elegante", teams: ["DS", "Maserati","Envision"] },
-      { answer: "Consciente", teams: ["ERT", "ABT","Mahindra"] }
+      { answer: "Aventureiro", teams: ["Jaguar", "Avalanche", "Nissan"] },
+      { answer: "Sofisticado e Elegante", teams: ["DS", "Maserati", "Envision"] },
+      { answer: "Consciente", teams: ["ERT", "ABT", "Mahindra"] }
     ]
   },
   {
-    question: "Alem da Formula E, qual outro tipo de modalidade que você acompanha?",
+    question: "Além da Formula E, qual outro tipo de modalidade que você acompanha?",
     options: [
-      { answer: "Equipes da Fórmula 1", teams: ["McLaren", "Porsche","Jaguar","Maserati"] },
+      { answer: "Equipes da Fórmula 1", teams: ["McLaren", "Porsche", "Jaguar", "Maserati"] },
       { answer: "Equipes de endurance (WEC, Le Mans)", teams: ["DS", "Envision"] },
-      { answer: "Equipes de rali (WRC, Dakar)", teams: ["Mahindra", "Avalanche","Nissan"] },
+      { answer: "Equipes de rali (WRC, Dakar)", teams: ["Mahindra", "Avalanche", "Nissan"] },
       { answer: "Outros", teams: ["ABT", "ERT"] }
     ]
   },
@@ -177,16 +177,16 @@ const questions = [
     question: "Quais tipos de veículos elétricos mais te atraem?",
     options: [
       { answer: "Os com tecnologia mais avançada", teams: ["Porsche", "Jaguar"] },
-      { answer: "Os que priorizam a redução da pegada de carbono", teams: ["ERT", "ABT","Mahindra","Avalanche"] },
+      { answer: "Os que priorizam a redução da pegada de carbono", teams: ["ERT", "ABT", "Mahindra", "Avalanche"] },
       { answer: "Os com mais Desempenho e potência", teams: ["Maserati", "McLaren"] },
-      { answer: "Os Econômicos", teams: ["Nissan", "Envision","DS"] }
+      { answer: "Os Econômicos", teams: ["Nissan", "Envision", "DS"] }
     ]
   },
   {
     question: "Você se identificaria mais com equipes mais pioneiras e tradicionais ou com novas equipes em ascensão?",
     options: [
-      { answer: "Equipes Pioneiras", teams: ["Mahindra","ERT","Envision","Nissan","DS","Avalanche","Maserati"] },
-      { answer: "Novas equipes em ascensão", teams: ["ABT", "McLaren","Porsche","Jaguar"] }
+      { answer: "Equipes Pioneiras", teams: ["Mahindra", "ERT", "Envision", "Nissan", "DS", "Avalanche", "Maserati"] },
+      { answer: "Novas equipes em ascensão", teams: ["ABT", "McLaren", "Porsche", "Jaguar"] }
     ]
   },
   {
@@ -201,25 +201,25 @@ const questions = [
   {
     question: "Para qual tipo de equipe você torceria?",
     options: [
-      { answer: "As equipes que ganham tudo", teams: ["Porsche", "McLaren","Nissan","Envision"] },
-      { answer: "Geralmente apoio equipes subestimadas ou azaradas", teams: ["Mahindra", "ERT","ABT"] },
-      { answer: "Acompanho várias equipes, independentemente do desempenho", teams: ["DS", "Jaguar","Avalanche","Maserati"] }
+      { answer: "As equipes que ganham tudo", teams: ["Porsche", "McLaren", "Nissan", "Envision"] },
+      { answer: "Geralmente apoio equipes subestimadas ou azaradas", teams: ["Mahindra", "ERT", "ABT"] },
+      { answer: "Acompanho várias equipes, independentemente do desempenho", teams: ["DS", "Jaguar", "Avalanche", "Maserati"] }
     ]
   },
   {
     question: "Qual é a sua visão de sucesso na Fórmula E?",
     options: [
-      { answer: "Vitórias e títulos de campeonato", teams: ["Porsche", "Jaguar","DS","Envision"] },
-      { answer: "Desenvolvimento de tecnologia inovadora", teams: ["Nissan", "McLaren","Jaguar","Avalanche"] },
-      { answer: "Contribuição para a conscientização dos veículos elétricos", teams: ["ERT", "ABT","Mahindra"] }
+      { answer: "Vitórias e títulos de campeonato", teams: ["Porsche", "Jaguar", "DS", "Envision"] },
+      { answer: "Desenvolvimento de tecnologia inovadora", teams: ["Nissan", "McLaren", "Jaguar", "Avalanche"] },
+      { answer: "Contribuição para a conscientização dos veículos elétricos", teams: ["ERT", "ABT", "Mahindra"] }
     ]
   },
   {
     question: "Qual o estilo de música que você mais gosta?",
     options: [
-      { answer: "Rock ou Alternativa", teams: ["Porsche", "Jaguar","ABT"] },
-      { answer: "Pop ou Eletrônica", teams: ["DS", "Envision","Nissan"] },
-      { answer: "Clássica ou Jazz", teams: ["Maserati", "Mahindra","Avalanche "] },
+      { answer: "Rock ou Alternativa", teams: ["Porsche", "Jaguar", "ABT"] },
+      { answer: "Pop ou Eletrônica", teams: ["DS", "Envision", "Nissan"] },
+      { answer: "Clássica ou Jazz", teams: ["Maserati", "Mahindra", "Avalanche"] },
       { answer: "Hip Hop ou Reggae", teams: ["McLaren", "ERT"] }
     ]
   }
@@ -256,36 +256,36 @@ const Quiz = () => {
 
   return (
     <QuizPage>
-    <h2 className='h2'>Responda nosso questionario!!</h2>
-    <p className='p'>Nele revelaremos uma Equipe que é a sua cara!!</p>
-    <QuizContainer>
-      {showResult ? (
-        <ResultContainer>
-          <h2>Recomendação de Equipe</h2>
-          <p>Com base em suas respostas, você se encaixa mais com a(s) equipe(s):</p>
-          {highestScoringTeams.map((team) => (
-            <div key={team}>
-              <h3>{team}</h3>
-              <p>{/* Aqui você pode adicionar uma descrição para cada equipe */}</p>
-            </div>
-          ))}
-          <p>Taxa de afinidade: {((teamScores[highestScoringTeams[0]] / (questions.length)) * 100).toFixed(2)}%</p>
-          <Link to='/Teams'>Equipes</Link>
-        </ResultContainer>
-      ) : (
-        <QuestionContainer>
-          <h2>{questions[currentQuestion].question}</h2>
-          {questions[currentQuestion].options.map((option, index) => (
-            <OptionButton
-              key={index}
-              onClick={() => handleOptionClick(option.teams)}
-            >
-              {option.answer}
-            </OptionButton>
-          ))}
-        </QuestionContainer>
-      )}
-    </QuizContainer>
+      <h2 className='h2'>Responda nosso questionario!!</h2>
+      <p className='p'>Nele revelaremos uma Equipe que é a sua cara!!</p>
+      <QuizContainer>
+        {showResult ? (
+          <ResultContainer>
+            <h2>Recomendação de Equipe</h2>
+            <p>Com base em suas respostas, você se encaixa mais com a(s) equipe(s):</p>
+            {highestScoringTeams.map((team) => (
+              <div key={team}>
+                <h3>{team}</h3>
+                <p>{/* Aqui você pode adicionar uma descrição para cada equipe */}</p>
+              </div>
+            ))}
+            <p>Taxa de afinidade: {((teamScores[highestScoringTeams[0]] / (questions.length)) * 100).toFixed(2)}%</p>
+            <Link to='/Teams'>Equipes</Link>
+          </ResultContainer>
+        ) : (
+          <QuestionContainer>
+            <h2>{questions[currentQuestion].question}</h2>
+            {questions[currentQuestion].options.map((option, index) => (
+              <OptionButton
+                key={index}
+                onClick={() => handleOptionClick(option.teams)}
+              >
+                {option.answer}
+              </OptionButton>
+            ))}
+          </QuestionContainer>
+        )}
+      </QuizContainer>
     </QuizPage>
   );
 };
