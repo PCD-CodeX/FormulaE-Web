@@ -6,6 +6,38 @@
         font-weight: normal;
         font-style: normal;
 }
+@font-face {
+    font-family: 'SubFont';
+    src: url('../assets/fonts/gg_sans_Normal.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GeneralBigFont';
+    src: url('../assets/fonts/Ginto_Nord_Black.ttf') format('truetype');
+    font-weight: 800;
+    font-size: 2.1875rem;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'HomepageFont';
+    src: url('../assets/fonts/Ginto_Medium.ttf') format('truetype');
+    font-style: medium;
+}
+
+@font-face {
+    font-family: 'NormalBoldFont';
+    src: url('../assets/fonts/gg_sans_Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'GenMediumFont';
+    src: url('../assets/fonts/Ginto_Nord_Regular.ttf') format('truetype');
+    font-style: normal;
+}
 
 *{
     margin: 0;

@@ -14,7 +14,6 @@ export const LiveStyle = styled.section`
 .lives-page {
   padding: 20px;
   background-color: var(--color-white);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color1);
   padding-top: 6vh;
   padding-bottom: 10vh;
