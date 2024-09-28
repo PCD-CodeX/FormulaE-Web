@@ -18,7 +18,9 @@ const Nav =()=>{
             {/*links*/}
 
             <div className='links'>
-                        <img src={logoCompleta} className='logo'/>
+                        <Link to='/'>
+                            <img src={logoCompleta} className='logo'/>
+                        </Link>
                         <Link to='/Quiz' className='h1'><h1>Quiz</h1></Link>
                         <Link to='/News' className='h1'><h1>News</h1></Link>
                         <Link to='/Live'className='h1'><h1>Lives</h1></Link>

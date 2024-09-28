@@ -286,22 +286,6 @@ const CarImage = styled.img`
     transform: translateX(0); /* Posição inicial */
     transition: transform 0.5s ease-out; /* Transição suave no retorno */
 `;
-
-const TituloStyle = styled.div`
-    h2{
-        display: flex;
-        justify-content: center;
-        font-size: clamp(20px, 1.6vw, 36px);
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-weight: 900;
-        background: var(--color2);
-        padding: 2vh;
-        color: white; 
-        margin: 4vh clamp(10px,44vw,1100px);
-        border-radius: 30px;
-    }
-`;
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid; // Exibe os cards em grid
@@ -312,10 +296,6 @@ const GridContainer = styled.div`
 `;
 const TeamList = () => {
     return (
-        <>
-            <TituloStyle>
-                <h2>Equipes</h2>
-            </TituloStyle>
             <GridContainer>
                 {teams.map((team, index) => (
                     <TeamCard key={index} color={team.colorMain}> {/* a funcao 'map' percorre o array da const Teams e retorna um card para cada equipe */}
@@ -343,7 +323,6 @@ const TeamList = () => {
                     </TeamCard>
                 ))}
             </GridContainer>
-        </>
     );
 };
 
