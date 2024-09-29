@@ -1,8 +1,17 @@
 import { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
+//keyframe para animação de spin da logo
 
-// Keyframe para animação de flutuação do logo
+const spin = keyframes`
+  0% {
+    transform: rotate(0deg) translateX(-100%);
+  }
+  100%{
+    transform: rotate(360deg) translateX(0%);
+  }
+`
+// Keyframe para animação de flutuação da logo
 const floating = keyframes`
   0% {
     transform: translateY(0);
@@ -21,17 +30,26 @@ const HomeContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  flex: 0.9; // Ocupa 80% do espaço
+  flex: 0.4; // Ocupa 40% do espaço
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #2978B5;
-  border-top-right-radius: 46%;
-  border-bottom-right-radius: 46%;
-  
   img {
     margin: 0 10vw 0 0;
-    animation: ${floating} infinite ease-in-out; 
+    animation: ${spin} 2s linear , ${floating} infinite ease-in-out 2s; 
+    position: absolute;
+    width: clamp(24vw,500px, 30vw);
+    height: clamp(10vw,200px,12vw);
+  }
+  h2{
+    color: white;
+    font-size: clamp(20px, 5vw, 60px);
+    display: flex;
+    align-items: start;
+    text-align: center;
+    padding: 0vw 8vw 24vw 8vw;
   }
 `;
 
@@ -76,7 +94,6 @@ const Card = styled(motion.div)`
 `;
 
 const Home = () => {
-  const [animateLogo, setAnimateLogo] = useState('float'); // Estado para a animação do logo
   const [currentIndex, setCurrentIndex] = useState(0);
   const cards = ['Info 1', 'Info 2', 'Info 3', 'Info 4', 'Info 5'];
   const desc = ['Descricao 1', 'Descricao 2', 'Descricao 3', 'Descricao 4', 'Descricao 5'];
@@ -101,9 +118,11 @@ const Home = () => {
   }, [cards.length]);
 
   return (
+    <>
     <HomeContainer>
-      <LogoContainer animate={animateLogo}>
-        <img src="/public/formulae-completo-branco.png" alt="Logo" style={{ width: '500px', height: '200px' }} />
+      <LogoContainer>
+        <h2>Bem-Vindo ao futuro do automobilismo!!</h2>
+        <img src="/public/formulae-completo-branco.png" alt="Logo"/>
       </LogoContainer>
       
       <CarouselContainer>
@@ -128,6 +147,7 @@ const Home = () => {
         </Card>
       </CarouselContainer>
     </HomeContainer>
+    </>
   );
 };
 
