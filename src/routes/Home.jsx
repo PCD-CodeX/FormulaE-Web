@@ -103,7 +103,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <LogoContainer animate={animateLogo}>
-        <img src="/public/Fomrula-E-Logo.png" alt="Logo" style={{ width: '200px', height: '200px' }} />
+        <img src="/public/formulae-completo-branco.png" alt="Logo" style={{ width: '500px', height: '200px' }} />
       </LogoContainer>
       
       <CarouselContainer>
