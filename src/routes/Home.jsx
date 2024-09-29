@@ -16,7 +16,7 @@ const floating = keyframes`
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   100% {
     transform: translateY(0);
@@ -61,7 +61,7 @@ const LogoContainer = styled.div`
   img {
     z-index: 2; /* Faz a logo aparecer acima do GIF */
     margin: 0 5vw;
-    animation: ${spin} 2s linear, ${floating} infinite ease-in-out 2s; 
+    animation: ${spin} 2s linear, ${floating} infinite ease-in-out 3s; 
     aspect-ratio: 5/2;
     width: 30vw;
     min-width: 300px;
@@ -88,18 +88,25 @@ const CarouselContainer = styled.div`
   align-items: center;
   padding: 20px;
   overflow: hidden;
+  background: linear-gradient(230deg, var(--color2) 0%, var(--color3) 60%);
+  h2{
+    font-size: clamp(16px, 5vw, 40px);
+    text-align: center;
+    margin: 0vw 5vw 2vw 5vw;
+    color: white;
+    letter-spacing: 0.2vw;
+  }
 `;
 
 const Card = styled(motion.div)`
   width: 90%; 
-  max-width: 600px; 
-  height: 800px; 
-  background: linear-gradient(135deg, var(--color2) 20%, var(--color3) 60%);
-  margin: 10px 0;
+  max-width: 500px; 
+  height: 700px; 
+  background: rgba(90, 90, 90, 0.514);
   border-radius:10px;
   display: flex;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: white;
+  padding: 2vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   .info {
     width: 100%;
     padding: 20px;
@@ -109,21 +116,27 @@ const Card = styled(motion.div)`
     align-items: center;
   }
   .titulo {
+    margin: 10px 0;
     font-size: clamp(20px, 5vw, 40px);
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
   }
   .desc {
     font-size: clamp(14px, 2vw, 20px);
     text-align: center;
     padding: 10px;
+    color: var(--color1);
   }
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
+    filter: blur(0.2px);
+    filter: contrast(0.9);
+    filter: saturate(1.1);
   }
 `;
 
@@ -162,6 +175,7 @@ const Home = () => {
         <img src="/public/formulae-completo-branco.png" alt="Logo" />
       </LogoContainer>
       <CarouselContainer>
+      <h2>Bem-Vindo ao Futuro !!</h2>
         <Card
           key={currentIndex}
           drag="y"
