@@ -88,26 +88,37 @@ const CarouselContainer = styled.div`
   align-items: center;
   padding: 20px;
   overflow: hidden;
-  background: linear-gradient(230deg, var(--color2) 0%, var(--color3) 60%);
-  h2{
-    font-size: clamp(16px, 5vw, 40px);
-    text-align: center;
-    margin: 0vw 5vw 2vw 5vw;
-    color: white;
-    letter-spacing: 0.2vw;
-  }
+  filter: contrast(1.1) saturate(1.1) brightness(0.95);
 `;
 
 const Card = styled(motion.div)`
   width: 90%; 
   max-width: 500px; 
   height: 700px; 
-  background: rgba(90, 90, 90, 0.514);
-  border-radius:10px;
+  position: relative; /* Necessário para o ::before funcionar corretamente */
+  border-radius: 10px;
   display: flex;
   padding: 2vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Evitar que o ::before saia da área do card */
+
+  /* Adicionando o background blur com ::before */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px); /* Efeito de desfoque */
+    background: #000000c1; /* Fundo semi-transparente */
+    z-index: 1; /* Fica atrás do conteúdo do card */
+  }
+
+  /* O conteúdo do card vai acima do ::before */
   .info {
+    position: relative; /* Garante que o conteúdo esteja acima do ::before */
+    z-index: 2;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -115,26 +126,30 @@ const Card = styled(motion.div)`
     justify-content: center;
     align-items: center;
   }
+
   .titulo {
     margin: 10px 0;
     font-size: clamp(20px, 5vw, 40px);
     font-weight: bold;
     text-transform: uppercase;
     color: white;
+    text-align: center;
   }
+
   .desc {
     font-size: clamp(14px, 2vw, 20px);
     text-align: center;
     padding: 10px;
-    color: var(--color1);
+    color: white;
   }
+
   img {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
-    filter: blur(0.2px);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 1);
+    filter: blur(20px);
     filter: contrast(0.9);
     filter: saturate(1.1);
   }
@@ -142,8 +157,8 @@ const Card = styled(motion.div)`
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cards = ['Info 1', 'Info 2', 'Info 3', 'Info 4', 'Info 5'];
-  const desc = ['Descricao 1', 'Descricao 2', 'Descricao 3', 'Descricao 4', 'Descricao 5'];
+  const cards = ['Wacth us any where', 'Replay', 'The Last 10 winners', 'Unplugged', 'Champions'];
+  const desc = ['You can wacth FE from our mobile App and youtube channels ', 'wacth some last races replays in our Youtube channel', 'See the last 10 champions of the FE World Championship ', 'Wacht our series from 2 January', 'The last 10 champions Teams of the FE World Championship'];
   const images = [
     '/public/story1.webp',
     '/public/story2.jpeg',
@@ -163,7 +178,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [cards.length]);
@@ -171,11 +186,9 @@ const Home = () => {
   return (
     <HomeContainer>
       <LogoContainer>
-        
         <img src="/public/formulae-completo-branco.png" alt="Logo" />
       </LogoContainer>
       <CarouselContainer>
-      <h2>Bem-Vindo ao Futuro !!</h2>
         <Card
           key={currentIndex}
           drag="y"
@@ -184,10 +197,18 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
+          style={{
+            background: `url(${images[currentIndex]})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
         >
           <div className="info">
-            <img src={images[currentIndex]} alt={cards[currentIndex]} />
+            <img
+              src={images[currentIndex]}
+              alt={`Slide ${currentIndex + 1}`}
+            />
             <div className="titulo">{cards[currentIndex]}</div>
             <div className="desc">{desc[currentIndex]}</div>
           </div>
