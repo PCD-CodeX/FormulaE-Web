@@ -111,7 +111,7 @@ const Card = styled(motion.div)`
     width: 100%;
     height: 100%;
     filter: blur(10px); /* Efeito de desfoque */
-    background: #000000c1; /* Fundo semi-transparente */
+    background: #051236c1; /* Fundo semi-transparente */
     z-index: 1; /* Fica atrás do conteúdo do card */
   }
 
@@ -152,12 +152,13 @@ const Card = styled(motion.div)`
     filter: blur(20px);
     filter: contrast(0.9);
     filter: saturate(1.1);
+    pointer-events: none; //evita que a imagem seja clicada
   }
 `;
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cards = ['Wacth us any where', 'Replay', 'The Last 10 winners', 'Unplugged', 'Champions'];
+  const cards = ['Any where', 'Replay', 'Season Winners', 'Unplugged', 'Champions'];
   const desc = ['You can wacth FE from our mobile App and youtube channels ', 'wacth some last races replays in our Youtube channel', 'See the last 10 champions of the FE World Championship ', 'Wacht our series from 2 January', 'The last 10 champions Teams of the FE World Championship'];
   const images = [
     '/public/story1.webp',
