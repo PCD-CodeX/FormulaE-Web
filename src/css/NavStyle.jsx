@@ -26,6 +26,7 @@ width: 100%;
     width: clamp(100px, 14vw, 240px); /* Mantém a logo flexível */
     margin-right: clamp(8px, 10vw, 200px);
     margin-bottom: 0vh;
+    pointer-events: none;
 }
 .link{
     display: flex;

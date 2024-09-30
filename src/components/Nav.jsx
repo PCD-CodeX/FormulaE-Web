@@ -22,7 +22,7 @@ const Nav =()=>{
                             <img src={logoCompleta} className='logo'/>
                         </Link>
                         <Link to='/Quiz' className='h1'><h1>Quiz</h1></Link>
-                        <Link to='/News' className='h1'><h1>News</h1></Link>
+                        <Link to='/News' className='h1'><h1>Notícias</h1></Link>
                         <Link to='/Live'className='h1'><h1>Lives</h1></Link>
                         <Link to='/Login' className='link'><h1>Login</h1></Link>
                         <Link to='/Cadastro'className='link'><h1>Cadastre-se</h1></Link>
