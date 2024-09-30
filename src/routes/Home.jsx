@@ -32,6 +32,7 @@ const HomeContainer = styled.div`
   background-color: #1987db;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -89,7 +90,6 @@ const CarouselContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  overflow: hidden;
   filter: contrast(1.1) saturate(1.1) brightness(0.95);
 `;
 
@@ -102,7 +102,6 @@ const Card = styled(motion.div)`
   display: flex;
   padding: 2vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
   background: #051236c1;
 
 
@@ -139,9 +138,7 @@ const Card = styled(motion.div)`
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 1);
-    filter: blur(40px);
-    filter: contrast(0.9);
-    filter: saturate(1.1);
+    filter: blur(40px),contrast(0.9),saturate(1.1);
     pointer-events: none;
   }
 `;
@@ -195,7 +192,6 @@ const CuriositiesSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
-  margin-top: 8vh;
 
   color: #000000;
 
