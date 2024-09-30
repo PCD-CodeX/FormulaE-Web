@@ -91,6 +91,7 @@ const CarouselContainer = styled.div`
   align-items: center;
   padding: 20px;
   filter: contrast(1.1) saturate(1.1) brightness(0.95);
+  opacity: 1;
 `;
 
 const Card = styled(motion.div)`
@@ -103,6 +104,7 @@ const Card = styled(motion.div)`
   padding: 2vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   background: #051236c1;
+  opacity: 1;
 
   .info {
     position: relative;

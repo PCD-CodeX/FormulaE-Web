@@ -83,7 +83,7 @@ export const CadastroStyle = styled.section`
         letter-spacing: 4px;
         font-weight: bolder;
         color: #ffffff;
-        filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
+        filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.408));
 
     }
 

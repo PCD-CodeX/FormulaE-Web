@@ -123,7 +123,7 @@ const Login = () => {
               </div>
             </div>
             <button className="my-form__button" type="submit">
-              Sign In
+              Login
             </button>
             {user && (
               <div>

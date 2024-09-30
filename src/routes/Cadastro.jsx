@@ -108,7 +108,7 @@ const Cadastro = () => {
                 </div>
               </div>
               <button className="my-form__button" type="submit">
-                Sign In
+                Cadastro
               </button>
             </div>
           </form>
