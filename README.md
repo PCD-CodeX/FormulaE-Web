@@ -27,6 +27,10 @@ A aplicação `Fórmula E Experience` foi criada com o objetivo de proporcionar 
 - **Página de corridas**: mostrando as próximas corridas e os detalhes das pistas.
 - **Página de lives**: transmissão ao vivo de eventos e corridas da Fórmula E.
 
+# <h1 align="center">Acesse nossa pagina na WEB</h1>
+ **Entre em nossa pagina web abaixo:** <h1>**[`Formula-E`](https://jota--boisterous-capybara-7dd4d4.netlify.app/)**
+</h1>
+
 # <h1 align="center">Instalação</h1>
 
 --------
