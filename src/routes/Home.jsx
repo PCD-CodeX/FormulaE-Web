@@ -49,8 +49,7 @@ const HomeContainer = styled.div`
     background-repeat: no-repeat;
     opacity: 1;
     z-index: 0;
-    filter: blur(40%);
-    filter: drop-shadow(0 0 5px var(--color1));
+    filter: blur(8px);
   }
 `;
 
