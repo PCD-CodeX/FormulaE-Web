@@ -70,12 +70,19 @@ A aplicação `Fórmula E Experience` foi criada com o objetivo de proporcionar 
 ## Estrutura Usada:
 
     FormulaEExperience/
+            ├── public                 # Referencias...
+            │   ├── flags/    
+            │   ├── team-images/    
+            │   └── tracks/    
             ├── src/
+            │   ├── assets/            # Recursos como fotos e fontes
+            │   ├── css/               # Estilo das paginas
+            │   ├── hooks              # Aplicações externas
             │   ├── components/        # Componentes reutilizáveis da aplicação
             │   ├── pages/             # Páginas principais (Home, Notícias, Corridas, Lives)
+            │   ├── routes/            # Definição das rotas
             │   ├── App.js             # Componente principal
-            │   ├── index.js           # Entrada da aplicação
-            │   └── routes/            # Definição das rotas
+            │   └── index.js           # Entrada da aplicação
             ├─── .gitignore
             ├─── eslint.config.js
             ├─── index.html 
