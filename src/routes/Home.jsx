@@ -263,11 +263,11 @@ const Home = () => {
     "The last 10 champion teams of the FE World Championship",
   ];
   const images = [
-    "/public/story1.webp",
-    "/public/story2.jpeg",
-    "/public/story3.jpeg",
-    "/public/story4.webp",
-    "/public/story6.jpeg",
+    "/story1.webp",
+    "/story2.jpeg",
+    "/story3.jpeg",
+    "/story4.webp",
+    "/story6.jpeg",
   ];
 
   const handleDragEnd = (event, info) => {
@@ -292,7 +292,7 @@ const Home = () => {
     <>
       <HomeContainer>
         <LogoContainer>
-          <img src="/public/formulae-completo-branco.png" alt="Logo" />
+          <img src=" /formulae-completo-branco.png" alt="Logo" />
         </LogoContainer>
         <CarouselContainer>
           <Card
