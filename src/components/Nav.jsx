@@ -2,7 +2,7 @@
 import { NavStyle } from "../css/NavStyle";
 import { Link } from 'react-router-dom';
 import logo from "/Fomrula-E-Logo.png";
-import logoCompleta from "../assets/logos/fe-Logo-completa.png";
+import logoCompleta from "/fe-logo-completa.png";
 
 const Nav =()=>{
     
