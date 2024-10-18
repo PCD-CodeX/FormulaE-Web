@@ -29,7 +29,7 @@ const QuizContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10vw 0;
-  margin-top: -12vh;
+  margin-top: -10vh;
   background-color: white;
   color: white;
 `;
@@ -41,17 +41,19 @@ const QuestionContainer = styled.div`
   align-items: center;
   font-size: clamp(0.8rem, 1.2vw, 2rem);
   background-color: var(--color1);
-  padding: 60px;
+  padding: 100px 60px;
   border-radius: 10px;
   min-width: 300px;
-  max-width: 42vw;
+  max-width: 46vw;
   width: 100%;
-  max-height: 80vh;
 
   h2{
     margin-top: 20px;
     text-align: center;
     padding: 0 30px;
+  }
+  p{
+    margin-top: -20px
   }
 `;
 
@@ -67,7 +69,7 @@ const OptionButton = styled.button`
   font-weight: 900;
   padding: 30px 20px;
   margin: 10px;
-  margin-top: 4vh;
+  margin-top: 6vh;
   margin-bottom: -1vh;
   width: 90%;
   border-radius: 5px;
@@ -83,8 +85,7 @@ const ResultContainer = styled.div`
   background-color: var(--color1);
   padding: 4vw;
   border-radius: 10px;
-  max-width: 600px;
-  width: 100%;
+  max-width: 700px;
   h2 {
     font-size: clamp(8px, 1.4vw, 40px);
     margin-bottom: 20px;
@@ -131,10 +132,10 @@ const ResultContainer = styled.div`
 
 // Estilização da barra de progresso
 const ProgressBar = styled.div`
-  width: 100%;
+  width: 80%;
   background-color: #e0e0df;
   border-radius: 50px;
-  margin: 20px 0;
+  margin: 40px;
 `;
 
 const Progress = styled.div`
@@ -301,13 +302,13 @@ const Quiz = () => {
         ) : (
           <QuestionContainer>
             {/* Exibe o número da questão atual */}
+
             <p>{currentQuestion + 1}/{questions.length}</p>
 
             {/* Barra de progresso */}
             <ProgressBar>
               <Progress percentage={percentageComplete} />
             </ProgressBar>
-
             <h2>{questions[currentQuestion].question}</h2>
             {questions[currentQuestion].options.map((option, index) => (
               <OptionButton
