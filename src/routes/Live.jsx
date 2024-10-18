@@ -1,5 +1,5 @@
-import { LiveStyle } from "../css/LiveStyle";
 import { useEffect, useState } from "react";
+import { LiveStyle } from "../css/LiveStyle";
 
 const LivesPage = () => {
   // Dados fictícios de lives para mostrar na página
@@ -115,19 +115,19 @@ const LivesPage = () => {
                 ))}
               </ul>
             </div>
-            
+
             {/* Texto sobre o circuito de Mônaco */}
             <div className="circuit-info">
               <h2>Sobre o Circuito de Mônaco</h2>
-              <img src={`/public/tracks/monaco.png`} alt="" />
+              <img src={`/tracks/monaco.png`} alt="" />
               <p>
-                <br/>
+                <br />
                 O Circuito de Mônaco é um dos mais tradicionais e icônicos
                 traçados do automobilismo mundial. Situado nas ruas de Monte
                 Carlo, é famoso por suas curvas desafiadoras e a proximidade das
-                barreiras.<br/><br/>A pista é estreita, com subidas e descidas
+                barreiras.<br /><br />A pista é estreita, com subidas e descidas
                 acentuadas, tornando as ultrapassagens extremamente difíceis e
-                exigindo muita habilidade dos pilotos.<br/><br/> Durante a corrida, a
+                exigindo muita habilidade dos pilotos.<br /><br /> Durante a corrida, a
                 temperatura e a umidade podem variar significativamente,
                 afetando o desempenho dos pneus e a aderência na pista. É um
                 verdadeiro teste para os pilotos, equipes e máquinas!

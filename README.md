@@ -2,7 +2,6 @@
 
 Este projeto é um site imersivo desenvolvido em React, focado em popularizar a Fórmula E. A aplicação permite que os usuários explorem informações sobre as corridas, equipes e notícias, enquanto desfrutam de uma experiência dinâmica e interativa. Utilizando o react-router-dom para gerenciar a navegação e o styled-components para estilização, o site proporciona uma interface fluida e intuitiva, oferecendo aos fãs da Fórmula E uma forma envolvente de explorar o conteúdo.
 
-[Link do Repositório](https://github.com/jota0802/FomulaEExperience)
 
 ----------
 
