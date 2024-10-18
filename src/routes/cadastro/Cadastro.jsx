@@ -1,9 +1,9 @@
-import { CadastroStyle } from "../css/CadastroStyle";
+import { CadastroStyle } from "./CadastroStyle";
 import { useEffect, useState } from "react";
-import lastFrameImage from "../assets/logos/last-formulaefia.png";
-import googleIcon from "../assets/logos/google-icon.png"; // Ícone do Google
-import facebookIcon from "../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
-import myGif from "../assets/logos/formulae-logo-completa.gif"
+import lastFrameImage from "../../assets/logos/last-formulaefia.png";
+import googleIcon from "../../assets/logos/google-icon.png"; // Ícone do Google
+import facebookIcon from "../../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
+import myGif from "../../assets/logos/formulae-logo-completa.gif"
 import axios from "axios";
 //import googleIcon from "../assets/logos/google-icon.png";  // Ícone do Google
 //import facebookIcon from "../assets/logos/facebook-icon.png";  // Ícone de outra plataforma

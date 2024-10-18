@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgImg from "../assets/logos/bg-login.gif";
+import bgImg from "../../assets/logos/bg-login.gif";
 export const CadastroStyle = styled.section`
 
 

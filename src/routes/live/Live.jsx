@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LiveStyle } from "../css/LiveStyle";
+import { LiveStyle } from "./LiveStyle";
 
 const LivesPage = () => {
   // Dados fictícios de lives para mostrar na página

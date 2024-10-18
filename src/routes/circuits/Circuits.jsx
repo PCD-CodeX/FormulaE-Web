@@ -1,4 +1,4 @@
-import { CircuitsStyle } from "../css/CircuitsStyle";
+import { CircuitsStyle } from "./CircuitsStyle";
 import { useState } from "react";
 
 // Lista de pistas com os continentes

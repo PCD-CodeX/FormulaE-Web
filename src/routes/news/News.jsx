@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Styled from '../css/NewsStyle';  // Importa o objeto unificado
+import Styled from './NewsStyle';  // Importa o objeto unificado
 
 const carouselNews = [  
   {

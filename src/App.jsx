@@ -1,5 +1,5 @@
-import Nav from './components/Nav'
-import Footer from './components/Footer'
+import Nav from './components/nav/Nav'
+import Footer from './components/footer/Footer'
 import { Outlet } from 'react-router-dom'
 import './css/reset.css'
 

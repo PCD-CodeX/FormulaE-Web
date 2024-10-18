@@ -1,10 +1,10 @@
-import { LoginStyle } from "../css/LoginStyle";
+import { LoginStyle } from "./LoginStyle";
 import { useEffect, useState } from "react";
-import myGif from "../assets/logos/formulae.gif";
-import lastFrameImage from "../assets/logos/last-fomrulae.png";
-import logoCompleta from "../assets/logos/formulae-completo-branco.png";
-import googleIcon from "../assets/logos/google-icon.png"; // Ícone do Google
-import facebookIcon from "../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
+import myGif from "../../assets/logos/formulae.gif";
+import lastFrameImage from "../../assets/logos/last-fomrulae.png";
+import logoCompleta from "../../assets/logos/formulae-completo-branco.png";
+import googleIcon from "../../assets/logos/google-icon.png"; // Ícone do Google
+import facebookIcon from "../../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
 import axios from "axios";
 
 const Login = () => {
