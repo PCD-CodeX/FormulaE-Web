@@ -202,7 +202,7 @@ const questions = [
     ]
   },
   {
-    question: "Você se identificaria mais com equipes mais pioneiras e tradicionais ou com novas equipes em ascensão?",
+    question: "Você gosta de equipes mais tradicionais ou equipes novas?",
     options: [
       { answer: "Equipes Pioneiras", teams: ["Mahindra", "ERT", "Envision", "Nissan", "DS", "Avalanche", "Maserati"] },
       { answer: "Novas equipes em ascensão", teams: ["ABT", "McLaren", "Porsche", "Jaguar"] }
