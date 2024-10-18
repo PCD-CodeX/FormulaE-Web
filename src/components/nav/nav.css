@@ -10,3 +10,29 @@
     border-bottom: 6px solid var(--color3);
 
 }
+
+.navbar-toggler collapsed{
+    border: 1px solid black;
+}
+
+.dropdown-menu show{
+    transition: all 0.3s ease-in;
+    margin: 20px;
+}
+
+.dropdown-item{
+    transition: all 0.5s ease;
+}
+
+.dropdown-item:hover{
+    color: var(--color1);
+    background-color: var(--opacity);
+}
+
+.nav-link{
+    transition: all 0.2s ease-in;
+}
+
+.nav-link:hover{
+    scale: 1.04;
+}

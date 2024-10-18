@@ -45,6 +45,8 @@
     box-sizing: border-box;
     font-family: 'MyCustomFont';
     letter-spacing: clamp(1px,0.2vh,3px);
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 :root {

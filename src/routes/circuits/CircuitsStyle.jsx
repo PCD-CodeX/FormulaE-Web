@@ -84,6 +84,8 @@ h2 {
 .flip-button {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: clamp(6px,1vw,30px);
   border-radius: 1vw;
   margin-top: 1vh;

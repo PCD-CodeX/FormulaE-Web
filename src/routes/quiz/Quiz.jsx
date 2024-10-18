@@ -16,7 +16,7 @@ const QuizPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4vh 2vh;
+    padding: 4vh clamp(10px,2vh,30px);
     margin-bottom: 8vh;
     background-color: white;
     font-size: clamp(1rem, 1.6vw, 2rem);
@@ -41,7 +41,7 @@ const QuestionContainer = styled.div`
   align-items: center;
   font-size: clamp(0.8rem, 1.2vw, 2rem);
   background-color: var(--color1);
-  padding: 100px 60px;
+  padding: clamp(50px,10vh,100px) clamp(10px,6vw,60px);
   border-radius: 10px;
   min-width: 300px;
   max-width: 46vw;
@@ -51,6 +51,7 @@ const QuestionContainer = styled.div`
     margin-top: 20px;
     text-align: center;
     padding: 0 30px;
+    font-size: clamp(1rem,2vw,3rem);
   }
   p{
     margin-top: -20px
@@ -83,24 +84,26 @@ const OptionButton = styled.button`
 
 const ResultContainer = styled.div`
   background-color: var(--color1);
-  padding: 4vw;
+  padding: clamp(40px,4vw,80px);
   border-radius: 10px;
   max-width: 700px;
+  width: 80%;
+
   h2 {
-    font-size: clamp(8px, 1.4vw, 40px);
+    font-size: clamp(14px, 1.4vw, 40px);
     margin-bottom: 20px;
     font-weight: 900;
     text-align: center;
   }
   p {
     text-align: center;
-    margin-top: 40px;
-    font-size: clamp(8px, 1.2vw, 20px); 
+    margin-top: clamp(20px,3vh,40px);
+    font-size: clamp(10px, 1.2vw, 20px); 
     font-weight: 500;
   }
   h3 {
     text-align: center;
-    font-size: clamp(8px, 1.8vw, 40px);
+    font-size: clamp(14px, 1.8vw, 40px);
     margin: 4vw 1vw;
     font-weight: 900;
     background-color: var(--opacity);
@@ -122,6 +125,7 @@ const ResultContainer = styled.div`
     transition: 0.2s ease;
     text-decoration: none;
     font-weight: 900;
+    
   }
   a:hover { 
     background-color: var(--opacity);
@@ -135,7 +139,7 @@ const ProgressBar = styled.div`
   width: 80%;
   background-color: #e0e0df;
   border-radius: 50px;
-  margin: 40px;
+  margin: 20px;
 `;
 
 const Progress = styled.div`
