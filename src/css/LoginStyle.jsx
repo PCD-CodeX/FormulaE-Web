@@ -47,7 +47,8 @@ export const LoginStyle = styled.section`
     }
 
     .logo {
-        width: clamp(100px, 16vw, 260px); /* Mantém a logo flexível */
+        width: clamp(180px, 16vw, 260px); /* Mantém a logo flexível */
+        margin-bottom: 2vh;
         filter: drop-shadow(0 0 0.5rem rgba(201, 200, 200, 0.425));
     }
     .login {
@@ -76,20 +77,20 @@ export const LoginStyle = styled.section`
 
     label {
         margin-bottom: 0.5rem;
-        font-size: clamp(8px, 0.9vw, 16px);;
+        font-size: clamp(14px, 0.9vw, 16px);;
         font-weight: 900;
         letter-spacing: 3px;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
     }
 
     input {
-        padding: clamp(6px,0.8vw,14px);
+        padding: clamp(10px,0.8vw,14px);
         padding-left: 2vw;
         border-radius: 1vw;
         border: none;
         //border: 3px solid var(--opacity);
-        font-size: clamp(8px, 0.6vw, 16px);
-        margin-top: 1vw;
+        font-size: clamp(10px, 0.6vw, 16px);
+        margin-top: 3vh;
         font-weight: 900;
         background: white;
         letter-spacing: 1px;
@@ -166,8 +167,9 @@ export const LoginStyle = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: absolute;
-        margin-top: 30vh;//ajusta a altura dos botoes
+        margin-top: 34vh;//ajusta a altura dos botoes
         gap: 4vh;
     }
 
@@ -181,7 +183,7 @@ export const LoginStyle = styled.section`
         width: 18vw;
         border: none;
         border-radius: 0.8vw;
-        font-size: clamp(6px, 0.9vw, 16px);
+        font-size: clamp(8px, 0.9vw, 16px);
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -217,15 +219,15 @@ export const LoginStyle = styled.section`
     //media query para ajustar o layout para telas menores
 
 
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
         .content {
             flex-direction: column;
-            padding: 0vw 2vw;
+            padding: 0vw 2vh;
             box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);
-            background: linear-gradient(0deg,#ffffff,#ffffff); ;
+            background: linear-gradient(0deg,#ffffff,#ffffff);
         }
         .form {
-            margin-top: clamp(-200px,-30vh,600px);
+            margin-top: clamp(-200px,-20vh,-600px);
             border-top-left-radius: 2vh;
             border-bottom-left-radius: 2vh;
         }
@@ -240,31 +242,22 @@ export const LoginStyle = styled.section`
             margin-left: 4vw;
         }
         .gif-container h1{
-            margin-bottom: clamp(200px,22vw,300px);
             display: none;
         }
         .gif-container .animation{
             display: none;
-        }
-        .gif-container .social-login {
-            margin-top: clamp(330px,52vw,1200px);
-        }  
+        } 
         .login{
             padding: 2.8rem clamp(20px, 3rem, 50px);
+            min-width: 300px; //ajusta a largura do formulario
+        }
+        .social-login {
+            display: none;
         }
         .my-form__button{
-            margin-top: clamp(150px,16vh,200px);
+            padding: 1.2vh;
+            font-size: clamp(14px, 1vw, 20px);
+            margin-top: 2vh;
         }
-        .google-button,
-        .other-button {
-            padding: 1vw;
-            width: clamp(90px,16vh,200px);
-            margin-right: clamp(0px,6vw,80px);
-        }
-        .google-button img,
-        .other-button img {
-        width: clamp(0.2vh,20px,3vh);
-        height: clamp(0.2vh,20px,3vh);
-    }
     }
 `

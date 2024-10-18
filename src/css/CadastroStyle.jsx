@@ -78,7 +78,7 @@ export const CadastroStyle = styled.section`
     h1 {
         display: flex;
         flex-direction: column;
-        font-size: clamp(0.6rem, 1.6vw, 2rem);
+        font-size: clamp(1.2rem, 1.6vw, 2rem);
         font-weight: 900;
         letter-spacing: 4px;
         font-weight: bolder;
@@ -98,7 +98,7 @@ export const CadastroStyle = styled.section`
         display: flex;
         flex-direction: start;
         margin-bottom: 0.5rem;
-        font-size: clamp(8px, 0.9vw, 16px);;
+        font-size: clamp(12px, 0.9vw, 16px);;
         font-weight: 900;
         letter-spacing: 3px;
         color: #ffffff;
@@ -108,7 +108,7 @@ export const CadastroStyle = styled.section`
     }
 
     input {
-        padding: clamp(6px,0.8vw,14px);
+        padding: clamp(10px,0.8vw,14px);
         padding-left: 2vw;
         border-radius: 1vw;
         border: none;
@@ -134,10 +134,10 @@ export const CadastroStyle = styled.section`
     .my-form__button {
         background-color: rgba(207, 212, 226, 0.35);
         color: #ffffff;
-        padding: clamp(6px,0.8vw,30px);
+        padding: clamp(10px,0.8vw,30px);
         border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
         border-radius: 1vw;
-        font-size: clamp(8px, 0.8vw, 20px);
+        font-size: clamp(12px, 0.8vw, 20px);
         transition: 0.2s ease;
         font-weight: 700;
         cursor: pointer;
@@ -178,9 +178,8 @@ export const CadastroStyle = styled.section`
         border-radius: 0.5rem;
         transition: opacity 0.5s ease;
         margin-bottom: clamp(20px,6vw,100px); //ajusta a altura da imagem e do gif
-        filter: contrast(80%) saturate(90%);
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.4));
-        filter: blur(0.4px);
+        filter: blur(0.5px);
     }
 
     .gif {
@@ -244,15 +243,18 @@ export const CadastroStyle = styled.section`
         width: clamp(1vh,20px,3hv);
         height: clamp(1vh,20px,3vh);
     }
+
+
     //media query para ajustar o layout para telas menores
 
 
-    @media (max-width: 700px) {
+    @media (max-width: 1000px) {
         .content {
             flex-direction: column;
             padding: 0vw 2vw;
             box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);
-            background: linear-gradient(0deg,#ffffff,#ffffff); ;
+            background: linear-gradient(0deg,#ffffff,#ffffff);
+            margin-top: -8vh;
         }
         .login{
             padding: 2rem 1rem;
@@ -262,6 +264,13 @@ export const CadastroStyle = styled.section`
         }
         h1{
             margin-bottom: 30px;
+            margin-top: 1vh;
+        }
+        label{
+            margin-top: 2vh;
+        }
+        input{
+            margin-top: 2vh;
         }
         .input-container {
             margin-top: 1vw;
@@ -271,11 +280,7 @@ export const CadastroStyle = styled.section`
             display: none;
         }
         .social-login{
-            z-index: 10;
-            margin-right: 0;
-            margin-top: 0;
-            margin-bottom: clamp(480px,30vw,380px);
-            margin-left: clamp(100px,34vw,100px);
+            display: none;
         }
         .gif-container .animation{
             display: none;
@@ -284,13 +289,8 @@ export const CadastroStyle = styled.section`
             margin-bottom: 2vw;
         }
         .my-form__button{
-            margin-top: clamp(150px,16vh,200px);
+            margin-top: 4vh
         }
-        .google-button,
-        .other-button {
-            padding: 1.2vw;
-            width: clamp(90px,16vh,200px);
-            margin-right: clamp(20px,8vw,0px);
-        }
+        
     }
 `

@@ -76,7 +76,7 @@ width: 100%;
     margin-left: clamp(30px, 4vw, 200px);
     background: linear-gradient(180deg, var(--color1), var(--color2));
     box-shadow: -0.4vw 0.4vw 0.4vw rgba(88, 88, 88, 0.3);
-    border-radius: 1vw;
+    border-radius: 2vh;
     transition: all 0.6s ease;
     opacity: 0.96;
     overflow: hidden;
@@ -113,7 +113,7 @@ width: 100%;
 
 }
 .menu.expand{
-    margin-top: clamp(20px,3vw,80px);
+    margin-top: clamp(30px,3vw,80px);
     font-size: clamp(14px, 1vw, 20px);
     letter-spacing: clamp(1px,0.2vh,3px);
     font-weight: 700;
