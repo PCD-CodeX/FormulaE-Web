@@ -18,7 +18,7 @@ const NavigationBar = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto fs-6 text-gray fw-semibold mb-2">
+                    <Nav className="ms-auto fs-6 text-gray fw-semibold">
                         <Link to='/Quiz' className="nav-link me-5">Questionário</Link>
                         <Link to='/News' className="nav-link me-5">Notícias</Link>
                         <Link to='/Live' className="nav-link me-5">Lives</Link>

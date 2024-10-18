@@ -188,6 +188,9 @@ const StatCard = styled.div`
     font-size: 16px;
     color: #cfd8dc;
   }
+  h1{
+    font-size: 20px;
+  }
 
   .link {
     display: flex;

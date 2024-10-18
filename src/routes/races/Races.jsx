@@ -119,6 +119,10 @@ const TrackCard = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        a{
+            color: white;
+        }
     }
 
     //hover do card inteiro
@@ -177,11 +181,11 @@ const GridContainer = styled.div`
 const Links = styled.a`
     display: flex;
     justify-content: center;
-    padding: clamp(6px,1vw,30px);
+    padding: clamp(10px,1vw,30px);
     border-radius: 1vw;
     background-color: var(--opacity);
     border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
-    font-size: clamp(8px, 0.9vw, 20px);
+    font-size: clamp(14px, 0.9vw, 20px);
     transition: 0.2s ease;  
     margin-bottom: 4vh;
     font-style: none;

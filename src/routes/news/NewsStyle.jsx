@@ -32,10 +32,14 @@ const Styled = {
     border-left: 3px solid var(--opacity);
 
     h2 {
-      padding: 1vw 1vh;
+      padding: 2vh 1vw;
       margin-right: 20vw;
       border-radius: 8px;
-      font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+      font-size: clamp(1.2rem, 1.3vw, 2.5rem);
+      background-color: var(--opacity);
+      width: 50%;
+      margin-left: 20px;
+      text-align: center;  
     }
 
     img {
@@ -59,7 +63,7 @@ const Styled = {
     .carousel-container {
       width: 90%;
       max-width: 80vw;
-      height: 24vw;
+      height: 60vh;
       margin: auto;
       margin-top: 10px;
       overflow: hidden;
@@ -67,21 +71,28 @@ const Styled = {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       border-radius: 8px;
       border: 4px solid var(--opacity);
     }
     h2{
-        padding: 1vw 1vh;
-        text-align: center;
-        font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1vh;
+      padding: 1vh;
+      text-align: center;
+      font-size: clamp(1.4rem, 1.3vw, 2.5rem);
+        
     }
     .carousel-container h2 {
+      font-weight: 900;
       text-align: start;
-      padding: 1.4vw 0.2vw;
+      padding: 1.4vw;
       font-size: clamp(0.8rem, 1.3vw, 2.5rem);
     }
     p{
-      padding: 0vw 0.2vw;
+      padding: 0vw 2vw;
       font-size: clamp(0.6rem, 1vw, 2.5rem);
     }
 
@@ -122,8 +133,8 @@ const Styled = {
     }
 
     .carousel-controls button {
-      margin: 0 0.25rem;
-      padding: 0.5vw;
+      margin: 0.25rem 0.25rem;
+      padding: 0.4vw 1vh;
       border: none;
       background-color: var(--opacity);
       border: 2px solid var(--opacity);
@@ -138,13 +149,14 @@ const Styled = {
 
     @media (max-width: 768px) {
       .carousel-container {
-        height: 250px;
+        height: 300px;
       }
     }
 
     @media (max-width: 480px) {
       .carousel-container {
-        height: 200px;
+        height: 250px;
+        border: 2px solid var(--opacity);
       }
     }
   `,
@@ -160,7 +172,7 @@ const Styled = {
       text-align: center;
       padding: 1vw 0;
       width: 100%;
-      font-size: clamp(0.8rem, 1.3vw, 2.5rem);
+      font-size: clamp(1.4rem, 1.3vw, 2.5rem);
     }
   `,
 
@@ -199,6 +211,7 @@ const Styled = {
   `,
 
   RightNewsCard: styled.div`
+    margin: 20px;
     background: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
@@ -206,13 +219,13 @@ const Styled = {
   `,
 
   RightNewsTitle: styled.h4`
-    font-size: clamp(0.5rem, 1vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2rem);
     color: #333;
     margin-bottom: 10px;
   `,
 
   RightNewsDescription: styled.p`
-    font-size: clamp(0.4rem, 0.8vw, 1.2rem);
+    font-size: clamp(0.8rem, 0.8vw, 1.2rem);
     color: var(--color2);
   `,
 };

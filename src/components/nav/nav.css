@@ -15,13 +15,20 @@
     border: 1px solid black;
 }
 
-.dropdown-menu show{
+.dropdown-menu{
     transition: all 0.3s ease-in;
-    margin: 20px;
+    padding: 2px;
+    width: 70%;
+}
+@media(max-width: 1000px){
+    .dropdown-menu{
+        width: 40%;
+    }
 }
 
 .dropdown-item{
     transition: all 0.5s ease;
+    font-weight: 500;
 }
 
 .dropdown-item:hover{
@@ -34,5 +41,13 @@
 }
 
 .nav-link:hover{
-    scale: 1.04;
+    background-color: var(--opacity);
+    border-radius: 4px;
+}
+
+.navbar-collapse{
+    margin-left: 10px;
+}
+.navbar-collapse a{
+    padding: 10px;
 }

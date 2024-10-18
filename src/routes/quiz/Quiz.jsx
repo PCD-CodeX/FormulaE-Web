@@ -9,8 +9,10 @@ const QuizPage = styled.div`
     align-items: center;
     padding: 10vh 4vh 0vh 4vh;
     background-color: white;
-    font-size: clamp(1rem, 2.6vw, 4rem);
+    font-size: clamp(1.2rem, 2.6vw, 4rem);
+    font-weight: 900;
     color: #000000;
+    text-align: center;
   }
   .p {
     display: flex;
@@ -21,6 +23,7 @@ const QuizPage = styled.div`
     background-color: white;
     font-size: clamp(1rem, 1.6vw, 2rem);
     color: #000000;
+    text-align: center;
   }
 `;
 
@@ -54,7 +57,8 @@ const QuestionContainer = styled.div`
     font-size: clamp(1rem,2vw,3rem);
   }
   p{
-    margin-top: -20px
+    margin-top: -30px;
+    font-size: clamp(18px,1.2em,30px);
   }
 `;
 
@@ -84,7 +88,7 @@ const OptionButton = styled.button`
 
 const ResultContainer = styled.div`
   background-color: var(--color1);
-  padding: clamp(40px,4vw,80px);
+  padding: clamp(40px,6vw,200px);
   border-radius: 10px;
   max-width: 700px;
   width: 80%;
