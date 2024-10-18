@@ -21,7 +21,7 @@ const Nav =()=>{
                         <Link to='/'>
                             <img src={logoCompleta} className='logo'/>
                         </Link>
-                        <Link to='/Quiz' className='h1'><h1>Quiz</h1></Link>
+                        <Link to='/Quiz' className='h1'><h1>Questionário</h1></Link>
                         <Link to='/News' className='h1'><h1>Notícias</h1></Link>
                         <Link to='/Live'className='h1'><h1>Lives</h1></Link>
                         <Link to='/Login' className='link'><h1>Login</h1></Link>

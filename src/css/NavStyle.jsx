@@ -69,7 +69,7 @@ width: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
-    height: clamp(30px,4vw,100px);;
+    height: clamp(24px,8vh,100px);;
     width: clamp(30px, 8vh, 80px);
     margin-top: clamp(20px, 6vh, 200px); //da a altura do menu em relação ao topo
     margin-bottom: clamp(20px, 8vh, 200px);
@@ -85,7 +85,7 @@ width: 100%;
 
 .sidebar_container.expanded {
     height: clamp(300px,32vw,800px); //se mexer aqui, tem que mexer no margin-top do hamb.expanded!! se nao o simbolo da FE nao aparece
-    width: clamp(80px,10vw,400px);
+    width: clamp(140px,10vw,400px);
     background: linear-gradient(180deg, var(--color1), var(--color2)); ;
     border-radius: 1.2vw;
 }
@@ -114,7 +114,7 @@ width: 100%;
 }
 .menu.expand{
     margin-top: clamp(20px,3vw,80px);
-    font-size: clamp(8px, 1vw, 20px);
+    font-size: clamp(14px, 1vw, 20px);
     letter-spacing: clamp(1px,0.2vh,3px);
     font-weight: 700;
     padding: 0.4vw; //altura dos componentes 
@@ -127,8 +127,8 @@ width: 100%;
     z-index: 4;
     display: flex;
     position: fixed;
-    width: clamp(20px,2.4vw,60px);
-    font-size: clamp(12px, 0.6vw, 20px);
+    width: clamp(26px,2.4vw,60px);
+    font-size: clamp(14px, 0.6vw, 20px);
     transition: all 0.6s ease;
     cursor: pointer;
 }
