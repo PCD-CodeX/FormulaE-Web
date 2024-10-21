@@ -22,9 +22,9 @@ const NavigationBar = () => {
                         <Link to='/Live' className="nav-link ">Lives</Link>
                         <Link to='/News' className="nav-link ">Notícias</Link>
                         <Link to='/Login' className="nav-link ">Login</Link>
-                        <Link to='/Cadastro' className="nav-link ">Cadastre-se</Link>
+                        <Link to='/Cadastro' className="nav-link ">Cadastro</Link>
                         {/* Dropdown de menu */}
-                        <NavDropdown title="Sobre" id="basic-nav-dropdown" className='dropdown'>
+                        <NavDropdown title="Conheça" id="basic-nav-dropdown" className='dropdown'>
                             <NavDropdown.Item as={Link} to='/Circuits'>Pistas</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/Races'>Corridas</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/Teams'>Equipes</NavDropdown.Item>

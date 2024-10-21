@@ -19,8 +19,8 @@ const floating = keyframes`
 // Estilo do container principal
 const HomeContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  flex-direction: row;
+  height: 140vh;
   background-color: #1987db;
   position: relative;
   overflow: hidden;
@@ -28,10 +28,10 @@ const HomeContainer = styled.div`
   padding: 50px 10px;
 
 
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
     align-items: center;
-    height: 120vh;
+    height: 140vh;
   }
   
   &::before {
