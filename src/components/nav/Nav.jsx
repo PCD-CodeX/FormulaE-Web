@@ -24,7 +24,7 @@ const NavigationBar = () => {
                         <Link to='/Login' className="nav-link ">Login</Link>
                         <Link to='/Cadastro' className="nav-link ">Cadastro</Link>
                         {/* Dropdown de menu */}
-                        <NavDropdown title="Conheça" id="basic-nav-dropdown" className='dropdown'>
+                        <NavDropdown title="Saiba Mais" id="basic-nav-dropdown" className='dropdown'>
                             <NavDropdown.Item as={Link} to='/Circuits'>Pistas</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/Races'>Corridas</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='/Teams'>Equipes</NavDropdown.Item>
