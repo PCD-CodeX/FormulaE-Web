@@ -10,15 +10,15 @@ const NavigationBar = () => {
     return (
         <Navbar bg="light" expand="lg" className='nav'>
             <Container className='container'>
-                <Navbar.Brand className='m-0'>
+                <Navbar.Brand className=''>
                     <Link to='/'>
-                        <img src={logoCompleta} alt="Logo" style={{ width: 'clamp(180px,16vw,300px)' }} />
+                        <img className='image' src={logoCompleta} alt="Logo" style={{ width: 'clamp(180px,16vw,300px)' }} />
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto fs-6 text-gray fw-semibold">
-                        <Link to='/Quiz' className="nav-link ">Conheça Sua Equipe</Link>
+                    <Nav className=" fs-6 text-gray fw-semibold"m id='nav'>
+                        <Link to='/Quiz' className="nav-link ">Match Your Team</Link>
                         <Link to='/Live' className="nav-link ">Lives</Link>
                         <Link to='/News' className="nav-link ">Notícias</Link>
                         <Link to='/Login' className="nav-link ">Login</Link>
