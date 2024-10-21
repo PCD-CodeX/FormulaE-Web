@@ -5,10 +5,21 @@
     --color4:#00ffff;
     --opacity:rgba(0, 71, 255, 0.1)
 }
+.container{
+    margin: 20px 40px;
+}
 
+
+a{
+    text-decoration: none;
+    color: black;
+}
 .nav{
     border-bottom: 6px solid var(--color3);
-
+    a{
+        text-decoration: none;
+        font-size: clamp(0.6rem, 0.9vw, 1.5rem);
+    }
 }
 
 .navbar-toggler collapsed{
@@ -20,7 +31,7 @@
     padding: 2px;
     width: 70%;
 }
-@media(max-width: 1000px){
+@media(max-width: 1170px){
     .dropdown-menu{
         width: 40%;
     }
@@ -38,6 +49,7 @@
 
 .nav-link{
     transition: all 0.2s ease-in;
+    margin-left: 60px;
 }
 
 .nav-link:hover{

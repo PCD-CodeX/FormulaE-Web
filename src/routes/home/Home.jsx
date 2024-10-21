@@ -3,14 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 // Animação de rotação e flutuação
-const spin = keyframes`
-  0% {
-    transform: rotate(0deg) translateX(-100%);
-  }
-  100%{
-    transform: rotate(360deg) translateX(0%);
-  }
-`;
 
 const floating = keyframes`
   0% {
@@ -33,10 +25,15 @@ const HomeContainer = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
+  padding: 50px 10px;
+
 
   @media (min-width: 768px) {
     flex-direction: row;
+    align-items: center;
+    height: 120vh;
   }
+  
   &::before {
     content: "";
     position: absolute;
@@ -64,7 +61,7 @@ const LogoContainer = styled.div`
   img {
     z-index: 2;
     margin: 0 5vw;
-    animation: ${spin} 2s linear, ${floating} infinite ease-in-out 3s;
+    animation: ${floating} infinite ease-in-out 3s;
     aspect-ratio: 5/2;
     width: 30vw;
     min-width: 300px;
@@ -84,6 +81,7 @@ const LogoContainer = styled.div`
 
 // Estilo do carrossel
 const CarouselContainer = styled.div`
+  position: static;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -92,6 +90,7 @@ const CarouselContainer = styled.div`
   padding: 20px;
   filter: contrast(1.1) saturate(1.1) brightness(0.95);
   opacity: 1;
+  margin-top: 30px;
 `;
 
 const Card = styled(motion.div)`
@@ -101,7 +100,7 @@ const Card = styled(motion.div)`
   height: 700px;
   border-radius: 10px;
   display: flex;
-  padding: 2vw;
+  padding: 3vh;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   background: #051236c1;
   opacity: 1;
@@ -110,7 +109,7 @@ const Card = styled(motion.div)`
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,7 +118,7 @@ const Card = styled(motion.div)`
 
   .titulo {
     margin: 10px 0;
-    font-size: clamp(20px, 5vw, 40px);
+    font-size: clamp(16px, 4.6vw, 40px);
     font-weight: bold;
     text-transform: uppercase;
     color: white;
@@ -127,7 +126,7 @@ const Card = styled(motion.div)`
   }
 
   .desc {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(10px, 2vw, 20px);
     text-align: center;
     padding: 10px;
     color: white;
@@ -142,6 +141,20 @@ const Card = styled(motion.div)`
     filter: blur(40px), contrast(0.9), saturate(1.1);
     pointer-events: none;
   }
+
+  @media (max-width: 768px) {
+    height: 500px;
+    max-width: 300px;
+
+    img{
+      max-width: 180px;
+    }
+
+    .info{
+      padding: 40px 0;
+    }
+  }
+
 `;
 
 const InfoSection = styled.section`
@@ -274,9 +287,9 @@ const Home = () => {
   ];
 
   const handleDragEnd = (event, info) => {
-    if (info.offset.y < -50) {
+    if (info.offset.x < -50) {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    } else if (info.offset.y > 50) {
+    } else if (info.offset.x > 50) {
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + cards.length) % cards.length
       );
@@ -300,12 +313,12 @@ const Home = () => {
         <CarouselContainer>
           <Card
             key={currentIndex}
-            drag="y"
-            dragConstraints={{ top: 0, bottom: 0 }}
+            drag="x"
+            dragConstraints={{ left: -50, right: 50, top: 0, bottom: 0 }}
             onDragEnd={handleDragEnd}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.8 }}
           >
             <div className="info">
