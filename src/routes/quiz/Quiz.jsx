@@ -223,7 +223,7 @@ const questions = [
     ]
   },
   {
-    question: "Alem da Formula E, qual outro tipo de modalidade que você acompanha?",
+    question: "Além da Formula E, qual outro tipo de modalidade que você acompanha?",
     options: [
       { answer: "Equipes da Fórmula 1", teams: ["McLaren", "Porsche", "Jaguar", "Maserati"] },
       { answer: "Equipes de endurance (WEC, Le Mans)", teams: ["DS", "Envision"] },
