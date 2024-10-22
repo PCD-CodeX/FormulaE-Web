@@ -20,7 +20,7 @@ const floating = keyframes`
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
-  height: 140vh;
+  height: 120vh;
   background-color: #1987db;
   position: relative;
   overflow: hidden;
@@ -239,7 +239,7 @@ const StatCard = styled.div`
     }
   }
   .link:hover {
-    background-color: var(--opacity);
+    background-color: var(--color2);
     border: 0.2vw solid var(--color1);
     scale: 1.03;
   }
@@ -261,7 +261,7 @@ const CuriositiesSection = styled.section`
   color: #000000;
 
   h2 {
-    font-size: clamp(26px, 4vw, 38px);
+    font-size: clamp(24px, 4vw, 38px);
     margin-bottom: 30px;
     text-align: center;
     color: #000000;
@@ -272,10 +272,11 @@ const CuriositiesSection = styled.section`
     padding-left: 0;
     max-width: 800px;
     width: 100%;
+    padding: 10px;
   }
 
   li {
-    font-size: clamp(16px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 18px);
     margin-bottom: 20px;
     display: flex;
     align-items: center;

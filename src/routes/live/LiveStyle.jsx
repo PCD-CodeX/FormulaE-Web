@@ -148,6 +148,9 @@ export const LiveStyle = styled.section`
   padding: 20px;
   transition: all 0.3s ease;
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .driver-ranking-card:hover {
@@ -208,35 +211,41 @@ export const LiveStyle = styled.section`
   width: 100%;
   min-width: 300px;
   margin-top: 40px;
-  padding: 20px;
+  padding: 40px;
   background-color: var(--opacity);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .circuit-info h2 {
-  font-size: clamp(1rem, 1.4vw, 2rem);
+  font-size: clamp(1rem, 1.2vw, 2rem);
   color: var(--color2);
   margin-bottom: 15px;
 }
 
 .circuit-info p {
   padding: 10px;
-  font-size: clamp(0.7rem, 1vw, 1.2rem);
-  color: var(--color2);
+  font-size: clamp(0.6rem, 0.8vw, 1.2rem);
+  color: var(--color3);
 }
 .circuit-info img{
     width: 100%;
     aspect-ratio: 6/4;
     border-radius: 10px;
+    max-width: 600px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1108px) {
   .live-content {
     flex-direction: column;
   }
 
   .live-videos, .right-sidebar {
     width: 100%;
+  }
+
+
+  .circuit-info{
+    padding: 20px;
   }
 }
 
