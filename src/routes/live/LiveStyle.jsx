@@ -26,13 +26,13 @@ export const LiveStyle = styled.section`
 }
 
 .lives-header h1 {
-  font-size: 2.5rem;
+  font-size: clamp(40px,1.4rem,);
   color: var(--color1);
   margin-bottom: 10px;
 }
 
 .lives-header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--color2);
 }
 
@@ -84,13 +84,13 @@ export const LiveStyle = styled.section`
 }
 
 .live-details h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
   color: var(--color1);
 }
 
 .live-details p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--color2);
 }
 
@@ -118,7 +118,7 @@ export const LiveStyle = styled.section`
 }
 
 .track-conditions-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: var(--color2);
 }
@@ -130,7 +130,7 @@ export const LiveStyle = styled.section`
 }
 
 .condition-icon {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-right: 10px;
 }
 
@@ -155,7 +155,7 @@ export const LiveStyle = styled.section`
 }
 
 .driver-ranking-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: var(--color2);
 }
@@ -183,16 +183,21 @@ export const LiveStyle = styled.section`
 }
 
 .position {
+  padding: 10px;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--color3);
 }
 
 .driver-name {
+  margin-left: 15px;
+  text-align: center;
   font-size: 1rem;
 }
 
 .team-name {
+  text-align: center;
+  margin-left: 15px;
   font-size: 0.9rem;
   color: var(--color2);
 }
@@ -210,7 +215,7 @@ export const LiveStyle = styled.section`
 }
 
 .circuit-info h2 {
-  font-size: clamp(0.8rem, 1.4vw, 2rem);
+  font-size: clamp(1rem, 1.4vw, 2rem);
   color: var(--color2);
   margin-bottom: 15px;
 }

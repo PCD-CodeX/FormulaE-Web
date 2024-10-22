@@ -31,7 +31,7 @@ const HomeContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    height: 120vh;
+    height: 100vh;
   }
   
   &::before {
@@ -59,6 +59,7 @@ const LogoContainer = styled.div`
   flex-direction: column;
   @media (max-width: 768px) {
     flex: 0.4;
+    display: none;
   }
   img {
     z-index: 2;
@@ -79,7 +80,9 @@ const LogoContainer = styled.div`
     text-align: center;
     padding: 0 5vw;
   }
-`;
+
+  
+`
 
 // Estilo do carrossel
 const CarouselContainer = styled.div`
@@ -95,11 +98,11 @@ const CarouselContainer = styled.div`
 
   @media (max-width:900px) {
     justify-content: start;
+    margin-top: 100px;
   }
 
 
   @media (max-width: 768px) {
-    margin-top: 0;
   }
 `;
 
