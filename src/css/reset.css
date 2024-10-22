@@ -1,41 +1,40 @@
 @font-face {
     font-family: 'MyCustomFont';
     src: local('MyCustomFont')
-        url('../assets/fonts/FESans.var.woff2') format('woff2'),
-        url('../assets/fonts/FESans.var.ttf') format('truetype');
+        url('../assets/fonts/UncutSans-Regular.otf') format('otf'),
+        url('../assets/fonts/UncutSans-Regular.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
 }
 @font-face {
     font-family: 'SubFont';
-    src: url('../assets/fonts/gg_sans_Normal.ttf') format('truetype');
+    src: url('../assets/fonts/UncutSans-Medium.otf') format('opentype');
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GeneralBigFont';
-    src: url('../assets/fonts/Ginto_Nord_Black.ttf') format('truetype');
-    font-weight: 800;
-    font-size: 2.1875rem;
+    src: url('../assets/fonts/UncutSans-Bold.otf') format('opentype');
+    font-weight: 900;
     font-style: bold;
 }
 
 @font-face {
     font-family: 'HomepageFont';
-    src: url('../assets/fonts/Ginto_Medium.ttf') format('truetype');
-    font-style: medium;
+    src: url('../assets/fonts/UncutSans-Light.otf') format('opentype');
+    font-style: light;
 }
 
 @font-face {
     font-family: 'NormalBoldFont';
-    src: url('../assets/fonts/gg_sans_Bold.ttf') format('truetype');
+    src: url('../assets/fonts/UncutSans-Semibold.otf') format('opentype');
     font-weight: 600;
     font-style: bold;
 }
 
 @font-face {
     font-family: 'GenMediumFont';
-    src: url('../assets/fonts/Ginto_Nord_Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Ginto_Nord_Regular.ttf') format('opentype');
     font-style: normal;
 }
 
@@ -44,7 +43,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'MyCustomFont';
-    letter-spacing: clamp(1px,0.2vh,3px);
+    letter-spacing: clamp(0.8px,0.1vh,3px);
     margin-block-start: 0;
     margin-block-end: 0;
 }

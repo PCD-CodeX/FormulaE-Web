@@ -9,10 +9,11 @@ const QuizPage = styled.div`
     align-items: center;
     padding: 10vh 4vh 0vh 4vh;
     background-color: white;
-    font-size: clamp(1.2rem, 2.6vw, 4rem);
+    font-size: clamp(3rem, 2.6vw, 4rem);
     font-weight: 900;
     color: #000000;
     text-align: center;
+    font-family: 'GeneralBigFont';
   }
   .p {
     display: flex;
@@ -21,9 +22,11 @@ const QuizPage = styled.div`
     padding: 4vh clamp(10px,2vh,30px);
     margin-bottom: 8vh;
     background-color: white;
-    font-size: clamp(1rem, 1.6vw, 2rem);
+    font-weight: light;
     color: #000000;
     text-align: center;
+    font-family: 'HomepageFont';
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
   }
 `;
 
@@ -291,7 +294,7 @@ const Quiz = () => {
 
   return (
     <QuizPage>
-      <h2 className='h2'>Responda nosso questionário</h2>
+      <h2 className='h2'>RESPONDA NOSSO QUESTIONÁRIO</h2>
       <p className='p'>Em 10 questões indicaremos uma Equipe que é a sua cara!!</p>
       <QuizContainer>
         {showResult ? (
