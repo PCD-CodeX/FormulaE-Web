@@ -14,6 +14,7 @@ const QuizPage = styled.div`
     color: #000000;
     text-align: center;
     font-family: 'GeneralBigFont';
+    font-style: none;
   }
   .p {
     display: flex;
@@ -294,7 +295,7 @@ const Quiz = () => {
 
   return (
     <QuizPage>
-      <h2 className='h2'>RESPONDA NOSSO QUESTIONÁRIO</h2>
+      <h2 className='h2'>DESCUBRA SUA EQUIPE !!  </h2>
       <p className='p'>Em 10 questões indicaremos uma Equipe que é a sua cara!!</p>
       <QuizContainer>
         {showResult ? (

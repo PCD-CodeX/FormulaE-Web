@@ -134,6 +134,7 @@ const NewsPage = () => {
                   key={index}
                   className={index === currentIndex ? "active" : ""}
                   onClick={() => setCurrentIndex(index)}
+                  style={{fontFamily: 'SubFont', fontSize:"14px"}}
                 >
                   {index + 1}
                 </button>
