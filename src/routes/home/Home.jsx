@@ -57,7 +57,9 @@ const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  @media (max-width: 768px) {
+    flex: 0.4;
+  }
   img {
     z-index: 2;
     margin: 0 5vw;
@@ -87,10 +89,13 @@ const CarouselContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   filter: contrast(1.1) saturate(1.1) brightness(0.95);
   opacity: 1;
   margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -136,7 +141,7 @@ const Card = styled(motion.div)`
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 1);
     filter: blur(40px), contrast(0.9), saturate(1.1);
     pointer-events: none;
