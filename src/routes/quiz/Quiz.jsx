@@ -27,6 +27,16 @@ const QuizPage = styled.div`
     text-align: center;
     font-size: clamp(1.5rem, 1.2vw, 2rem);
   }
+
+  @media (max-width: 768px) {
+    .h2{
+      font-size: 2rem;
+    }
+    .p{
+      font-size: 1.4rem;
+      padding: 40px;
+    }
+  }
 `;
 
 const QuizContainer = styled.div`
@@ -34,7 +44,7 @@ const QuizContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10vw 0;
-  margin-top: -10vh;
+  margin-top: -14vh;
   background-color: white;
   color: white;
 `;
@@ -90,13 +100,35 @@ const OptionButton = styled.button`
 
 const ResultContainer = styled.div`
   background-color: var(--color1);
-  padding: clamp(40px,6vw,200px);
+  padding: clamp(40px,5vw,200px);
   border-radius: 10px;
   max-width: 700px;
   width: 80%;
 
+
+  @media (max-width: 1600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 140px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(50px,6vw,200px);
+
+    h2{
+      font-size: 1rem;
+    }
+    h3{
+      padding: 20px;
+    }
+  }
+
   h2 {
-    font-size: clamp(14px, 1.4vw, 40px);
+    font-size:  clamp(1.6rem,2vw,3rem);
     margin-bottom: 20px;
     font-weight: 900;
     text-align: center;
@@ -104,12 +136,12 @@ const ResultContainer = styled.div`
   p {
     text-align: center;
     margin-top: clamp(20px,3vh,40px);
-    font-size: clamp(10px, 1.2vw, 20px); 
+    font-size: clamp(1rem, 1.2vw, 2rem); 
     font-weight: 500;
   }
   h3 {
     text-align: center;
-    font-size: clamp(14px, 1.8vw, 40px);
+    font-size: clamp(1.2rem, 1.8vw, 3rem);
     margin: 4vw 1vw;
     font-weight: 900;
     background-color: var(--opacity);
@@ -122,11 +154,11 @@ const ResultContainer = styled.div`
     display: flex;
     justify-content: center;  
     margin: 3vw 6vw 0vw 6vw;
-    padding: clamp(6px,1vw,30px);
+    padding: clamp(10px,1vw,30px);
     border-radius: 1vw;
     background-color: var(--opacity);
     border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
-    font-size: clamp(8px, 1vw, 20px);
+    font-size: clamp(1rem, 1.2vw,3rem);
     color: white;
     transition: 0.2s ease;
     text-decoration: none;
@@ -153,7 +185,7 @@ const Progress = styled.div`
   height: 20px;
   background-color: var(--color4);
   border-radius: 50px;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.3s ease-in-out;
 `;
 
 const teams = {
@@ -302,8 +334,7 @@ const Quiz = () => {
             <p>Com base em suas respostas, você se encaixa mais com a(s) equipe(s):</p>
             {highestScoringTeams.map((team) => (
               <div key={team}>
-                <h3>{team}</h3>
-                <p>{/* Aqui você pode adicionar uma descrição para cada equipe */}</p>
+                <h3 style={{padding: "20px"}}>{team}</h3>
               </div>
             ))}
             <p>Taxa de afinidade: {((teamScores[highestScoringTeams[0]] / (questions.length)) * 100).toFixed(2)}%</p>

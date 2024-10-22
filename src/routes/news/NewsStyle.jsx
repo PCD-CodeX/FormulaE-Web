@@ -200,12 +200,12 @@ const Styled = {
   `,
 
   NewsTitle: styled.h3`
-    margin-top: 10px;
+    margin-top: 24px;
     font-size: clamp(0.8rem, 1vw, 2rem);
   `,
 
   NewsDescription: styled.p`
-    padding-top: 10px;
+    padding-top: 14px;
     font-size: clamp(0.6rem, 0.8vw, 1.2rem);
     color: #555;
   `,
