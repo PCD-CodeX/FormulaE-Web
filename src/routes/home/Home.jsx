@@ -25,7 +25,7 @@ const HomeContainer = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
-  padding: 0px 0px;
+  padding: 5px 0px;
 
 
   @media (max-width: 768px) {
