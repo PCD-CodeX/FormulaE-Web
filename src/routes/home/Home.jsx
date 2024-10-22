@@ -31,7 +31,7 @@ const HomeContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    height: 140vh;
+    height: 120vh;
   }
   
   &::before {
@@ -92,6 +92,11 @@ const CarouselContainer = styled.div`
   filter: contrast(1.1) saturate(1.1) brightness(0.95);
   opacity: 1;
   margin-top: 30px;
+
+  @media (max-width:900px) {
+    justify-content: start;
+  }
+
 
   @media (max-width: 768px) {
     margin-top: 0;
