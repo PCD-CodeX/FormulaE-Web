@@ -12,6 +12,11 @@
             overflow: hidden;
             text-align: center;
             margin-left: 40px;
+            margin-left: 30px;
+            font-family: 'NormalBoldFont';
+            font-weight: clamp(2rem, 0.9vw, 1.5rem);
+            font-size: clamp(1.2rem, 0.9vw, 2rem);
+            color: rgb(20, 20, 20);
         }
         .image{
             padding: 10px 40px;
@@ -89,4 +94,6 @@ a{
 }
 .navbar-collapse a{
     padding: 10px;
+    font-family: 'NormalBoldFont';
+    color: black;
 }
