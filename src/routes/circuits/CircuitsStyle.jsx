@@ -100,6 +100,8 @@ h2 {
 .flip-button p {
   color: white;
   font-weight: 800;
+  margin: 0;
+  padding: 5px;
 }
 
 .flip-button:hover {

@@ -203,6 +203,7 @@ const StatCard = styled.div`
   }
   h1{
     font-size: 20px;
+    margin: 0;
   }
 
   .link {
