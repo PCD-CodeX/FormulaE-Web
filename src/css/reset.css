@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'MyCustomFont';
     src: local('MyCustomFont')
-        url('../assets/fonts/UncutSans-Regular.otf') format('otf'),
-        url('../assets/fonts/UncutSans-Regular.otf') format('opentype');
+        url('../assets/fonts/FESans.var.ttf') format('ttf'),
+        url('../assets/fonts/FESans.var.woff2') format('opentype');
         font-weight: normal;
         font-style: normal;
 }

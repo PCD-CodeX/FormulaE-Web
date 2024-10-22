@@ -13,7 +13,6 @@ const QuizPage = styled.div`
     font-weight: 900;
     color: #000000;
     text-align: center;
-    font-family: 'GeneralBigFont';
     font-style: none;
   }
   .p {
@@ -23,10 +22,9 @@ const QuizPage = styled.div`
     padding: 4vh clamp(10px,2vh,30px);
     margin-bottom: 8vh;
     background-color: white;
-    font-weight: light;
+    font-weight: 200;
     color: #000000;
     text-align: center;
-    font-family: 'HomepageFont';
     font-size: clamp(1.5rem, 1.2vw, 2rem);
   }
 `;

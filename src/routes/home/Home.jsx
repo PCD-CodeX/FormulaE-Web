@@ -222,7 +222,7 @@ const StatCard = styled.div`
   .link {
     display: flex;
     justify-content: center;
-    margin: 2vw 2vw 0vw 2vw;
+    margin: 0vw 2vw 0vw 2vw;
     padding: clamp(6px, 1vw, 30px);
     border-radius: 1vw;
     background-color: var(--opacity);
@@ -231,6 +231,12 @@ const StatCard = styled.div`
     transition: 0.2s ease;
     text-decoration: none;
     color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .link{
+      padding: 12px;
+    }
   }
   .link:hover {
     background-color: var(--opacity);
