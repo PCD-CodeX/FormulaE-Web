@@ -6,9 +6,9 @@ const Footer = () => {
         <FooterStyle>
 
             <section className='Footer'>
-                    <h5> 
+                    <h3> 
                     © FIA 2013-2024 Todo o conteúdo sujeito à aprovação da FIA
-                    </h5>
+                    </h3>
                         <a href="https://www.facebook.com/fiaformulae/"><i className="fi fi-brands-facebook"></i></a>
                         <a href="https://www.tiktok.com/@fiaformulae?lang=en"><i className="fi fi-brands-tik-tok"></i></a>
                         <a href="https://www.instagram.com/fiaformulae/"><i className="fi fi-brands-instagram"></i></a>

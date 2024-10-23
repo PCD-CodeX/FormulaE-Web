@@ -25,8 +25,8 @@ a{
     font-size: clamp(8px,1vw,30px);
     color: white;
 }
-h5{
+h3{
     font-weight: 600;
-    font-size: clamp(8px,0.6vw,30px);
+    font-size: clamp(8px,1vw,30px);
 }
 `

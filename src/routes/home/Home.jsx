@@ -21,32 +21,29 @@ const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
   height: 120vh;
-  background-color: #1987db;
+  background-color: #0167ff;
   position: relative;
   overflow: hidden;
   z-index: 0;
   padding: 5px 0px;
-
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     height: 90vh;
   }
-  
-  &::before {
-    content: "";
+
+  // Estilização do vídeo de fundo
+  video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/bg-cadastro-removed.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    z-index: -1;
     opacity: 0.5;
-    z-index: 0;
-    filter: blur(8px);
+    filter: blur(10px);
   }
 `;
 
@@ -80,9 +77,7 @@ const LogoContainer = styled.div`
     text-align: center;
     padding: 0 5vw;
   }
-
-  
-`
+`;
 
 // Estilo do carrossel
 const CarouselContainer = styled.div`
@@ -96,13 +91,9 @@ const CarouselContainer = styled.div`
   opacity: 1;
   margin-top: 30px;
 
-  @media (max-width:900px) {
+  @media (max-width: 900px) {
     justify-content: start;
     margin-top: 100px;
-  }
-
-
-  @media (max-width: 768px) {
   }
 `;
 
@@ -159,15 +150,14 @@ const Card = styled(motion.div)`
     height: 500px;
     max-width: 300px;
 
-    img{
+    img {
       max-width: 180px;
     }
 
-    .info{
+    .info {
       padding: 40px 0;
     }
   }
-
 `;
 
 const InfoSection = styled.section`
@@ -257,7 +247,6 @@ const CuriositiesSection = styled.section`
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
-
   color: #000000;
 
   h2 {
@@ -327,32 +316,33 @@ const Home = () => {
 
   return (
     <>
-      <HomeContainer>
-        <LogoContainer>
-          <img src=" /formulae-completo-branco.png" alt="Logo" />
-        </LogoContainer>
-        <CarouselContainer>
-          <Card
-            key={currentIndex}
-            drag="x"
-            dragConstraints={{ left: -50, right: 50, top: 0, bottom: 0 }}
-            onDragEnd={handleDragEnd}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="info">
-              <img
-                src={images[currentIndex]}
-                alt={`Slide ${currentIndex + 1}`}
-              />
-              <div className="titulo">{cards[currentIndex]}</div>
-              <div className="desc">{desc[currentIndex]}</div>
-            </div>
-          </Card>
-        </CarouselContainer>
-      </HomeContainer>
+    <HomeContainer>
+      <video autoPlay muted loop>
+        <source src="/bg-cadastro-removed.mp4" type="video/mp4" />
+        Seu navegador não suporta o vídeo.
+      </video>
+      <LogoContainer>
+        <img src="/formulae-completo-branco.png" alt="Logo" />
+      </LogoContainer>
+      <CarouselContainer>
+        <Card
+          key={currentIndex}
+          drag="x"
+          dragConstraints={{ left: -50, right: 50, top: 0, bottom: 0 }}
+          onDragEnd={handleDragEnd}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="info">
+            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+            <div className="titulo">{cards[currentIndex]}</div>
+            <div className="desc">{desc[currentIndex]}</div>
+          </div>
+        </Card>
+      </CarouselContainer>
+    </HomeContainer>
 
       <InfoSection>
         <h2>Informações e Estatísticas</h2>
