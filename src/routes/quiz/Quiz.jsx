@@ -2,6 +2,99 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+
+const questions = [
+  {
+    question: "Qual é o seu estilo de vida?",
+    options: [
+      { answer: "Urbano e Moderno", teams: ["Porsche", "McLaren"] },
+      { answer: "Aventureiro", teams: ["Jaguar", "Avalanche", "Nissan"] },
+      { answer: "Sofisticado e Elegante", teams: ["DS", "Maserati", "Envision"] },
+      { answer: "Consciente", teams: ["ERT", "ABT", "Mahindra"] }
+    ]
+  },
+  {
+    question: "Qual dessas atividades você mais gosta de fazer?",
+    options: [
+      { answer: "Cozinhar e experimentar novas receitas", teams: ["DS", "Maserati"] },
+      { answer: "Jogar vídeo games e maratonar séries", teams: ["Porsche", "McLaren", "Nissan"] },
+      { answer: "Explorar atividades ao ar livre", teams: ["Avalanche", "Jaguar", "ABT"] },
+      { answer: "Ler livros e assistir documentários", teams: ["Mahindra", "Envision", "ERT"] }
+    ]
+  },
+  {
+    question: "Qual o estilo de música que você mais gosta?",
+    options: [
+      { answer: "Rock ou Alternativa", teams: ["Porsche", "Jaguar", "ABT"] },
+      { answer: "Pop ou Eletrônica", teams: ["DS", "Envision", "Nissan"] },
+      { answer: "Clássica ou Jazz", teams: ["Maserati", "Mahindra", "Avalanche"] },
+      { answer: "Hip Hop ou Reggae", teams: ["McLaren", "ERT"] }
+    ]
+  },
+  {
+    question: "Quais tipos de veículos elétricos mais te atraem?",
+    options: [
+      { answer: "Os com tecnologia mais avançada", teams: ["Porsche", "Jaguar"] },
+      { answer: "Os que priorizam a redução da pegada de carbono", teams: ["ERT", "ABT", "Mahindra", "Avalanche"] },
+      { answer: "Os com mais Desempenho e potência", teams: ["Maserati", "McLaren"] },
+      { answer: "Os Econômicos", teams: ["Nissan", "Envision", "DS"] }
+    ]
+  },
+  {
+    question: "Você gosta de equipes mais tradicionais ou equipes novas?",
+    options: [
+      { answer: "Equipes Pioneiras", teams: ["Mahindra", "ERT", "Envision", "Nissan", "DS", "Avalanche", "Maserati"] },
+      { answer: "Novas equipes em ascensão", teams: ["ABT", "McLaren", "Porsche", "Jaguar"] }
+    ]
+  },
+  {
+    question: "O que mais te instigaria na Fórmula E?",
+    options: [
+      { answer: "A Inovação tecnológica envolvida no campeonato", teams: ["Nissan", "Jaguar", "McLaren"] },
+      { answer: "A Sustentabilidade ambiental", teams: ["ERT", "ABT", "Avalanche"] },
+      { answer: "A Competição acirrada entre as equipes", teams: ["DS", "Envision", "Jaguar"] },
+      { answer: "A História e tradição do campeonato", teams: ["Mahindra", "ERT"] },
+      { answer: "Velocidade e desempenho", teams: ["Maserati", "Porsche"] }
+    ]
+  },
+  {
+    question: "Além da Formula E, qual outro tipo de modalidade que você acompanha?",
+    options: [
+      { answer: "Equipes da Fórmula 1", teams: ["McLaren", "Porsche", "Jaguar", "Maserati"] },
+      { answer: "Equipes de endurance (WEC, Le Mans)", teams: ["DS", "Envision"] },
+      { answer: "Equipes de rali (WRC, Dakar)", teams: ["Mahindra", "Avalanche", "Nissan"] },
+      { answer: "Outros", teams: ["ABT", "ERT"] }
+    ]
+  },
+  {
+    question: "Que tipo de patrocinadores das equipes você mais reconheceria?",
+    options: [
+      { answer: "Empresas Tecnologicas", teams: ["Nissan", "McLaren", "ABT"] },
+      { answer: "Marcas Automotivas", teams: ["Jaguar", "Maserati", "Porsche"] },
+      { answer: "Empresas Sustentáveis", teams: ["ERT", "ABT", "Mahindra"] },
+      { answer: "Outros", teams: ["DS", "Envision"] }
+    ]
+  },
+  {
+    question: "Para qual tipo de equipe você torceria?",
+    options: [
+      { answer: "As equipes que ganham tudo", teams: ["Porsche", "McLaren", "Nissan", "Envision"] },
+      { answer: "Geralmente apoio equipes subestimadas ou azaradas", teams: ["Mahindra", "ERT", "ABT"] },
+      { answer: "Acompanho várias equipes, independentemente do desempenho", teams: ["DS", "Jaguar", "Avalanche", "Maserati"] }
+    ]
+  },
+  {
+    question: "Qual é a sua visão de sucesso na Fórmula E?",
+    options: [
+      { answer: "Vitórias e títulos de campeonato", teams: ["Porsche", "Jaguar", "DS", "Envision"] },
+      { answer: "Desenvolvimento de tecnologia inovadora", teams: ["Nissan", "McLaren", "Jaguar", "Avalanche"] },
+      { answer: "Contribuição para a conscientização dos veículos elétricos", teams: ["ERT", "ABT", "Mahindra"] }
+    ]
+  }
+];
+
+// STYLE!!
+
 const QuizPage = styled.div`
   .h2 {
     display: flex;
@@ -56,11 +149,15 @@ const QuestionContainer = styled.div`
   align-items: center;
   font-size: clamp(0.8rem, 1.2vw, 2rem);
   background-color: var(--color1);
-  padding: clamp(50px,10vh,100px) clamp(10px,6vw,60px);
+  padding: clamp(50px,16vh,100px) clamp(10px,6vw,60px);
   border-radius: 10px;
-  min-width: 300px;
+  min-width: 60%;
   max-width: 46vw;
   width: 100%;
+
+  @media (max-width: 768px) {
+    min-width: 85%;
+    }
 
   h2{
     margin-top: 20px;
@@ -202,95 +299,6 @@ const teams = {
   ABT: 0,
 };
 
-const questions = [
-  {
-    question: "Qual é o seu estilo de vida?",
-    options: [
-      { answer: "Urbano e Moderno", teams: ["Porsche", "McLaren"] },
-      { answer: "Aventureiro", teams: ["Jaguar", "Avalanche", "Nissan"] },
-      { answer: "Sofisticado e Elegante", teams: ["DS", "Maserati", "Envision"] },
-      { answer: "Consciente", teams: ["ERT", "ABT", "Mahindra"] }
-    ]
-  },
-  {
-    question: "Qual dessas atividades você mais gosta de fazer?",
-    options: [
-      { answer: "Cozinhar e experimentar novas receitas", teams: ["DS", "Maserati"] },
-      { answer: "Jogar vídeo games e maratonar séries", teams: ["Porsche", "McLaren", "Nissan"] },
-      { answer: "Explorar atividades ao ar livre", teams: ["Avalanche", "Jaguar", "ABT"] },
-      { answer: "Ler livros e assistir documentários", teams: ["Mahindra", "Envision", "ERT"] }
-    ]
-  },
-  {
-    question: "Qual o estilo de música que você mais gosta?",
-    options: [
-      { answer: "Rock ou Alternativa", teams: ["Porsche", "Jaguar", "ABT"] },
-      { answer: "Pop ou Eletrônica", teams: ["DS", "Envision", "Nissan"] },
-      { answer: "Clássica ou Jazz", teams: ["Maserati", "Mahindra", "Avalanche"] },
-      { answer: "Hip Hop ou Reggae", teams: ["McLaren", "ERT"] }
-    ]
-  },
-  {
-    question: "Quais tipos de veículos elétricos mais te atraem?",
-    options: [
-      { answer: "Os com tecnologia mais avançada", teams: ["Porsche", "Jaguar"] },
-      { answer: "Os que priorizam a redução da pegada de carbono", teams: ["ERT", "ABT", "Mahindra", "Avalanche"] },
-      { answer: "Os com mais Desempenho e potência", teams: ["Maserati", "McLaren"] },
-      { answer: "Os Econômicos", teams: ["Nissan", "Envision", "DS"] }
-    ]
-  },
-  {
-    question: "Você gosta de equipes mais tradicionais ou equipes novas?",
-    options: [
-      { answer: "Equipes Pioneiras", teams: ["Mahindra", "ERT", "Envision", "Nissan", "DS", "Avalanche", "Maserati"] },
-      { answer: "Novas equipes em ascensão", teams: ["ABT", "McLaren", "Porsche", "Jaguar"] }
-    ]
-  },
-  {
-    question: "O que mais te instigaria na Fórmula E?",
-    options: [
-      { answer: "A Inovação tecnológica envolvida no campeonato", teams: ["Nissan", "Jaguar", "McLaren"] },
-      { answer: "A Sustentabilidade ambiental", teams: ["ERT", "ABT", "Avalanche"] },
-      { answer: "A Competição acirrada entre as equipes", teams: ["DS", "Envision", "Jaguar"] },
-      { answer: "A História e tradição do campeonato", teams: ["Mahindra", "ERT"] },
-      { answer: "Velocidade e desempenho", teams: ["Maserati", "Porsche"] }
-    ]
-  },
-  {
-    question: "Além da Formula E, qual outro tipo de modalidade que você acompanha?",
-    options: [
-      { answer: "Equipes da Fórmula 1", teams: ["McLaren", "Porsche", "Jaguar", "Maserati"] },
-      { answer: "Equipes de endurance (WEC, Le Mans)", teams: ["DS", "Envision"] },
-      { answer: "Equipes de rali (WRC, Dakar)", teams: ["Mahindra", "Avalanche", "Nissan"] },
-      { answer: "Outros", teams: ["ABT", "ERT"] }
-    ]
-  },
-  {
-    question: "Que tipo de patrocinadores das equipes você mais reconheceria?",
-    options: [
-      { answer: "Empresas Tecnologicas", teams: ["Nissan", "McLaren", "ABT"] },
-      { answer: "Marcas Automotivas", teams: ["Jaguar", "Maserati", "Porsche"] },
-      { answer: "Empresas Sustentáveis", teams: ["ERT", "ABT", "Mahindra"] },
-      { answer: "Outros", teams: ["DS", "Envision"] }
-    ]
-  },
-  {
-    question: "Para qual tipo de equipe você torceria?",
-    options: [
-      { answer: "As equipes que ganham tudo", teams: ["Porsche", "McLaren", "Nissan", "Envision"] },
-      { answer: "Geralmente apoio equipes subestimadas ou azaradas", teams: ["Mahindra", "ERT", "ABT"] },
-      { answer: "Acompanho várias equipes, independentemente do desempenho", teams: ["DS", "Jaguar", "Avalanche", "Maserati"] }
-    ]
-  },
-  {
-    question: "Qual é a sua visão de sucesso na Fórmula E?",
-    options: [
-      { answer: "Vitórias e títulos de campeonato", teams: ["Porsche", "Jaguar", "DS", "Envision"] },
-      { answer: "Desenvolvimento de tecnologia inovadora", teams: ["Nissan", "McLaren", "Jaguar", "Avalanche"] },
-      { answer: "Contribuição para a conscientização dos veículos elétricos", teams: ["ERT", "ABT", "Mahindra"] }
-    ]
-  }
-];
 
 
 const Quiz = () => {

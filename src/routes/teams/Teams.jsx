@@ -268,6 +268,12 @@ const PilotList = styled.ul`
     font-weight: bold;
     list-style-type: none;
     padding: 0;
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
 `;
 
 const PilotItem = styled.li`
@@ -276,7 +282,7 @@ padding: 1vw;
 `;
 
 const CarImage = styled.img`
-    width: clamp(280px, 34vw, 660px); // Tamanho da imagem
+    width: clamp(260px, 34vw, 660px); // Tamanho da imagem
     height: auto;
     margin-top: 6vh;
     margin-bottom: 1vh;
@@ -299,6 +305,7 @@ const GridContainer = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding: 50px;
     }
 `;
 const TeamList = () => {

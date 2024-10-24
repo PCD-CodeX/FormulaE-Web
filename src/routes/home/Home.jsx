@@ -26,7 +26,6 @@ const HomeContainer = styled.div`
   overflow: hidden;
   z-index: 0;
   padding: 5px 0px;
-  filter: brightness(0.7);
 
   @media (max-width: 768px) {
     flex-direction: column;

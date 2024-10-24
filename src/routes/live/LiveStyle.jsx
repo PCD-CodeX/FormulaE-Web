@@ -47,7 +47,7 @@ export const LiveStyle = styled.section`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 65%;
+  width: 60%;
 }
 
 .live-card {
@@ -99,9 +99,14 @@ export const LiveStyle = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 30%;
+  width: 35%;
   margin-right: 20px;
+
+  @media (max-width:1000px) {
+    margin-top: 20px;
+  }
 }
+
 
 /* Card das condições da pista */
 .track-conditions-card {
@@ -225,7 +230,7 @@ export const LiveStyle = styled.section`
 
 .circuit-info p {
   padding: 10px;
-  font-size: clamp(0.6rem, 0.8vw, 1.2rem);
+  font-size: clamp(0.8rem, 0.8vw, 1.2rem);
   color: var(--color3);
 }
 .circuit-info img{
@@ -234,7 +239,7 @@ export const LiveStyle = styled.section`
     border-radius: 10px;
     max-width: 600px;
 }
-@media (max-width: 1108px) {
+@media (max-width: 900px) {
   .live-content {
     flex-direction: column;
   }
