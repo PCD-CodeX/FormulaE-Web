@@ -28,18 +28,14 @@
         .container{ 
             margin: 10px 20px 20px 0px;
         }
-        .navbar-brand{
-            img{
-                min-width: 230px;
-                height: auto;
-                margin-left: -10px;
-            }
-        }
     
 }
 .image{
-    width: clamp(180px,16vw,300px);
     height: auto;
+    margin-left: -10px;
+    max-width: 230px;
+    min-width: 180px;
+    aspect-ratio: 425/182;
 }
 a{
     text-decoration: none;
