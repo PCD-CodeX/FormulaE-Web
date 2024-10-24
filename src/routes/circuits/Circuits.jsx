@@ -149,7 +149,7 @@ const CircuitsList = () => {
 
   return (
     <CircuitsStyle>
-      <div>
+      <div className="card-conatiner">
         {Object.keys(circuitsByContinent).map((continent) => (
           <div key={continent} className="continent-container">
             <h2 className="continent">{continent}</h2>

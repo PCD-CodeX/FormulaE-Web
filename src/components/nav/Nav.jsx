@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import logoCompleta from "/fe-logo-completa.png";
+import logoCompleta from "/fe-logo-completa.webp";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './nav.css'

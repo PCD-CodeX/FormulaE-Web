@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
 export const CircuitsStyle = styled.div`
+  .card-conatiner{
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+
   .circuit-card {
   perspective: 1000px;
   margin: 2rem;
@@ -116,6 +126,13 @@ h2 {
   grid-auto-rows: auto;
   gap: 4rem;
   padding: 6vw 8vw;
+
+  @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 }
 
 .continent-container {

@@ -230,7 +230,7 @@ const StatCard = styled.div`
   }
   .link:hover {
     background-color: var(--color2);
-    border: 0.2vw solid var(--color1);
+    border: 0.2vw solid var(--color2);
     scale: 1.03;
   }
   .h1 {

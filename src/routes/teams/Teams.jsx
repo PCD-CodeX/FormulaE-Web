@@ -233,7 +233,7 @@ const TeamCard = styled.div`
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.336);
     color: white;
-    min-width: 18vw;
+    min-width: 16vw;
     overflow: hidden; // Esconde a imagem que ultrapassa o tamanho do card
     h2{
         display: flex;
@@ -276,7 +276,7 @@ padding: 1vw;
 `;
 
 const CarImage = styled.img`
-    width: clamp(300px, 34vw, 660px); // Tamanho da imagem
+    width: clamp(280px, 34vw, 660px); // Tamanho da imagem
     height: auto;
     margin-top: 6vh;
     margin-bottom: 1vh;
@@ -289,10 +289,17 @@ const CarImage = styled.img`
 // Estilo para o grid layout
 const GridContainer = styled.div`
     display: grid; // Exibe os cards em grid
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Define o tamanho das colunas
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Define o tamanho das colunas
     gap: 6vw 12vw; // Espaçamento entre os cards
     padding: 4vw 16vw; // Espaçamento interno (topo e laterais)
     background: white;
+
+    @media (max-width: 800px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 `;
 const TeamList = () => {
     return (

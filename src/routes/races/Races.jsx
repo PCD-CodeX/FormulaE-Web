@@ -79,6 +79,7 @@ const TrackCard = styled.div`
     transition: all 0.3s ease-in;
     border: 7px solid #ebebebf0;
 
+
     //numero
     h1{
         display: flex;
@@ -100,18 +101,17 @@ const TrackCard = styled.div`
         padding: 2vh;
         border-radius: 4px;
         font-size: clamp(14px, 1.2vw, 26px);
-        font-weight: bold;
         margin-bottom: 2vh;
         margin-top: 2vh;
         letter-spacing: 3px;
-        font-weight: 900;
+        font-weight: 300;
     }
 
     //data
     p {
         font-size: clamp(12px, 1vw, 20px);
-        font-weight: 900;
         margin-bottom: 0.6vh;
+        font-weight: 300;
     }
 
     //imagem da pista
@@ -176,6 +176,14 @@ const GridContainer = styled.div`
     padding: 4vw 16vw 6vw 16vw;
     filter: drop-shadow(0 0px 8px rgba(0, 0, 0, 0.3));
     background: white;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
 `;
 
 const Links = styled.a`
@@ -192,7 +200,6 @@ const Links = styled.a`
     text-decoration: none;
     a{
             color: white;
-            font-weight: 800;
     }
 
     &:hover{
