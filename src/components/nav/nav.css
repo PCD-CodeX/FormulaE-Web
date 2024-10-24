@@ -37,6 +37,9 @@
         }
     
 }
+.image{
+    width: clamp(180px,16vw,300px);
+}
 a{
     text-decoration: none;
     padding-left: 5px;
