@@ -224,7 +224,7 @@ const TrackList = () => {
                             <FlagImage src={`/flags/${track.flagCountry}.svg`} alt={track.sedePT} />
                             </h2>
                         <div className="images">
-                            <TrackImage src={`/tracks/${track.track}.png`} alt={`Imagem da pista de ${track.sedePT}`} />
+                            <TrackImage src={`/tracks/${track.track}.svg`} alt={`Imagem da pista de ${track.sedePT}`} />
                             <Links href={track.link}>
                             <a>
                                 Comprar Ingressos

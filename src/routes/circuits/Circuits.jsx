@@ -167,7 +167,7 @@ const CircuitsList = () => {
                       <h2>{circuit.sedePT}</h2>
                       <div className="images">
                         <img
-                          src={`/tracks/${circuit.track}.png`}
+                          src={`/tracks/${circuit.track}.svg`}
                           alt={`Imagem da pista de ${circuit.sedePT}`}
                           className="circuit-image"
                         />

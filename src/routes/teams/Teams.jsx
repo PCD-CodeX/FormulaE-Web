@@ -4,7 +4,7 @@ const teams = [
     {
         name: 'Maserati MSG Racing',
         colorMain: '#2088DD94',
-        imageCar: 'maserati.png',
+        imageCar: 'maserati.svg',
         wins: 10,
         podiums: 27,
         races: 132,
@@ -24,7 +24,7 @@ const teams = [
     {
         name: 'ABT CUPRA Formula E Team',
         colorMain: '#0b3c75c1',
-        imageCar: 'cupra.png',
+        imageCar: 'cupra.svg',
         wins: 14,
         podiums: 47,
         races: 115,
@@ -44,7 +44,7 @@ const teams = [
     {
         name: 'TAG Porsche Formula E Team',
         colorMain: '#880516',
-        imageCar: 'porsche.png',
+        imageCar: 'porsche.svg',
         wins: 12,
         podiums: 22,
         races: 74,
@@ -64,7 +64,7 @@ const teams = [
     {
         name: 'Mahindra Racing',
         colorMain: '#df1e10',
-        imageCar: 'mahindra.png',
+        imageCar: 'mahindra.svg',
         wins: 5,
         podiums: 24,
         races: 131,
@@ -84,7 +84,7 @@ const teams = [
     {
         name: 'Nissan Formula E Team',
         colorMain: '#EE6174FF',
-        imageCar: 'nissan.png',
+        imageCar: 'nissan.svg',
         wins: 19,
         podiums: 47,
         races: 132,
@@ -104,7 +104,7 @@ const teams = [
     {
         name: 'Avalanche Andretti Formula E',
         colorMain: '#E61C1C94',
-        imageCar: 'andretti.png',
+        imageCar: 'andretti.svg',
         wins: 11,
         podiums: 37,
         races: 132,
@@ -124,7 +124,7 @@ const teams = [
     {
         name: 'ERT Formula E Team',
         colorMain: '#262627df',
-        imageCar: 'ert.png',
+        imageCar: 'ert.svg',
         wins: 2,
         podiums: 6,
         races: 132,
@@ -144,7 +144,7 @@ const teams = [
     {
         name: 'Jaguar TCS Racing',
         colorMain: '#868585ac',
-        imageCar: 'jaguar.png',
+        imageCar: 'jaguar.svg',
         wins: 16,
         podiums: 46,
         races: 111,
@@ -164,7 +164,7 @@ const teams = [
     {
         name: 'Neom McLaren Formula E Team',
         colorMain: '#FF7300D8',
-        imageCar: 'mclaren.png',
+        imageCar: 'mclaren.svg',
         wins: 8,
         podiums: 26,
         races: 87,
@@ -184,7 +184,7 @@ const teams = [
     {
         name: 'DS Penske',
         colorMain: '#FF990096',
-        imageCar: 'ds_penske.png',
+        imageCar: 'ds_penske.svg',
         wins: 3,
         podiums: 17,
         races: 132,
@@ -204,7 +204,7 @@ const teams = [
     {
         name: 'Envision Racing',
         colorMain: '#0f962a61',
-        imageCar: 'envision.png',
+        imageCar: 'envision.svg',
         wins: 16,
         podiums: 53,
         races: 132,
