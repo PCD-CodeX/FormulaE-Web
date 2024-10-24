@@ -322,7 +322,7 @@ const Home = () => {
         Seu navegador não suporta o vídeo.
       </video>
       <LogoContainer>
-        <img src="/formulae-completo-branco.png" alt="Logo" />
+        <img src="/formulae-completo-branco.webp" alt="Logo" />
       </LogoContainer>
       <CarouselContainer>
         <Card
