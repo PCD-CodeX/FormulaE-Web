@@ -119,7 +119,7 @@ const LivesPage = () => {
             {/* Texto sobre o circuito de Mônaco */}
             <div className="circuit-info">
               <h2>Sobre o Circuito de Mônaco</h2>
-              <img src={`/tracks/monaco.png`} alt="" />
+              <img src={`/tracks/monaco.svg`} alt="" />
               <p>
                 <br />
                 O Circuito de Mônaco é um dos mais tradicionais e icônicos
