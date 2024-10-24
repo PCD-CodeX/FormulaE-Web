@@ -39,6 +39,7 @@
 }
 .image{
     width: clamp(180px,16vw,300px);
+    height: auto;
 }
 a{
     text-decoration: none;

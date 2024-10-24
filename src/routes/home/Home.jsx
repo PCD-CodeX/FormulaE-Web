@@ -118,6 +118,11 @@ const Card = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    img{
+      aspect-ratio: 2/3;
+      min-width: 200px;
+    }
   }
 
   .titulo {
