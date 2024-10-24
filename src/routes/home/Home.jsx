@@ -204,7 +204,7 @@ const StatCard = styled.div`
     font-size: 16px;
     color: #cfd8dc;
   }
-  h1{
+  h4{
     font-size: 20px;
     margin: 0;
   }
@@ -350,30 +350,30 @@ const Home = () => {
           <h3>Equipes de Destaque</h3>
           <p>Confira as equipes e seu desempenho na temporada.</p>
           <Link to="/Teams" className="link">
-            <h1>Equipes</h1>
+            <h4>Equipes</h4>
           </Link>
         </StatCard>
         <StatCard>
-          <h3>Onde Estamos?</h3>
+          <h3>Por Onde Estamos?</h3>
           <p>
-            Fique por dentro das próximas corridas e eventos dessa temporada.
+            Fique por dentro das próximas corridas dessa temporada.
           </p>
           <Link to="/Races" className="link">
-            <h1>Corridas</h1>
+            <h4>Corridas</h4>
           </Link>
         </StatCard>
         <StatCard>
           <h3>Fique por Dentro</h3>
           <p>Veja nossas notícias sobre a temporada, carros e novidades</p>
           <Link to="/News" className="link">
-            <h1>Notícias</h1>
+            <h4>Notícias</h4>
           </Link>
         </StatCard>
         <StatCard>
           <h3>Tem 1 minutinho?</h3>
           <p>nós mostraremos uma equipe que combina com você!</p>
           <Link to="/Quiz" className="link">
-            <h1>Questionario</h1>
+            <h4>Questionario</h4>
           </Link>
         </StatCard>
       </InfoSection>
