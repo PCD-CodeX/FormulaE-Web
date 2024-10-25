@@ -184,7 +184,6 @@ export const LoginStyle = styled.section`
         border: none;
         border-radius: 0.8vw;
         font-size: clamp(8px, 0.9vw, 16px);
-        font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
         word-spacing: 0.2vw;

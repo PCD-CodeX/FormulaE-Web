@@ -15,6 +15,7 @@
             font-family: 'MyCustomFont';
             word-spacing: 2px;
             font-style: none;
+            font-weight: 500;
         }
         .image{
             padding: 10px 40px;
@@ -33,9 +34,8 @@
 .image{
     height: auto;
     margin-left: -10px;
-    max-width: 230px;
-    width: 200px;
-    min-width: 180px;
+    min-width: 230px;
+    width: 18vw;
     aspect-ratio: 425/182;
 }
 a{
@@ -89,6 +89,5 @@ a{
 }
 .navbar-collapse a{
     padding: 10px;
-    font-family: 'MyCustomFont';
     font-size: 1rem;
 }

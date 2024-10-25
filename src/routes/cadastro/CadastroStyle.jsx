@@ -211,7 +211,6 @@ export const CadastroStyle = styled.section`
         border: none;
         border-radius: 0.8vw;
         font-size: clamp(6px, 0.9vw, 16px);
-        font-weight: bold;
         cursor: pointer;
         transition: background-color 0.3s ease;
         word-spacing: 0.1vw;
