@@ -186,7 +186,7 @@ export const LoginStyle = styled.section`
         font-size: clamp(8px, 0.9vw, 16px);
         cursor: pointer;
         transition: background-color 0.3s ease;
-        word-spacing: 0.2vw;
+        word-spacing: 0.1vw;
     }
 
     .google-button {
