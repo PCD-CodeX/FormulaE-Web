@@ -42,7 +42,7 @@ const HomeContainer = styled.div`
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.3; //muda a vibrancia do fundo 
+    opacity: 0.2; //muda a vibrancia do fundo 
     filter: blur(10px);
   }
 `;
