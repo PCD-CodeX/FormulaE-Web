@@ -146,8 +146,6 @@ const Card = styled(motion.div)`
     max-width: 300px;
     border-radius: 10px;
     margin: 20px 0;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 1);
-    filter: blur(40px), contrast(0.9), saturate(1.1);
     pointer-events: none;
   }
 
@@ -322,7 +320,7 @@ const Home = () => {
   return (
     <>
     <HomeContainer>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source src="/bg-cadastro-removed.mp4" type="video/mp4" />
         Seu navegador não suporta o vídeo.
       </video>
