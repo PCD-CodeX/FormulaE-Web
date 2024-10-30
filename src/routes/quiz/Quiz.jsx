@@ -2,6 +2,196 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+// STYLE!!
+
+const QuizPage = styled.div`
+  .h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 4vh 0vh 4vh;
+    background-color: white;
+    font-size: clamp(3rem, 2.6vw, 4rem);
+    font-weight: 900;
+    color: #000000;
+    text-align: center;
+    font-style: none;
+  }
+  .p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh clamp(10px,2vh,30px);
+    margin-bottom: 8vh;
+    background-color: white;
+    font-weight: 200;
+    color: #000000;
+    text-align: center;
+    font-size: clamp(1.5rem, 1.2vw, 2rem);
+  }
+
+  @media (max-width: 768px) {
+    .h2{
+      font-size: 2rem;
+    }
+    .p{
+      font-size: 1.4rem;
+      padding: 40px;
+    }
+  }
+`;
+
+const QuizContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vw 0;
+  margin-top: -14vh;
+  background-color: white;
+  color: white;
+`;
+
+const QuestionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.8rem, 1.2vw, 2rem);
+  background-color: var(--color1);
+  padding: clamp(50px,14vh,180px) clamp(10px,2vw,50px);
+  border-radius: 10px;
+  width: clamp(56%, 50vw, 60%); 
+
+  @media (max-width: 768px) {
+    min-width: 85%;
+    }
+
+  h2{
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 30px;
+    font-size: clamp(1rem,2vw,3rem);
+  }
+  p{
+    margin-top: -30px;
+    font-size: clamp(18px,1.2em,30px);
+  }
+`;
+
+const OptionButton = styled.button`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--color3);
+  color: #000000;
+  border: none;
+  font-size: clamp(0.8rem, 1vw, 2rem);
+  font-weight: 900;
+  padding: 30px 20px;
+  margin: 10px;
+  margin-top: 6vh;
+  margin-bottom: -1vh;
+  width: 70%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color4);
+  }
+`;
+
+const ResultContainer = styled.div`
+  background-color: var(--color1);
+  padding: clamp(40px,5vw,200px);
+  border-radius: 10px;
+  max-width: 700px;
+  width: 80%;
+
+
+  @media (max-width: 1600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 140px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(50px,6vw,200px);
+
+    h2{
+      font-size: 1rem;
+    }
+    h3{
+      padding: 20px;
+    }
+  }
+
+  h2 {
+    font-size:  clamp(1.6rem,2vw,3rem);
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin-top: clamp(20px,3vh,40px);
+    font-size: clamp(1rem, 1.2vw, 2rem); 
+    font-weight: 500;
+  }
+  h3 {
+    text-align: center;
+    font-size: clamp(1.2rem, 1.8vw, 3rem);
+    margin: 4vw 1vw;
+    font-weight: 900;
+    background-color: var(--opacity);
+    width: auto;
+    padding: 1vw;
+    border-radius: 1vw;
+  }
+  
+  a {
+    display: flex;
+    justify-content: center;  
+    margin: 3vw 6vw 0vw 6vw;
+    padding: clamp(10px,1vw,30px);
+    border-radius: 1vw;
+    background-color: var(--opacity);
+    border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
+    font-size: clamp(1rem, 1.2vw,3rem);
+    color: white;
+    transition: 0.2s ease;
+    text-decoration: none;
+    font-weight: 900;
+    
+  }
+  a:hover { 
+    background-color: var(--opacity);
+    border: 0.2vw solid var(--color2) ;
+    scale: 1.03;
+  }
+`;
+
+// Estilização da barra de progresso
+const ProgressBar = styled.div`
+  width: 70%;
+  background-color: #e0e0df;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+`;
+
+const Progress = styled.div`
+  width: ${(props) => props.percentage}%;
+  height: 20px;
+  background-color: var(--color4);
+  border-radius: 50px;
+  transition: width 0.3s ease-in-out;
+`;
 
 const questions = [
   {
@@ -93,198 +283,6 @@ const questions = [
   }
 ];
 
-// STYLE!!
-
-const QuizPage = styled.div`
-  .h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 4vh 0vh 4vh;
-    background-color: white;
-    font-size: clamp(3rem, 2.6vw, 4rem);
-    font-weight: 900;
-    color: #000000;
-    text-align: center;
-    font-style: none;
-  }
-  .p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4vh clamp(10px,2vh,30px);
-    margin-bottom: 8vh;
-    background-color: white;
-    font-weight: 200;
-    color: #000000;
-    text-align: center;
-    font-size: clamp(1.5rem, 1.2vw, 2rem);
-  }
-
-  @media (max-width: 768px) {
-    .h2{
-      font-size: 2rem;
-    }
-    .p{
-      font-size: 1.4rem;
-      padding: 40px;
-    }
-  }
-`;
-
-const QuizContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10vw 0;
-  margin-top: -14vh;
-  background-color: white;
-  color: white;
-`;
-
-const QuestionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(0.8rem, 1.2vw, 2rem);
-  background-color: var(--color1);
-  padding: clamp(50px,16vh,100px) clamp(10px,6vw,60px);
-  border-radius: 10px;
-  min-width: 60%;
-  max-width: 46vw;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    min-width: 85%;
-    }
-
-  h2{
-    margin-top: 20px;
-    text-align: center;
-    padding: 0 30px;
-    font-size: clamp(1rem,2vw,3rem);
-  }
-  p{
-    margin-top: -30px;
-    font-size: clamp(18px,1.2em,30px);
-  }
-`;
-
-const OptionButton = styled.button`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background-color: var(--color3);
-  color: #000000;
-  border: none;
-  font-size: clamp(0.8rem, 1vw, 2rem);
-  font-weight: 900;
-  padding: 30px 20px;
-  margin: 10px;
-  margin-top: 6vh;
-  margin-bottom: -1vh;
-  width: 90%;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: var(--color4);
-  }
-`;
-
-const ResultContainer = styled.div`
-  background-color: var(--color1);
-  padding: clamp(40px,5vw,200px);
-  border-radius: 10px;
-  max-width: 700px;
-  width: 80%;
-
-
-  @media (max-width: 1600px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 100px 140px;
-  }
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: clamp(50px,6vw,200px);
-
-    h2{
-      font-size: 1rem;
-    }
-    h3{
-      padding: 20px;
-    }
-  }
-
-  h2 {
-    font-size:  clamp(1.6rem,2vw,3rem);
-    margin-bottom: 20px;
-    font-weight: 900;
-    text-align: center;
-  }
-  p {
-    text-align: center;
-    margin-top: clamp(20px,3vh,40px);
-    font-size: clamp(1rem, 1.2vw, 2rem); 
-    font-weight: 500;
-  }
-  h3 {
-    text-align: center;
-    font-size: clamp(1.2rem, 1.8vw, 3rem);
-    margin: 4vw 1vw;
-    font-weight: 900;
-    background-color: var(--opacity);
-    width: auto;
-    padding: 1vw;
-    border-radius: 1vw;
-  }
-  
-  a {
-    display: flex;
-    justify-content: center;  
-    margin: 3vw 6vw 0vw 6vw;
-    padding: clamp(10px,1vw,30px);
-    border-radius: 1vw;
-    background-color: var(--opacity);
-    border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
-    font-size: clamp(1rem, 1.2vw,3rem);
-    color: white;
-    transition: 0.2s ease;
-    text-decoration: none;
-    font-weight: 900;
-    
-  }
-  a:hover { 
-    background-color: var(--opacity);
-    border: 0.2vw solid var(--color2) ;
-    scale: 1.03;
-  }
-`;
-
-// Estilização da barra de progresso
-const ProgressBar = styled.div`
-  width: 80%;
-  background-color: #e0e0df;
-  border-radius: 50px;
-  margin: 20px;
-`;
-
-const Progress = styled.div`
-  width: ${(props) => props.percentage}%;
-  height: 20px;
-  background-color: var(--color4);
-  border-radius: 50px;
-  transition: width 0.3s ease-in-out;
-`;
-
 const teams = {
   Maserati: 0,
   Porsche: 0,
@@ -329,7 +327,7 @@ const Quiz = () => {
   };
 
   const highestScoringTeams = getHighestScoringTeam();
-  const percentageComplete = ((currentQuestion + 1) / questions.length) * 100; // Calcula porcentagem
+  const percentageComplete = ((currentQuestion + 1) / questions.length) * 100; // valor da barra de progresso
 
   return (
     <QuizPage>

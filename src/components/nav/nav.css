@@ -70,16 +70,16 @@ a{
 @media(max-width: 1170px){
     .dropdown-menu{
         width: 40%;
-        background-color: #e2e2e7;
+        background-color: rgb(217, 216, 230);
         margin-left: 0px;
         padding: 1px;
         border: none;
-        border-radius: 20px;
+        border-radius: 10px;
     }
     .inner-container{
         padding: 10px;
         border: 2px solid rgb(150, 150, 150);
-        border-radius: 20px;
+        border-radius: 10px;
     }
     .dropdown-item{
         transition: all 0.5s ease;
