@@ -21,7 +21,7 @@ const HomeContainer = styled.div`
   display: flex;
   flex-direction: row;
   height: 120vh;
-  background-color: #0400ff; // nao adianta mudar essa cor sem mudar o video{ opacity: 0.1 (mais escuro) --> 0.9 (mais claro)}
+  background-color: #03009b; // nao adianta mudar essa cor sem mudar o video{ opacity: 0.1 (mais escuro) --> 0.9 (mais claro)}
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -42,7 +42,7 @@ const HomeContainer = styled.div`
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.2; //muda a vibrancia do fundo 
+    opacity: 0.3; //muda a vibrancia do fundo 
     filter: blur(10px);
   }
 `;
