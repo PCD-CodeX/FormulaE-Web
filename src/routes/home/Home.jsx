@@ -331,7 +331,7 @@ const Home = () => {
         <Card
           key={currentIndex}
           drag="x"
-          dragConstraints={{ left: -50, right: 50, top: 0, bottom: 0 }}
+          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           onDragEnd={handleDragEnd}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
