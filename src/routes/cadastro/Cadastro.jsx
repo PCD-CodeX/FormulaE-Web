@@ -4,39 +4,35 @@ import lastFrameImage from "../../assets/logos/last-formulaefia.png";
 import googleIcon from "../../assets/logos/google-icon.png"; // Ícone do Google
 import facebookIcon from "../../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
 import myGif from "../../assets/logos/formulae-logo-completa.gif"
-import axios from "axios";
 //import googleIcon from "../assets/logos/google-icon.png";  // Ícone do Google
 //import facebookIcon from "../assets/logos/facebook-icon.png";  // Ícone de outra plataforma
 
 const Cadastro = () => {
-  // --------------< Cadastro >-------------- //
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  
+  const [usuario, setUsuario]=useState({
+    nome:'',
+    email:'',
+    senha:''
+  })
 
-  const handleCadastro = async (e) => {
-    e.preventDefault();
+  const handleChange=(e)=>{
+    setUsuario({...usuario,[e.target.name]:e.target.value})
+  }
 
-    const newUser = {
-      name: name,
-      email: email,
-      password: password,
-    };
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    fetch(`http://localhost:8080/usuario`,{
+      method:"post",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify(usuario),
+    }).then(()=>{
+      alert("Usuário cadastrado com sucesso!")
+    })
+  
+  }
 
-    // Fazer a requisição POST usando Axios
-    axios
-      .post("http://localhost:8080/users", newUser)
-      .then((response) => {
-        console.log("Usuário adicionado com sucesso:", response.data);
-        alert("Usuário adicionado com sucesso!");
-      })
-      .catch((error) => {
-        console.error("Erro ao adicionar o usuário:", error);
-        alert("Erro ao adicionar o usuário!");
-      });
-  };
-
-  // --------------< GIF >-------------- //
 
   const [showGif, setShowGif] = useState(true);
   const [showLastFrame, setShowLastFrame] = useState(false);
@@ -57,7 +53,7 @@ const Cadastro = () => {
   return (
     <CadastroStyle>
       <div className="content">
-          <form className="form" onSubmit={handleCadastro}>
+          <form className="form" onSubmit={handleSubmit}>
             {" "}
             {/* Submit os valores de name, email e password */}
             <div className="login">
@@ -70,8 +66,9 @@ const Cadastro = () => {
                   type="text"
                   id="name"
                   placeholder="Seu nome"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  name= "nome"
+                  value={usuario.nome}
+                  onChange={handleChange}
                   required
                 />
                 <div className="error-message">Name in incorrect format</div>
@@ -81,10 +78,11 @@ const Cadastro = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="Formulae@gmail.com"
                   autoComplete="off"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={usuario.email}
+                  onChange={handleChange}
                   required
                 />
                 <div className="error-message">Email in incorrect format</div>
@@ -97,8 +95,9 @@ const Cadastro = () => {
                   placeholder="Senha: FormulaE@2024"
                   title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  name="senha"
+                  value={usuario.senha}
+                  onChange={handleChange}
                   required
                   autoComplete="off"
                 />

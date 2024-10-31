@@ -99,7 +99,7 @@ export const CadastroStyle = styled.section`
         flex-direction: start;
         margin-bottom: 0.5rem;
         font-size: clamp(12px, 0.9vw, 16px);;
-        font-weight: 900;
+        font-weight: 500;
         letter-spacing: 3px;
         color: #ffffff;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.308));
@@ -116,7 +116,7 @@ export const CadastroStyle = styled.section`
         font-size: clamp(8px, 0.6vw, 16px);
         margin-top: 1vw;
         margin-right: 6vw;
-        font-weight: 900;
+        font-weight: 500;
         background: white;
         letter-spacing: 2.2px;
         font-style: italic;
@@ -139,7 +139,6 @@ export const CadastroStyle = styled.section`
         border-radius: 1vw;
         font-size: clamp(12px, 0.8vw, 20px);
         transition: 0.2s ease;
-        font-weight: 700;
         cursor: pointer;
         outline: none;
         margin-top: 2vh;
@@ -148,7 +147,6 @@ export const CadastroStyle = styled.section`
     .my-form__button:hover {
         border: clamp(2px,0.2vw,4px) solid var(--color2) ;
         scale: 1.01;
-        font-weight: 700;
     }
     .gif-container {
         display: flex;

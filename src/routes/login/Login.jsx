@@ -5,36 +5,11 @@ import lastFrameImage from "../../assets/logos/last-fomrulae.png";
 import logoCompleta from "../../assets/logos/formulae-completo-branco.png";
 import googleIcon from "../../assets/logos/google-icon.png"; // Ícone do Google
 import facebookIcon from "../../assets/logos/facebook-icon.png"; // Ícone de outra plataforma
-import axios from "axios";
 
 const Login = () => {
   // --------------------------< Login >------------------------------------ //
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
 
-    // Fazer a requisição GET para buscar o usuário pelo email e senha
-    axios.get("http://localhost:8080/users?email=${email}&password=${password}")
-      .then((response) => {
-        if (response.data.length > 0) {
-          // Usuário encontrado
-          setUser(response.data[0]);
-          console.log("Login bem-sucedido:", response.data[0]);
-          alert("Login bem-sucedido!");
-        } else {
-          // Nenhum usuário encontrado
-          console.log("Email ou senha incorretos");
-          alert("Email ou senha incorretos");
-        }
-      })
-      .catch((error) => {
-        console.error("Erro ao buscar o usuário:", error);
-        alert("Erro ao buscar o usuário!");
-      });
-  };
 
   // -------------------------------< GIF >----------------------------//
 
@@ -86,7 +61,7 @@ const Login = () => {
             </button>
           </div>
         </div>
-        <form className="form" onSubmit={handleLogin}>
+        <form className="form">
           <div className="login">
             <img src={logoCompleta} className="logo" />
             <div className="input-container">
@@ -97,8 +72,6 @@ const Login = () => {
                 name="email"
                 placeholder="Formulae@gmail.com"
                 autoComplete="off"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <div className="error-message">Email in incorrect format</div>
@@ -113,8 +86,6 @@ const Login = () => {
                 title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                 pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
                 autoComplete="off"
               />
               <div className="error-message">
@@ -125,12 +96,12 @@ const Login = () => {
             <button className="my-form__button" type="submit">
               Login
             </button>
-            {user && (
+            {/*{user && (
               <div>
                 <h2>Bem-vindo, {user.name}!</h2>
                 <p>Email: {user.email}</p>
               </div>
-            )}
+            )}</form>*/}
           </div>
         </form>
       </div>

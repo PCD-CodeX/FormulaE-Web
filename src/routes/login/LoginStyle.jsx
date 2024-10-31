@@ -78,7 +78,7 @@ export const LoginStyle = styled.section`
     label {
         margin-bottom: 0.5rem;
         font-size: clamp(14px, 0.9vw, 16px);;
-        font-weight: 900;
+        font-weight: 500;
         letter-spacing: 3px;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.808));
     }
@@ -91,7 +91,7 @@ export const LoginStyle = styled.section`
         //border: 3px solid var(--opacity);
         font-size: clamp(10px, 0.6vw, 16px);
         margin-top: 3vh;
-        font-weight: 900;
+        font-weight: 500;
         background: white;
         letter-spacing: 1px;
         font-style: italic;
@@ -112,7 +112,7 @@ export const LoginStyle = styled.section`
         border-radius: 1vw;
         font-size: clamp(8px, 0.8vw, 20px);
         transition: 0.2s ease;
-        font-weight: 700;
+        font-weight: 500;
         cursor: pointer;
         outline: none;
         margin-bottom: 2vh;
@@ -121,7 +121,6 @@ export const LoginStyle = styled.section`
     .my-form__button:hover {
         border: clamp(2px,0.2vw,4px) solid var(--color2) ;
         scale: 1.01;
-        font-weight: 700;
     }
 
     .gif-container {
