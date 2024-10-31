@@ -22,7 +22,7 @@ const Cadastro = () => {
   const handleSubmit=(e)=>{
     e.preventDefault()
     fetch(`http://localhost:8080/usuario`,{
-      method:"post",
+      method:"POST",
       headers:{
         "Content-Type":"application/json",
       },

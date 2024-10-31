@@ -9,7 +9,38 @@ import facebookIcon from "../../assets/logos/facebook-icon.png"; // Ícone de ou
 const Login = () => {
   // --------------------------< Login >------------------------------------ //
 
-
+    const [loginData, setLoginData] = useState({
+      email: '',
+      senha: ''
+    });
+  
+    const handleChange = (e) => {
+      setLoginData({ ...loginData, [e.target.name]: e.target.value });
+    };
+  
+    const handleLogin = (e) => {
+      e.preventDefault();
+  
+      fetch(`http://localhost:8080/login`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert("Login realizado com sucesso!");
+        } else {
+          alert("Login falhou. Verifique suas credenciais.");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+        alert("Ocorreu um erro no login.");
+      });
+    };
 
   // -------------------------------< GIF >----------------------------//
 
@@ -71,7 +102,8 @@ const Login = () => {
                 id="email"
                 name="email"
                 placeholder="Formulae@gmail.com"
-                autoComplete="off"
+                value={loginData.email}
+                onChange={handleChange}
                 required
               />
               <div className="error-message">Email in incorrect format</div>
@@ -81,10 +113,12 @@ const Login = () => {
               <input
                 id="password"
                 type="password"
-                name="password"
+                name="senha"
                 placeholder="Senha: FormulaE@2024"
                 title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                 pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
+                value={loginData.senha}
+                onChange={handleChange}
                 required
                 autoComplete="off"
               />
@@ -96,12 +130,6 @@ const Login = () => {
             <button className="my-form__button" type="submit">
               Login
             </button>
-            {/*{user && (
-              <div>
-                <h2>Bem-vindo, {user.name}!</h2>
-                <p>Email: {user.email}</p>
-              </div>
-            )}</form>*/}
           </div>
         </form>
       </div>
