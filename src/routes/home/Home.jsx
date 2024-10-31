@@ -300,9 +300,9 @@ const Home = () => {
   ];
 
   const handleDragEnd = (event, info) => {
-    if (info.offset.x < -50) {
+    if (info.offset.x < -20) {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    } else if (info.offset.x > 50) {
+    } else if (info.offset.x > 20) {
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + cards.length) % cards.length
       );
