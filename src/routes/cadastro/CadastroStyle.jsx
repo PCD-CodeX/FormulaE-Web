@@ -167,7 +167,7 @@ export const CadastroStyle = styled.section`
         padding: 0.4vw;
         color: #000000;
         border-bottom: 4px solid var(--color2);
-        filter: drop-shadow(0 0 0.5rem rgba(100, 100, 100, 0.329));
+        //filter: drop-shadow(0 0 0.5rem rgba(100, 100, 100, 0.329));
     }
 
     .gif, .imagem-final {

@@ -96,8 +96,8 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: clamp(6px,1vw,30px);
-  border-radius: 1vw;
+  padding: clamp(6px,0.8vw,30px);
+  border-radius: 2vh;
   margin-top: 1vh;
   background-color: var(--opacity);
   border: clamp(2px,0.2vw,4px) solid var(--opacity);

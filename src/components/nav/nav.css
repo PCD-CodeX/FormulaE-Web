@@ -36,9 +36,9 @@ a{
     }
 }
 .dropdown-menu{
-    background-color: #d9d8e6;
+    background-color: rgb(203, 222, 250);
     margin-left: 30px;
-    border: 2px solid rgb(150, 150, 150);
+    border: 3px solid var(--opacity);
     padding: 5px;
 }
 
@@ -53,7 +53,7 @@ a{
 @media(max-width: 1170px){
     .dropdown-menu{
         width: 40%;
-        background-color: #d9d8e6;
+        background-color: rgb(201, 222, 252);
         margin-left: 0px;
         border-radius: 10px;
     }
