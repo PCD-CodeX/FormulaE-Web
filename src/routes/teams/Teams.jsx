@@ -123,7 +123,7 @@ const teams = [
     },
     {
         name: 'ERT Formula E Team',
-        colorMain: '#262627df',
+        colorMain: '#262627E9',
         imageCar: 'ert.svg',
         wins: 2,
         podiums: 6,
@@ -143,7 +143,7 @@ const teams = [
     },
     {
         name: 'Jaguar TCS Racing',
-        colorMain: '#868585ac',
+        colorMain: '#868585C9',
         imageCar: 'jaguar.svg',
         wins: 16,
         podiums: 46,
@@ -258,6 +258,12 @@ const TeamCard = styled.div`
     &:hover img {
         transform: translateX(-30px); /* Move a imagem para a esquerda */
     }
+
+    @media (max-width:768px) {
+        &:hover img {
+        transform: translateX(-10px); /* Move a imagem para a esquerda */
+    }
+    }
 `;
 
 const PilotList = styled.ul`
@@ -288,9 +294,10 @@ const CarImage = styled.img`
     margin-bottom: 1vh;
     //filter: drop-shadow(0 0 6px rgba(155, 154, 154, 0.507));
     object-fit: cover;
-    margin-left: 6vw;
+    margin-left: 5vw;
     transform: translateX(0); /* Posição inicial */
     transition: transform 0.5s ease-out; /* Transição suave no retorno */
+
 `;
 // Estilo para o grid layout
 const GridContainer = styled.div`
