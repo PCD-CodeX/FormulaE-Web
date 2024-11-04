@@ -21,7 +21,7 @@ const Cadastro = () => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    fetch(`http://localhost:8080/usuario`,{
+    fetch(`https://banco-vercel.vercel.app/usuario`,{
       method:"POST",
       headers:{
         "Content-Type":"application/json",
