@@ -12,6 +12,7 @@
 
 .navbar-collapse{
     margin-left: 60px;
+    margin-right: -140px;
 }
 .navbar-collapse a{
     padding: 10px;
@@ -76,6 +77,11 @@ a{
     }
     .navbar-collapse{
         margin-left: 20px;
+    }
+    .nav-link{
+        
+            width: 70%;
+        
     }
 }
 

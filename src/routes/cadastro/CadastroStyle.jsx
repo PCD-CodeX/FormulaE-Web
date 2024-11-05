@@ -97,13 +97,13 @@ export const CadastroStyle = styled.section`
     label {
         display: flex;
         flex-direction: start;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         font-size: clamp(12px, 0.9vw, 16px);;
         font-weight: 500;
         letter-spacing: 3px;
         color: #ffffff;
         filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.308));
-        margin-top: 1vw;
+        margin-top: 1vh;
         margin-right: 6vw;
     }
 
@@ -113,14 +113,12 @@ export const CadastroStyle = styled.section`
         border-radius: 1vw;
         border: none;
         //border: 3px solid var(--opacity);
-        font-size: clamp(8px, 0.6vw, 16px);
+        font-size: clamp(10px, 0.6vw, 16px);
         margin-top: 1vw;
         margin-right: 6vw;
         font-weight: 500;
         background: white;
-        letter-spacing: 2.2px;
-        font-style: italic;
-        filter: drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.308));
+        letter-spacing: 1px;
     }
 
     .error-message {

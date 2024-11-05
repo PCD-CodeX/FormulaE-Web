@@ -19,16 +19,17 @@ const NavigationBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className=" fs-6 text-gray fw-semibold"m id='nav'>
                         <Link to='/Quiz' className="nav-link ">Match Your Team</Link>
+                        <Link to='/Python' className="nav-link ">Aposte</Link>
                         <Link to='/Live' className="nav-link ">Lives</Link>
-                        <Link to='/News' className="nav-link ">Notícias</Link>
                         <Link to='/Login' className="nav-link ">Login</Link>
                         <Link to='/Cadastro' className="nav-link ">Cadastro</Link>
                         {/* Dropdown de menu */}
                         <NavDropdown title="Saiba Mais" id="basic-nav-dropdown" className='dropdown'>
                             <div className="inner-container">
-                                <NavDropdown.Item as={Link} to='/Circuits'>Pistas</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to='/Races'>Corridas</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to='/Teams'>Equipes</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/News'>Notícias</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to='/Circuits'>Pistas</NavDropdown.Item>
                             </div>
                         </NavDropdown>
                     </Nav>

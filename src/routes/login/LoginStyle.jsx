@@ -94,7 +94,6 @@ export const LoginStyle = styled.section`
         font-weight: 500;
         background: white;
         letter-spacing: 1px;
-        font-style: italic;
     }
 
     .error-message {
@@ -132,13 +131,13 @@ export const LoginStyle = styled.section`
         width: clamp(200px, 30vw, 540px);
         height: clamp(100px, 16.6vw, 310px);
         z-index: 1;
-        margin: 3vw 0vw; //ajusta a altura do lado esquerdo inteiro
+        margin: 5vw 0vw; //ajusta a altura do lado esquerdo inteiro
         filter: drop-shadow(0 0 0.5rem rgba(146, 146, 146, 0.4));
         background-image: mix-blend-mode;
     }
     .gif-container h1{
         position: absolute;
-        margin-bottom: 26vw; //ajusta a altura do 'welcome back'
+        margin-bottom: 30vw; //ajusta a altura do 'welcome back'
         padding: 0.4vw;
         color: #000000;
         border-bottom: 4px solid var(--color2);
@@ -150,7 +149,7 @@ export const LoginStyle = styled.section`
         height: auto;
         border-radius: 0.5rem;
         transition: opacity 0.5s ease;
-        margin-bottom: 6vw; //ajusta a altura da imagem e do gif
+        margin-bottom: 10vw; //ajusta a altura da imagem e do gif
         filter: contrast(80%) saturate(90%);
     }
 
@@ -162,14 +161,21 @@ export const LoginStyle = styled.section`
         opacity: 1; /* Mantenha visível após a exibição */
         position: relative;
     }
+    .link-cadastro{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1vh;
+        font-size: clamp(10px, 0.8vw, 16px);    
+    }
     .social-login {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: absolute;
-        margin-top: 34vh;//ajusta a altura dos botoes
-        gap: 4vh;
+        margin-top: 32vh;//ajusta a altura dos botoes
+        gap: 3vh;
     }
 
     .google-button,

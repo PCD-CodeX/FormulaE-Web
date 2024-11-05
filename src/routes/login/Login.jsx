@@ -1,4 +1,5 @@
 import { LoginStyle } from "./LoginStyle";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import myGif from "../../assets/logos/formulae.gif";
 import lastFrameImage from "../../assets/logos/last-fomrulae.png";
@@ -90,6 +91,10 @@ const Login = () => {
               <img src={facebookIcon} alt="Other platform logo" />
               Login com Facebook
             </button>
+            <div className="link-cadastro">
+                <p>não possui login?</p>
+                <Link to='/Cadastro'>Cadastre-se</Link>
+              </div>
           </div>
         </div>
         <form className="form">

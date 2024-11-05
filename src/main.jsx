@@ -14,6 +14,7 @@ import Cadastro from './routes/cadastro/Cadastro.jsx'
 import Quiz from './routes/quiz/Quiz.jsx'
 import News from './routes/news/News.jsx'
 import Live from './routes/live/Live.jsx'
+import Python from './routes/python/Python.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: '/News', element: <News /> },
       { path: '/Live', element: <Live /> },
       { path: '/Quiz', element: <Quiz /> },
+      { path: '/Python', element: <Python /> },
     ]
   }
 ])
