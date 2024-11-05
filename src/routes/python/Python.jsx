@@ -53,6 +53,18 @@ const PythonContainer = styled.div`
     max-width: 100%;
   }
 }
+.screenshot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    img{
+      width: 80%;
+      height: auto;
+      margin: 10px;
+    }
+}
 .custom-button-col{
   display: flex;
   justify-content: flex-end;
@@ -473,6 +485,12 @@ plt.show()
         <a href="https://github.com/PCD-CodeX/Formula-Python" target="_blank" rel="noopener noreferrer">
           <img src="/git.svg" alt="GitHub" /> Repositório GitHub
         </a>
+      </div>
+      <div className="screenshot">
+              <img src="/SS2.png"/>
+              <img src="/SS3.png"/>
+              <img src="/SS4.png"/>
+              <img src="/SS5.png"/>
       </div>
     </PythonContainer>
   );
