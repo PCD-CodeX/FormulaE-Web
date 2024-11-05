@@ -443,7 +443,13 @@ plt.show()
           Ele calcula a <strong>distância percorrida</strong> e o <strong>tempo de corrida</strong> com base nos parâmetros de velocidade e tempo. <br></br> Ideal para entender como os pilotos se comportam em um cenário de corrida e explorar a melhor experiência ao usário, permitindo ter mais convicções em suas apostas.
         </p>
       </div>
-
+      <h2>Um Piloto Verdadeiro</h2>
+      <div className="description-container">
+        <p>
+        “A chuva coloca todos os carros no mesmo patamar, mas não os pilotos. A chuva mostra para o telespectador quem são os verdadeiros pilotos.”
+        </p>
+        <h3>- Ayrton Senna</h3>
+      </div>
       <div className="buttom-container">
         <Row>
           <Col xs={6} md={8} className="custom-toast-col">
