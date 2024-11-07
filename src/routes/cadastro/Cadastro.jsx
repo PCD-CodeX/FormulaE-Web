@@ -8,30 +8,38 @@ import myGif from "../../assets/logos/formulae-logo-completa.gif"
 //import facebookIcon from "../assets/logos/facebook-icon.png";  // Ícone de outra plataforma
 
 const Cadastro = () => {
-  
-  const [usuario, setUsuario]=useState({
-    nome:'',
-    email:'',
-    senha:''
-  })
+  const [cadastroData, setCadastroData] = useState({
+    nome: '',
+    email: '',
+    senha: '',
+  });
 
-  const handleChange=(e)=>{
-    setUsuario({...usuario,[e.target.name]:e.target.value})
-  }
+  const handleChange = (e) => {
+    setCadastroData({ ...cadastroData, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-    fetch(`https://banco-vercel.vercel.app/usuario`,{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json",
+  const handleCadastro = (e) => {
+    e.preventDefault();
+
+    fetch(`https://banco-vercel.vercel.app/usuario`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body:JSON.stringify(usuario),
-    }).then(()=>{
-      alert("Usuário cadastrado com sucesso!")
+      body: JSON.stringify(cadastroData),
     })
-  
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert("Cadastro realizado com sucesso!");
+        } else {
+          alert(data.message || "O cadastro falhou.");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro no cadastro:", error);
+      });
+  };
 
 
   const [showGif, setShowGif] = useState(true);
@@ -53,7 +61,7 @@ const Cadastro = () => {
   return (
     <CadastroStyle>
       <div className="content">
-          <form className="form" onSubmit={handleSubmit}>
+          <form className="form" onSubmit={handleCadastro}>
             {" "}
             {/* Submit os valores de name, email e password */}
             <div className="login">
@@ -67,7 +75,7 @@ const Cadastro = () => {
                   id="name"
                   placeholder="Seu nome"
                   name= "nome"
-                  value={usuario.nome}
+                  value={cadastroData.nome}
                   onChange={handleChange}
                   required
                 />
@@ -81,7 +89,7 @@ const Cadastro = () => {
                   name="email"
                   placeholder="Formulae@gmail.com"
                   autoComplete="off"
-                  value={usuario.email}
+                  value={cadastroData.email}
                   onChange={handleChange}
                   required
                 />
@@ -96,7 +104,7 @@ const Cadastro = () => {
                   title="Minimum 6 characters at least 1 Alphabet, 1 Number and 1 Symbol"
                   pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{6,}$"
                   name="senha"
-                  value={usuario.senha}
+                  value={cadastroData.senha}
                   onChange={handleChange}
                   required
                   autoComplete="off"
