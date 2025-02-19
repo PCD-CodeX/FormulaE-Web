@@ -89,11 +89,11 @@ export const LoginStyle = styled.section`
         border-radius: 1vw;
         border: none;
         //border: 3px solid var(--opacity);
-        font-size: clamp(10px, 0.6vw, 16px);
+        font-size: clamp(10px, 0.9vw, 20px);
         margin-top: 3vh;
         font-weight: 500;
         background: white;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 
     .error-message {
