@@ -113,12 +113,12 @@ export const CadastroStyle = styled.section`
         border-radius: 1vw;
         border: none;
         //border: 3px solid var(--opacity);
-        font-size: clamp(10px, 0.6vw, 16px);
+        font-size: clamp(10px, 0.9vw, 20px);
         margin-top: 1vw;
         margin-right: 6vw;
-        font-weight: 500;
+        font-weight: 700;
         background: white;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 
     .error-message {
@@ -135,7 +135,7 @@ export const CadastroStyle = styled.section`
         padding: clamp(10px,0.8vw,30px);
         border: clamp(2px,0.2vw,4px) solid var(--opacity) ;
         border-radius: 1vw;
-        font-size: clamp(12px, 0.8vw, 20px);
+        font-size: clamp(12px, 0.9vw, 20px);
         transition: 0.2s ease;
         cursor: pointer;
         outline: none;
@@ -219,7 +219,7 @@ export const CadastroStyle = styled.section`
     }
 
     .google-button:hover {
-        background-color: #b3ddcc;
+        background-color: #1c9263c8;
         color: #ffffff;
     }
 
@@ -229,7 +229,7 @@ export const CadastroStyle = styled.section`
     }
 
     .other-button:hover {
-        background-color: #a2aacc;
+        background-color: #4953a7;
         color: #ffffff
     }
 

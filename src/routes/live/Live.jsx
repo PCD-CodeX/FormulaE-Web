@@ -9,7 +9,7 @@ const LivesPage = () => {
       title: "Corrida ao vivo - ePrix de Monaco",
       description:
         "Acompanhe a emocionante corrida de Fórmula E direto de Monaco.",
-      videoUrl: "https://www.youtube.com/embed/XJwYf8Kk9Pk", // Exemplo de URL do vídeo do YouTube
+      videoUrl: "https://www.youtube.com/embed/JyO8dQx7kZE", // Exemplo de URL do vídeo do YouTube
     },
     {
       id: 2,
